@@ -1,0 +1,17 @@
+/* toolbar */
+.search-box{
+    padding: 1em;   
+}
+.search-input{ 
+    border-bottom: 1px solid #ccc;
+    padding: 0px 8px;
+    line-height: 2em;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.search-btn{ 
+    margin-right: 6px;
+}
+.add-btn{
+    float:right;
+}
