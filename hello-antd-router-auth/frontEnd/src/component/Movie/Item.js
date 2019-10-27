@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
 import MovieForm from './MovieForm';
 import './Item.css';
-import getResponse from './api/api';
-import { format } from 'url';
+import getResponse from '../../api/api';
 class Item extends Component {
     state={
         modalVisble:false

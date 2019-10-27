@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router-dom'
 class AuthRouter extends Component {
     render() {  
         const { component: Component, ...rest } = this.props
-        const isLogin = sessionStorage.getItem("isLogin")==='true'?true:false;
+        const isLogin = sessionStorage.getItem("isLogin")==='true' ? true:false;
         console.log('isLogin = ',isLogin);
         return (
             <Route {...rest} render={props => {

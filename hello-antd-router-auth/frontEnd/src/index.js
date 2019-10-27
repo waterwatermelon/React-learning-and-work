@@ -13,11 +13,10 @@ ReactDOM.render(
         <Switch>  
             <Route exact path="/" component={Login}/>
             <Route  path="/login" component={Login}/>
-            <AuthRoute path='/index' component={App}></AuthRoute>
-            {/* <Route  path="/index" component={App} /> */}
+            <AuthRoute path='/app' component={App}/>
         </Switch>
     </BrowserRouter>,
-     document.getElementById('root')
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

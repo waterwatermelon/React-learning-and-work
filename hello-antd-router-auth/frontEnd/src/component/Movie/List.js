@@ -1,7 +1,5 @@
 import React,{Component} from 'react'; 
 import Item from './Item';
-import axios from 'axios';
-import getResponse from './api/api';
 class List extends Component{
     constructor(){
         super();

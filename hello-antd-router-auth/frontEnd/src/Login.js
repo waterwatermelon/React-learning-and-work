@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
 import {Form,Input,Button} from 'antd';
 import './Login.css';
-import axios from 'axios'; 
-import getResponse from './api/api';
 class Login extends Component{
        
     constructor(props){ 
@@ -15,12 +13,10 @@ class Login extends Component{
         async function validateFunction(err,values){
             if(!err){
                 console.log('values =',values);
-                let response = await getResponse('/api/login',values); 
-                console.log('response =',response);
-                if(response.data.success){
+                if(values.account === 'admin'&& values.password!=='') {
                     sessionStorage.setItem('isLogin',true);
-                    this.props.history.push('/index');
-                }    
+                    this.props.history.push('/app');
+                }
             }else{
                 console.log('err =',err); 
             }
@@ -47,6 +43,7 @@ class Login extends Component{
                 <FormItem label='登录账号'>
                     {
                         getFieldDecorator('account',{
+                            initialValue:'admin',
                             rules:[{
                                 required:true,
                                 message:'请填写账号'
@@ -58,6 +55,7 @@ class Login extends Component{
                 <FormItem label='密码'>
                     {
                         getFieldDecorator('password',{
+                            initialValue:'admin',
                             rules:[{
                                 required:true,
                                 message:'请填写密码'
