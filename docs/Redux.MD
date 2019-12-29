@@ -1,4 +1,3 @@
-
 # Redux 介绍
     Redux试图让state的变化可预测。
 ##　核心概念

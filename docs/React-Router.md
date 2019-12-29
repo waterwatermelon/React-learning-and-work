@@ -1,4 +1,4 @@
-# react-router 4 笔记
+# React-Router 4 笔记
 ## Router
     Router是一个容器，用于包裹Route。一个Route即为一个url，Route里面会包裹一个组件。当在浏览器里面输入url，就会跳转到相应的Route
     并显示相关组件。
