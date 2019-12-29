@@ -1,0 +1,481 @@
+{"level":"INFO","date":"2019-05-26 00:00:02,190","pid":9830,"hostname":"sue-X550JK","message":"[egg-logrotator] app logger reload: got log-reload message"}
+{"level":"INFO","date":"2019-05-26 00:00:17,422","pid":9858,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:00:17,446","pid":9858,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:00:17,449","pid":9858,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:00:17,513","pid":9858,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:00:17,515","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,515","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,515","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,516","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,516","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,516","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,516","pid":9858,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:17,524","pid":9858,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 3ms"}
+{"level":"INFO","date":"2019-05-26 00:00:17,538","pid":9858,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:00:17,540","pid":9858,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:00:17 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:00:17,546","pid":9858,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:00:19,833","pid":9869,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:00:19,858","pid":9869,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:00:19,860","pid":9869,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:00:19,918","pid":9869,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:00:19,920","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,920","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,920","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,921","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,921","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,921","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,921","pid":9869,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:19,929","pid":9869,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 3ms"}
+{"level":"INFO","date":"2019-05-26 00:00:19,943","pid":9869,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:00:19,944","pid":9869,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:00:19 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:00:19,952","pid":9869,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:00:21,410","pid":9880,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:00:21,435","pid":9880,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:00:21,437","pid":9880,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:00:21,490","pid":9880,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:00:21,491","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,492","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,492","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,492","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,493","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,493","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,493","pid":9880,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:21,500","pid":9880,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:00:21,515","pid":9880,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:00:21,517","pid":9880,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:00:21 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:00:21,524","pid":9880,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:00:23,467","pid":9891,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:00:23,488","pid":9891,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:00:23,491","pid":9891,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:00:23,544","pid":9891,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:00:23,546","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,546","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,546","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,547","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,547","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,547","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,547","pid":9891,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:23,555","pid":9891,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:00:23,570","pid":9891,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:00:23,572","pid":9891,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:00:23 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:00:23,579","pid":9891,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:00:27,268","pid":9902,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:00:27,290","pid":9902,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:00:27,292","pid":9902,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:00:27,348","pid":9902,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:00:27,350","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,350","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,351","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,351","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,351","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,351","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,351","pid":9902,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:00:27,360","pid":9902,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:00:27,375","pid":9902,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:00:27,376","pid":9902,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:00:27 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:00:27,385","pid":9902,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:05:43,732","pid":10113,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:05:43,755","pid":10113,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:05:43,758","pid":10113,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:05:43,817","pid":10113,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:05:43,819","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,819","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,820","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,820","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,820","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,820","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,820","pid":10113,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:43,828","pid":10113,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:05:43,842","pid":10113,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:05:43,844","pid":10113,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:05:43 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:05:43,851","pid":10113,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:05:47,299","pid":10125,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:05:47,322","pid":10125,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:05:47,324","pid":10125,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:05:47,379","pid":10125,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:05:47,381","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,381","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,381","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,382","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,382","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,382","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,382","pid":10125,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:05:47,390","pid":10125,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 3ms"}
+{"level":"INFO","date":"2019-05-26 00:05:47,404","pid":10125,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:05:47,405","pid":10125,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:05:47 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:05:47,415","pid":10125,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 00:09:50,633","pid":10222,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:09:50,654","pid":10222,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:09:50,657","pid":10222,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:09:50,711","pid":10222,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:09:50,712","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,713","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,713","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,713","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,714","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,714","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,714","pid":10222,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:50,722","pid":10222,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:09:50,737","pid":10222,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:09:50,738","pid":10222,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:09:50 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:09:50,746","pid":10222,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:09:53,563","pid":10233,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:09:53,584","pid":10233,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:09:53,586","pid":10233,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:09:53,639","pid":10233,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:09:53,641","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,641","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,642","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,642","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,643","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,643","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,643","pid":10233,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:53,652","pid":10233,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:09:53,666","pid":10233,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:09:53,668","pid":10233,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:09:53 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:09:53,676","pid":10233,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:09:56,293","pid":10244,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:09:56,316","pid":10244,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:09:56,319","pid":10244,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:09:56,372","pid":10244,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:09:56,373","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,374","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,374","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,374","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,375","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,375","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,375","pid":10244,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:56,383","pid":10244,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:09:56,398","pid":10244,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:09:56,399","pid":10244,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:09:56 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:09:56,410","pid":10244,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 8ms"}
+{"level":"INFO","date":"2019-05-26 00:09:59,015","pid":10255,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:09:59,036","pid":10255,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:09:59,039","pid":10255,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:09:59,092","pid":10255,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:09:59,094","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,094","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,095","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,095","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,095","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,095","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,095","pid":10255,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:09:59,103","pid":10255,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:09:59,118","pid":10255,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:09:59,120","pid":10255,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:09:59 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:09:59,128","pid":10255,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:10:09,124","pid":10271,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:09,145","pid":10271,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:09,148","pid":10271,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:09,200","pid":10271,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:09,202","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,202","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,202","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,203","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,203","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,203","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,203","pid":10271,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:09,211","pid":10271,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 3ms"}
+{"level":"INFO","date":"2019-05-26 00:10:09,225","pid":10271,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:09,226","pid":10271,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:09 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:09,236","pid":10271,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:10:11,628","pid":10282,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:11,650","pid":10282,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:11,652","pid":10282,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:11,707","pid":10282,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:11,709","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,709","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,709","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,709","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,710","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,710","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,710","pid":10282,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:11,718","pid":10282,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:10:11,733","pid":10282,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:11,734","pid":10282,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:11 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:11,742","pid":10282,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:10:16,631","pid":10295,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:16,655","pid":10295,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:16,658","pid":10295,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:16,716","pid":10295,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:16,718","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,719","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,719","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,719","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,719","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,720","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,720","pid":10295,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:16,728","pid":10295,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:10:16,744","pid":10295,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:16,745","pid":10295,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:16 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:16,756","pid":10295,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 00:10:20,407","pid":10306,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:20,428","pid":10306,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:20,431","pid":10306,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:20,484","pid":10306,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:20,486","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,486","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,486","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,486","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,487","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,487","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,487","pid":10306,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:20,494","pid":10306,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:10:20,509","pid":10306,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:20,510","pid":10306,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:20 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:20,519","pid":10306,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:10:26,018","pid":10317,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:26,040","pid":10317,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:26,043","pid":10317,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:26,101","pid":10317,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:26,103","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,103","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,104","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,104","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,104","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,104","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,104","pid":10317,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:26,114","pid":10317,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:10:26,132","pid":10317,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:26,134","pid":10317,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:26 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:26,143","pid":10317,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 00:10:29,528","pid":10328,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:10:29,549","pid":10328,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:10:29,552","pid":10328,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:10:29,626","pid":10328,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:10:29,627","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,628","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,628","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,628","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,629","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,629","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,629","pid":10328,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:10:29,638","pid":10328,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 00:10:29,655","pid":10328,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:10:29,657","pid":10328,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:10:29 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:10:29,666","pid":10328,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 00:14:26,981","pid":10470,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 00:14:27,003","pid":10470,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 00:14:27,006","pid":10470,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 00:14:27,061","pid":10470,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 00:14:27,063","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,063","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,063","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,064","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,064","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,064","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,064","pid":10470,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 00:14:27,072","pid":10470,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 00:14:27,087","pid":10470,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 00:14:27,089","pid":10470,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sat May 25 2019 16:14:27 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 00:14:27,099","pid":10470,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 09:19:45,789","pid":5004,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:19:45,813","pid":5004,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:19:45,939","pid":5004,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:19:48,710","pid":5004,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:19:48,736","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,770","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,805","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,832","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,846","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,855","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,855","pid":5004,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:19:48,916","pid":5004,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 9ms"}
+{"level":"INFO","date":"2019-05-26 09:19:48,936","pid":5004,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:19:49,035","pid":5004,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:19:48 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:19:49,056","pid":5004,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 15ms"}
+{"level":"INFO","date":"2019-05-26 09:34:57,033","pid":6906,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:34:57,054","pid":6906,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:34:57,056","pid":6906,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:34:57,111","pid":6906,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:34:57,112","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,113","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,113","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,113","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,113","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,114","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,114","pid":6906,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:34:57,122","pid":6906,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 09:34:57,136","pid":6906,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:34:57,138","pid":6906,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:34:57 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:34:57,145","pid":6906,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:35:07,712","pid":6926,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:35:07,738","pid":6926,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:35:07,741","pid":6926,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:35:07,804","pid":6926,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:35:07,806","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,806","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,807","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,807","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,807","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,808","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,808","pid":6926,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:07,815","pid":6926,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 09:35:07,832","pid":6926,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:35:07,833","pid":6926,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:35:07 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:35:07,843","pid":6926,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:35:23,283","pid":6941,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:35:23,316","pid":6941,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:35:23,321","pid":6941,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:35:23,381","pid":6941,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:35:23,382","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,383","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,383","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,383","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,383","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,384","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,384","pid":6941,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:23,392","pid":6941,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:35:23,408","pid":6941,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:35:23,410","pid":6941,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:35:23 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:35:23,417","pid":6941,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:35:37,879","pid":6959,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:35:37,902","pid":6959,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:35:37,904","pid":6959,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:35:37,961","pid":6959,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:35:37,962","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,963","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,963","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,963","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,964","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,964","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,964","pid":6959,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:37,972","pid":6959,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 09:35:37,989","pid":6959,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:35:37,990","pid":6959,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:35:37 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:35:37,999","pid":6959,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:35:49,161","pid":6981,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:35:49,185","pid":6981,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:35:49,188","pid":6981,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:35:49,243","pid":6981,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:35:49,245","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,245","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,245","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,246","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,246","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,246","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,246","pid":6981,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:49,254","pid":6981,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:35:49,269","pid":6981,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:35:49,270","pid":6981,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:35:49 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:35:49,279","pid":6981,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:35:50,889","pid":6992,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:35:50,922","pid":6992,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:35:50,926","pid":6992,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:35:50,990","pid":6992,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:35:50,992","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,993","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,993","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,993","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,994","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,994","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:50,994","pid":6992,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:35:51,002","pid":6992,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 09:35:51,018","pid":6992,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:35:51,019","pid":6992,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:35:51 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:35:51,029","pid":6992,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 09:42:15,736","pid":7187,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:42:15,774","pid":7187,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:42:15,779","pid":7187,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:42:15,882","pid":7187,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:42:15,888","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,888","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,893","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,893","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,894","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,894","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,894","pid":7187,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:15,909","pid":7187,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 9ms"}
+{"level":"INFO","date":"2019-05-26 09:42:15,949","pid":7187,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:42:15,952","pid":7187,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:42:15 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:42:15,987","pid":7187,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 13ms"}
+{"level":"INFO","date":"2019-05-26 09:42:53,056","pid":7215,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:42:53,085","pid":7215,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:42:53,088","pid":7215,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:42:53,174","pid":7215,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:42:53,177","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,177","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,177","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,178","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,178","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,178","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,178","pid":7215,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:53,189","pid":7215,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:42:53,209","pid":7215,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:42:53,212","pid":7215,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:42:53 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:42:53,234","pid":7215,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 17ms"}
+{"level":"INFO","date":"2019-05-26 09:42:55,556","pid":7226,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:42:55,579","pid":7226,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:42:55,581","pid":7226,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:42:55,636","pid":7226,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:42:55,638","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,639","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,639","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,639","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,640","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,640","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,640","pid":7226,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:55,648","pid":7226,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 4ms"}
+{"level":"INFO","date":"2019-05-26 09:42:55,663","pid":7226,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:42:55,665","pid":7226,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:42:55 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:42:55,672","pid":7226,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:42:57,860","pid":7240,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:42:57,889","pid":7240,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:42:57,892","pid":7240,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:42:57,950","pid":7240,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:42:57,952","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,952","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,953","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,953","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,953","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,954","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,954","pid":7240,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:42:57,962","pid":7240,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:42:57,979","pid":7240,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:42:57,980","pid":7240,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:42:57 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:42:57,989","pid":7240,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:45:03,018","pid":7305,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:45:03,039","pid":7305,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:45:03,041","pid":7305,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:45:03,094","pid":7305,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:45:03,095","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,096","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,096","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,096","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,097","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,097","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,097","pid":7305,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:03,105","pid":7305,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:45:03,119","pid":7305,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:45:03,121","pid":7305,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:45:03 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:45:03,129","pid":7305,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 6ms"}
+{"level":"INFO","date":"2019-05-26 09:45:05,056","pid":7316,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 09:45:05,080","pid":7316,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 09:45:05,083","pid":7316,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 09:45:05,147","pid":7316,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 09:45:05,149","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,149","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,149","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,150","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,150","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,150","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,150","pid":7316,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 09:45:05,159","pid":7316,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 5ms"}
+{"level":"INFO","date":"2019-05-26 09:45:05,176","pid":7316,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 09:45:05,177","pid":7316,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 01:45:05 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 09:45:05,188","pid":7316,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 7ms"}
+{"level":"INFO","date":"2019-05-26 12:34:19,475","pid":22773,"hostname":"sue-X550JK","message":"[egg:logger] init all loggers with options: {\"dir\":\"/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/logs/demo\",\"encoding\":\"utf8\",\"env\":\"local\",\"level\":\"INFO\",\"consoleLevel\":\"INFO\",\"disableConsoleAfterReady\":false,\"outputJSON\":true,\"buffer\":true,\"appLogName\":\"demo-web.log\",\"coreLogName\":\"egg-web.log\",\"agentLogName\":\"egg-agent.log\",\"errorLogName\":\"common-error.log\",\"coreLogger\":{\"consoleLevel\":\"WARN\"},\"allowDebugAtProd\":false,\"type\":\"application\"}"}
+{"level":"INFO","date":"2019-05-26 12:34:19,528","pid":22773,"hostname":"sue-X550JK","message":"[egg-multipart] stream mode enable"}
+{"level":"INFO","date":"2019-05-26 12:34:19,550","pid":22773,"hostname":"sue-X550JK","message":"[egg-mysql] connecting root@127.0.0.1:3307/douban"}
+{"level":"INFO","date":"2019-05-26 12:34:19,937","pid":22773,"hostname":"sue-X550JK","message":"[egg-static] starting static serve /public/ -> /home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/app/public"}
+{"level":"INFO","date":"2019-05-26 12:34:19,941","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use methodnoallow middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,942","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use noopen middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,942","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use nosniff middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,943","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use xssProtection middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,943","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use xframe middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,944","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] use dta middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:19,944","pid":22773,"hostname":"sue-X550JK","message":"[egg-security] compose 6 middlewares into one security middleware"}
+{"level":"INFO","date":"2019-05-26 12:34:20,053","pid":22773,"hostname":"sue-X550JK","message":"[egg:core] dump config after load, 6ms"}
+{"level":"INFO","date":"2019-05-26 12:34:20,075","pid":22773,"hostname":"sue-X550JK","message":"[egg-mysql] instance[0] status OK, rds currentTime: Sun May 26 2019 04:34:20 GMT+0800 (GMT+08:00)"}
+{"level":"INFO","date":"2019-05-26 12:34:20,077","pid":22773,"hostname":"sue-X550JK","message":"[egg-watcher:application] watcher start success"}
+{"level":"INFO","date":"2019-05-26 12:34:20,100","pid":22773,"hostname":"sue-X550JK","message":"[egg:core] dump config after ready, 16ms"}

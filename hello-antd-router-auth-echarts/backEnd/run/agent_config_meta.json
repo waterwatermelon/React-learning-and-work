@@ -1,0 +1,309 @@
+{
+  "keys": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+  "view": {
+    "mapping": {
+      ".html": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js"
+    },
+    "root": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "cache": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view@2.1.2@egg-view/config/config.local.js",
+    "defaultExtension": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "defaultViewEngine": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js"
+  },
+  "mysql": {
+    "client": {
+      "host": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+      "port": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+      "user": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+      "password": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+      "database": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js"
+    },
+    "app": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+    "agent": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+    "default": {
+      "database": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-mysql@3.0.0@egg-mysql/config/config.default.js",
+      "connectionLimit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-mysql@3.0.0@egg-mysql/config/config.default.js"
+    }
+  },
+  "validateLogin": {
+    "ignore": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js"
+  },
+  "security": {
+    "csrf": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+      "useSession": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "cookieName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "sessionName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "headerName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "bodyName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "queryName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.local.js",
+      "maxAge": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "policy": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "checkAddress": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+    "allowMethods": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js"
+  },
+  "logger": {
+    "outputJSON": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js",
+    "dir": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "encoding": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "env": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "level": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "consoleLevel": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "buffer": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "appLogName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "coreLogName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "agentLogName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "errorLogName": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "customLogger": {
+    "myLogger": {
+      "file": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/config/config.default.js"
+    },
+    "scheduleLogger": {
+      "consoleLevel": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-schedule@3.6.2@egg-schedule/config/config.default.js",
+      "file": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-schedule@3.6.2@egg-schedule/config/config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "key": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "httpOnly": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "encrypt": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "callback": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "csrf": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "templatePath": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieDomain": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js",
+      "development": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-schedule@3.6.2@egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "autoFields": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "defaultCharset": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fieldSize": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fields": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fileSize": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "files": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fileExtensions": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "whitelist": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "tmpdir": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "ignoreDirs": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "fastReady": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "reloadOnDebug": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "overrideDefault": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFiles": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxDays": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dir": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dynamic": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "preload": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "buffer": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "maxFiles": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js"
+  },
+  "nunjucks": {
+    "autoescape": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-nunjucks@2.2.0@egg-view-nunjucks/config/config.default.js",
+    "throwOnUndefined": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-nunjucks@2.2.0@egg-view-nunjucks/config/config.default.js",
+    "trimBlocks": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-nunjucks@2.2.0@egg-view-nunjucks/config/config.default.js",
+    "lstripBlocks": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-nunjucks@2.2.0@egg-view-nunjucks/config/config.default.js",
+    "cache": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-nunjucks@2.2.0@egg-view-nunjucks/config/config.local.js"
+  },
+  "ejs": {
+    "root": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.default.js",
+    "cache": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.local.js",
+    "debug": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.default.js",
+    "compileDebug": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.default.js",
+    "delimiter": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.default.js",
+    "strict": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg-view-ejs@2.0.0@egg-view-ejs/config/config.default.js"
+  },
+  "env": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "name": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "proxy": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "maxProxyCount": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "protocolHeaders": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "ipHeaders": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "hostHeaders": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "pkg": {
+    "name": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "version": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "description": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "main": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "scripts": {
+      "test": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "dev": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    },
+    "author": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "license": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dependencies": {
+      "egg": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-cors": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-mysql": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-view-ejs": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-view-nunjucks": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "mz": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "mz-modules": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "puppeteer": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "request": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-mock": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    }
+  },
+  "baseDir": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "HOME": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "rundir": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "dump": {
+    "ignore": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "notFound": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "sitefile": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "middlewares": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "httpClient": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "encoding": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "formLimit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "jsonLimit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "strict": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "depth": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "parameterLimit": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    }
+  },
+  "httpclient": {
+    "enableDNSCache": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "request": {
+      "timeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "freeSocketTimeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxSockets": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxFreeSockets": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "freeSocketTimeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxSockets": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxFreeSockets": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "logging": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "coreMiddleware": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "workerStartTimeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "serverTimeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "port": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "hostname": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "responseTimeout": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  },
+  "onClientError": "/home/sue/React-learning-and-work/hello-antd-router-auth/backEnd/node_modules/_egg@2.22.2@egg/config/config.default.js"
+}

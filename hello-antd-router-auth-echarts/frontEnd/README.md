@@ -7,4 +7,5 @@
 ## 启动项目
 ### `npm start`
 
+## 在react项目中使用echart的方法
  
