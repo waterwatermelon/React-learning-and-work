@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Movie from './component/Movie';
-import ComponentOne from './component/ComponentOne';
-import ComponentTwo from './component/ComponentTwo';
+import ComponentOne from './component/ComponentOne.jsx';
+import ComponentTwo from './component/ComponentTwo.jsx';
 import { Button } from 'antd';
 import './App.css';
 import { NavLink,Route } from 'react-router-dom';
