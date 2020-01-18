@@ -1,6 +1,7 @@
 import React from 'react';
-import Login from './Login.jsx';
-// import UserApp from './page//UserApp.js';
+import Login from './Login';
+import UserApp from './page//UserApp.js';
+import AuthRoute from './AuthRoute';
 // import Main from './page/Main.jsx';
 // import Order from './page/Order.jsx';
 // import Cart from './page/Cart.jsx';
@@ -17,10 +18,6 @@ function App() {
         <Route path='/' exact component={Login} />
         <Route path='/login' component={Login} />
         <AuthRoute component={UserApp} />
-        {/* <Route path='/user/main' component={Main} />
-        <Route path='/user/order' component={Order} />
-        <Route path='/user/cart' component={Cart} />
-        <Route path='/user/center' component={Center} /> */}
       </Switch>
     </Router>
   );

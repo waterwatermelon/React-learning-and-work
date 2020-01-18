@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import MainLayout from './layout/MainLayout';
+import MainLayout from '../layout/MainLayout';
 
 class Order extends Component{
 
