@@ -30,17 +30,21 @@ url设计
 项目结构设计
 
 - src
-|--App.js 放置路由  
-|--AuthRoute.jsx 认证拦截路由  
-|--Login.jsx 登录界面
-|--Main.jsx 首页  
-|--Order.jsx 订单  
-|--Cart.jsx 购物车页面  
-|--Center.jsx 个人中心  
-|--public
+|-- App.js 放置路由  
+|-- AuthRoute.jsx 认证拦截路由  
+|-- Login.jsx 登录界面
+
+|-- page
+|---- UserApp 用户侧应用的路由定义
+|---- Main.jsx 首页  
+|---- Order.jsx 订单  
+|---- Cart.jsx 购物车页面  
+|---- Center.jsx 个人中心
+
+|-- public 通用组件
 |---- MenuTabs 菜单tab
-|--layout
-|---- MainLayout 带有菜单tab的布局容器
+|-- layout
+|---- MainLayout 布局容器：底部固定布局的tab，同时底部有与tab等高的paddingBottom
 
 
 仓库端
