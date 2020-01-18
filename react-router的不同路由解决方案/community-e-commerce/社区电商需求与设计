@@ -1,0 +1,48 @@
+用户端
+    登录页面：
+    应用：
+        首页：头部搜索框 社区信息 商品列表 底部功能按钮tab
+            商品详情：商品详情轮播图 商品介绍 相关推荐 底部结算栏
+        订单：顶部订单状态tab 订单列表  底部功能按钮tab
+            订单详情：
+            申请售后：
+        购物车：社区购物车列表 汇总结算栏 底部功能按钮tab
+            付款页面：
+        我的：头部个人信息 个人信息 地址管理 我的家人 我的卡券
+            我的地址：地址列表 添加按钮
+                地址详情：地址信息表单项 保存按钮
+            我的家人：家人列表 
+            我的卡券：卡券状态筛选栏 卡券列表 底部功能按钮tab
+url设计
+/login
+/user/main
+    /user/product/detail?productId=
+/user/order/list
+    /user/order/detail?orderId=  
+    /user/order/refund?orderId=
+/user/cart
+    /user/pay?orderId=
+/user/center
+    /user/address/list
+        /user/address/detail?addressId=
+    /user/family/list
+    /user/coupon/list
+项目结构设计
+
+- src
+|--App.js 放置路由  
+|--AuthRoute.jsx 认证拦截路由  
+|--Login.jsx 登录界面
+|--Main.jsx 首页  
+|--Order.jsx 订单  
+|--Cart.jsx 购物车页面  
+|--Center.jsx 个人中心  
+|--public
+|---- MenuTabs 菜单tab
+|--layout
+|---- MainLayout 带有菜单tab的布局容器
+
+
+仓库端
+
+社区端

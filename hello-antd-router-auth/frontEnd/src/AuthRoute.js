@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { Route, Redirect } from 'react-router-dom'
 
-class AuthRouter extends Component {
+class AuthRoute extends Component {
     render() {  
         const { component: Component, ...rest } = this.props
         const isLogin = sessionStorage.getItem("isLogin")==='true' ? true:false;
@@ -17,4 +17,4 @@ class AuthRouter extends Component {
       }
 }
 // withRouter 的作用
-export default withRouter(AuthRouter); 
+export default withRouter(AuthRoute); 

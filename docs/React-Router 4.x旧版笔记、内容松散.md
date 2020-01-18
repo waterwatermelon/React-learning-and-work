@@ -15,14 +15,6 @@
     </div>
 </Router>
 ```
-## Router和History的种类
-- HashRouter、HashHistory
-- BroswerRouter、BroswerHistory
-- MemoryRouter、createMemeryHistory
-HashHistory与BroswerHistory的区别：url不同。
-- 使用hashHistory,浏览器的url是这样的：/#/user/liuna?_k=adseis
-- 使用BrowserHistory,浏览器的url是这样的：/user/liuna
-- 推荐使用BroswerHistory
 ## 控制浏览器url的方式
 ### 标签控制
 通过<Switch/><Link/><Redirect/>这三个标签控制
@@ -64,7 +56,7 @@ this.props.history.replace(targetUrl);
 ## Route 的使用介绍
 - exact 表示精确匹配
 ## Link和NavLink
-    二者差不多，但是NavLink提供的API更多而已。可作用类似于HTML中a标签。
+二者差不多，但是NavLink提供的API更多而已。可作用类似于HTML中a标签。
 
 ### Link的用法
 ```js
@@ -93,52 +85,6 @@ this.props.history.replace(targetUrl);
 ### Switch
 用来包裹路由Route，它里面不能放置其他元素，用来显示一个路由。
 
-## 基础用法
-### 路由配置
-### 路由匹配原则
-- 路由嵌套关系
-- 路径语法
-- 优先级
-#### 路由嵌套关系
-React-Router使用路由嵌套的概念，让开发者定义view的嵌套。首先深度遍历路由配置，找寻匹配url的路由，然后渲染对应组件。如果没找到匹配的路由，就不渲染页面。
-```js
-//？？Router如何处理path属性为空的路由
-<Route component={NotFound}/>
-```
-#### 路由路径 即Route的path属性
-path属性的值是匹配一个或者一部分url的字符串模式。
-- :paramName 匹配url中位于/、?或者#后面的内容，命中的部分将被作为参数
-- () 括号内部的内容会被看做可选内容
-- × 匹配任意字符，直到遇到下一个字符或者整个url结尾，splat函数
-```js
-<Route path='/hello/:name' component={A}/> 
-// 匹配/hello/sue和/hello/chieo
-<Route path='/hello(/:name)' component={B}/>
-// 匹配/hello,/hello/sue和/hello/chieo
-<Route path='/hello/*.*' component={C}/>
-// 匹配/hello/file.jpg、/hello/path/to/file.txt
-```
-- 相对路径，路由匹配时，完整的路径由它的全部祖先节点的路径和自身路径进行拼合。
-- 绝对路径，直接取path的值与url进行匹配。
-#### 优先级
-
-### history
-React-Router是建立在history基础之上。
-#### browserHistory
-browserHistory需要服务器配合
-服务器：对所有get请求不进行处理，只渲染index.html。
-### 默认路由IndexRoute
-在没有匹配到子元素的时候，充当首页的路由。
-### IndexLink
-(尚未使用)
-## 高级用法
-### 动态路由
-React-Router中的路径匹配以及组件加载都是异步完成的。
-### 跳转前确认
-React Router 提供一个 routerWillLeave 生命周期钩子函数，以拦截页面跳转行为或是对用户做出提示。分为2种：
-- return false 取消跳转
-- return 提示信息给用户
-### 服务端渲染
 ### 组件的生命周期
 在v4中路由组价的生命周期有如下对应关系  
 |组件生命周期 | 路由钩子函数 |
