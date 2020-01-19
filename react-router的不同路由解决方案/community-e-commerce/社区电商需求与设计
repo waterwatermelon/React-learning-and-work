@@ -11,7 +11,6 @@
         我的：头部个人信息 个人信息 地址管理 我的家人 我的卡券
             我的地址：地址列表 添加按钮
                 地址详情：地址信息表单项 保存按钮
-            我的家人：家人列表 
             我的卡券：卡券状态筛选栏 卡券列表 底部功能按钮tab
 url设计
 /login
@@ -20,12 +19,12 @@ url设计
 /user/order/list
     /user/order/detail?orderId=  
     /user/order/refund?orderId=
+    /user/order/pay?orderId=
 /user/cart
-    /user/pay?orderId=
+
 /user/center
     /user/address/list
-        /user/address/detail?addressId=
-    /user/family/list
+    /user/address/detail?addressId=
     /user/coupon/list
 项目结构设计
 
@@ -36,16 +35,33 @@ url设计
 
 |-- page
 |---- UserApp 用户侧应用的路由定义
-|---- Main.jsx 首页  
-|---- Order.jsx 订单  
+
+|---- Address 地址列表  
+|------ Address.jsx 地址列表
+|---- AddressDetail 地址  
+|------ index.jsx 地址详情  
+|---- Coupon 我的卡券  
+|------ Coupon.jsx 我的卡券  
+|---- Main 首页  
+|------ Main.jsx 首页  
+|---- Order 订单列表  
+|------ Order.jsx 订单列表 
+|---- Pay 付款页面  
+|------ Pay.jsx 付款页面  
+|---- ProductDetail 商品详情  
 |---- Cart.jsx 购物车页面  
 |---- Center.jsx 个人中心
+|---- NotFound.jsx 404页面  
+|---- Refund.jsx 订单售后  
 
 |-- public 通用组件
 |---- MenuTabs 菜单tab
+|---- SearchBar 搜索框
+
 |-- layout
 |---- MainLayout 布局容器：底部固定布局的tab，同时底部有与tab等高的paddingBottom
 
+TODO:完善xx页面，引入redux
 
 仓库端
 
