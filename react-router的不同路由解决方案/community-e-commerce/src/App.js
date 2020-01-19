@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Login from './Login';
 import UserApp from './page//UserApp.js';
 import AuthRoute from './AuthRoute';
@@ -11,16 +11,26 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path='/' exact component={Login} />
-        <Route path='/login' component={Login} />
-        <AuthRoute component={UserApp} />
-      </Switch>
-    </Router>
-  );
+class App extends Component{
+  constructor(){
+    super();
+  }
+  componentDidMount(){
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    console.log('rem = ',document.documentElement.style.fontSize);
+    // window.addEventListener('resize',);
+  }
+  render(){
+      return (
+        <Router>
+        <Switch>
+          <Route path='/' exact component={Login} />
+          <Route path='/login' component={Login} />
+          <AuthRoute component={UserApp} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;

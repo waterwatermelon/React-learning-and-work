@@ -58,10 +58,13 @@ url设计
 |---- MenuTabs 菜单tab
 |---- SearchBar 搜索框
 
-|-- layout
+|-- layout 布局
 |---- MainLayout 布局容器：底部固定布局的tab，同时底部有与tab等高的paddingBottom
 
-TODO:完善xx页面，引入redux
+|-- style 放置样式文件
+|---- style.css 样式文件
+
+TODO:完善我的地址页面，引入redux
 
 仓库端
 

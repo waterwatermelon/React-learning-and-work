@@ -1,0 +1,129 @@
+.fr{
+    float: right;
+}
+.btn{
+    line-height: 2.6em;
+    font-size: .2rem;
+}
+
+/* custome radio */
+.r-ctn {
+    position: relative;
+    display: inline-block;
+    width: 0.36rem;
+    height: 100%;
+    vertical-align: top;
+}
+
+.r-input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0.36rem;
+    height: 0.36rem;
+    line-height: 100%;
+    opacity: 0;
+}
+
+.r-label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0.36rem;
+    height: 0.36rem;
+    line-height: 100%;
+    background: center / 100% no-repeat;
+}
+
+.r-input+.r-label {
+    background-image: url(/images/radio.png);
+}
+
+.r-input:checked+.r-label {
+    background-image: url(/images/radio-on.png);
+}
+
+/* addList */
+.adds {
+    padding-top: .22rem;
+}
+
+.add {
+    padding: 0 .35rem;
+    margin-bottom: .22rem;
+    background: #FFFFFF;
+    box-shadow: 0 .04rem .28rem 0 rgba(48, 125, 39, 0.05);
+}
+
+.add-hd {
+    line-height: .65rem;
+    font-size: .24rem;
+    color: #64676A;
+    border-bottom: 1px solid #EAEDF0;
+}
+
+.add-op {
+    display: inline-block;
+    width: 0.72rem;
+    line-height: .24rem;
+}
+
+.add-ed {
+    border-right: 1px solid rgb(171, 175, 178);
+}
+
+.add-bd {
+    padding-top: .04rem;
+}
+
+.add-del {
+    text-align: right;
+}
+
+.add-row {
+    font-size: .28rem;
+    color: #48494A;
+    line-height: .5rem;
+}
+
+.add-detail {
+    font-size: .24rem;
+    color: #48494A;
+    line-height: .5rem;
+}
+
+.add-ft-ops {
+    font-size: 0;
+    line-height: .8rem;
+}
+
+.add-ft-op {
+    display: inline-block;
+    height: .8rem;
+    margin-right: .72rem;
+    font-size: .24rem;
+    color: #64676A;
+}
+
+.add-r-op-text {
+    margin-left: .12rem;
+}
+
+.al-ft {
+    padding: 0 .32rem;
+}
+
+.btn-address {
+    background: #89BC62;
+    border: none;
+    color: #fff;
+}
+.btn-cancel-con {
+    padding: .06rem .18rem;
+    background: #89BC62;
+    border: none;
+    color: #fff; 
+}

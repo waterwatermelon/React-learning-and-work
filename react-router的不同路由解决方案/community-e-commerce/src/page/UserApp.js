@@ -11,7 +11,7 @@ import Main from './Main/Main.jsx';
 import Product from './Product.jsx';
 import Pay from './Pay/Pay.jsx';
 import Coupon from './Coupon/Coupon.jsx';
-import Address from './Address/Address.jsx';
+import Address from './Address/AddressList.jsx';
 import AddressDetail from './AddressDetail';
 import NotFound from './NotFound.jsx';
 import Refund from './Refund.jsx';
