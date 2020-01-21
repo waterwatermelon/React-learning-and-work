@@ -48,7 +48,78 @@ reducer指定应用状态的变化如何响应action，并发送到store。它�
 - 调用非纯函数，如Date.now()、Math.random()
 ### 设计state结构
 state有UI相关和非UI相关的数据，应该将二者分开。
+
+从编写初始状态作为开始，开始编写reducer。reducer中需要根据action的type,执行不同的操作，并返回新的state。
 ### 拆分reducer、合并reducer
+拆分reducer：根据业务逻辑，将reducer按照数据领域进行拆分。
+```js
+function rootReducer(state=initialState,action){
+    switch (action.type) {
+        case ADD_TODO:
+            return todoReducer(state.todos,action);
+            break;
+        case ADD_USER:
+            return userReducer(state.user,action);
+            break;
+        default:
+            break;
+    }
+}
+function todoReducer(state,action){
+    switch (action.type) {
+        case ADD_TODO:
+            ...
+            break;
+        default:
+            break;
+    }
+}
+
+
+function userReducer(state,action){
+    switch (action.type) {
+        case ADD_USER:
+            ...
+            break;
+        default:
+            break;
+    }
+}
+```
+合并reducer：将子reducer合并到同一个reducer中,可以借助redux的combineReducer接口。
+
+```js
+function rootReducer(state = initialState,action){
+    return {
+        todos:todoReducer(state.todos,action),
+        user:userReducer(state.user,action),
+    }
+}
+// 使用redux提供的api combineReducer
+// 将根reducer拆分成不同子reducer，用于处理state树的不同分支
+const rootReducer = combineReducer({
+    user:userReducer,
+    todo:todoReducer,
+});
+```
+```js
+// combineReducer和普通合并reducer的写法对应关系
+// a是state树中的a属性值，aReducer表示处理a的reducer，它接受第一个参数是a，不是完整的state
+const rootReducer = combineReducer({
+    a:aReducer,
+    b:processB,
+    key:keyReducer
+}); 
+
+export default function rootReducer(state,aciton) {
+    return {
+        a:aReducer(state.a,action),
+        b:processB(state.b,aciton),
+    };
+}
+
+```
+
 ## Store
 联系state、action、reducer的一个场所。具有以下职责：  
 - 维持应用的state
@@ -56,15 +127,18 @@ state有UI相关和非UI相关的数据，应该将二者分开。
 - 提供dispatch(action)来更新state
 - 通过subscribe(listener)注册监听器
 - 通过subscribe(listener)返回的函数注销监听器
+
 根据已有的reducer创建store
 ```js
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 import todoApp from './reducers'
 let store = createStore(todoApp)
-// createStore接受第2参数作为state的初始值
+// createStore接受第2个参数作为state的初始值
 let store = createStore(todoApp,window.STATE_FROM_SERVER)
 ```
-### 发起action进行测试
+### 发起action 进行测试
+redux定义了处理的各类action的一系列的reducer，由于reducer都是纯函数，我们可以在没有UI的情况测试reducer的逻辑是否正常。
+
 ## 数据流
 严格的单向数据流是redux的**设计核心**。  
 Redux应用中的数据的生命周期遵循下面4个步骤：
@@ -72,3 +146,32 @@ Redux应用中的数据的生命周期遵循下面4个步骤：
 2、Redux store 调用reducer
 3、根reducer将多个子reducer输出的state合成一个单一的state树
 4、Redux store保存了根reducer返回的单一state树
+
+## 搭配React开发
+### 安装react-redux
+
+### 容器组件和UI组件
+react-redux是基于容器组件和UI组件分离 的开发思想。
+
+> 不必手写容器组件，可以借助react-redux的connect函数来生成
+
+先编写展示组件，因为他们纯粹展示数据。无须考虑如何与redux交互。
+
+然后编写容器组件，通过redux的connect函数来实现
+```js
+
+connect({mapStateToProps,mapDispatchToProps})(Todo)
+```
+connect的参数：
+- mapStateToProps 把我们所需的state，从store中注入组件的props同名属性
+- mapDispatchToProps 往组件的props注入分发某个动作的函数
+
+
+### 传入store
+借用react-redux的Provider组件，在根组件将store注入。所有容器组件都可以访问到store。
+
+# 高级
+## 异步action
+
+### 设计state结构
+

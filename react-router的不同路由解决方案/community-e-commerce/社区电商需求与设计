@@ -64,7 +64,9 @@ url设计
 |-- style 放置样式文件
 |---- style.css 样式文件
 
-TODO:完善我的地址页面，引入redux
+TODO:完善我的地址页面，引入redux 
+1、处理添加地址ADD_ADDRESS
+2、处理异步action
 
 仓库端
 
