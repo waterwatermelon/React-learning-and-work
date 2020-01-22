@@ -1,4 +1,4 @@
-用户端
+用户端页面需求
     登录页面：
     应用：
         首页：头部搜索框 社区信息 商品列表 底部功能按钮tab
@@ -26,10 +26,10 @@ url设计
     /user/address/list
     /user/address/detail?addressId=
     /user/coupon/list
-项目结构设计
 
-- src
-|-- App.js 放置路由  
+项目结构设计
+- src  
+- App.js 放置路由  
 |-- AuthRoute.jsx 认证拦截路由  
 |-- Login.jsx 登录界面
 
@@ -62,12 +62,18 @@ url设计
 |---- MainLayout 布局容器：底部固定布局的tab，同时底部有与tab等高的paddingBottom
 
 |-- style 放置样式文件
-|---- style.css 样式文件
+|---- style.css 所有组件的样式
+
+|-- redux redux相关设计
+|---- store.js 创建store
+|---- reducers 放置reducer
+|------ index.js 组合所有子reducer
+|------ address.js 处理address分支的reducer
+|------ counter.js 处理couter分支的reducer（测试）
+|---- actions 
+|------ index.js action生成函数，包括处理异步操作的action
+|------ actionType.js action type 常量
+
 
 TODO:完善我的地址页面，引入redux 
-1、处理添加地址ADD_ADDRESS
-2、处理异步action
-
-仓库端
-
-社区端
+1、处理添加地址ADD_ADDRESS（异步的形式）

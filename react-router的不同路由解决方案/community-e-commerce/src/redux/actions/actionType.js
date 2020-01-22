@@ -1,0 +1,2 @@
+const ADD_NUMBER = 'ADD_NUMBER';
+const ADD_ADDRESS = 'ADD_ADDRESS';

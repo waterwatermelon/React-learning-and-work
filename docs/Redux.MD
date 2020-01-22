@@ -160,7 +160,7 @@ react-redux是基于容器组件和UI组件分离 的开发思想。
 然后编写容器组件，通过redux的connect函数来实现
 ```js
 
-connect({mapStateToProps,mapDispatchToProps})(Todo)
+connect(mapStateToProps,mapDispatchToProps)(Todo)
 ```
 connect的参数：
 - mapStateToProps 把我们所需的state，从store中注入组件的props同名属性
@@ -171,7 +171,70 @@ connect的参数：
 借用react-redux的Provider组件，在根组件将store注入。所有容器组件都可以访问到store。
 
 # 高级
-## 异步action
+## 异步action(redux-thunk)的使用方法
+### action
+以一个网络请求为例，涉及2个时间点：
+- 发起请求: 
+- 接受响应: 
 
 ### 设计state结构
+```js
+const state = {
+    post:{
+        // 请求 缓存相关
+        isFetchting:false,
+        isExpired:false
+    }
+}
+```
 
+### 编写同步reducer
+```js
+// redux/reducer/post.js
+const initialState = {
+    isFetchting:false,
+}
+export default function (state=initialState,action){
+    switch (action) {
+        case 'REQUEST_FETCH':
+
+            return { isFetchting:true,...state};
+        case 'RECEVE_FETCH':
+
+            return { isFetchting:false,...state};
+        default:
+            break;
+    }
+}
+```
+设计*请求发起*和*接受响应*时对应的同步reducer
+### 编写执行异步操作的action
+```js
+// redux/acitons/index.js
+export function addAddressAysnc(data){
+    // redux-thunk 接受这个回调，并传入dispatch。运行我们在一个异步操作过程再次触发dispatch
+    return function (dispatch) {
+        dispatch({type:'REQUEST_FECTH'});
+        return fetch('./data.json').then(response => response.json);
+    }
+}
+```
+这个特殊action借助promise把一些异步操作封装在一个事务中，同时返回处理结果。
+### 异步action调用
+```js
+// index.js
+import { createStore,applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { addAddressAysnc } from './redux/actions/index.js';
+const store = createStore(reducers,applyMiddleware(thunkMiddleware));
+store.dispatch(addAddressAysnc()).then( json => console.log('json :', json););
+```
+1.引入redux-thunk
+2.在生成store时，应用中间件thunkMiddleware
+3.通过store.dispatch()调用刚才编写的特殊action，来验证`使用redux-thunk`是否成功
+
+
+### 连接到UI
+使用react-redux提供的mapDispatch函数。
+
+## 异步数据流

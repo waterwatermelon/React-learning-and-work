@@ -5,11 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import Counter from './page/Counter';
+// 模块加载 寻找路径的方式 ？
+import { addNumber, testAsync } from './redux/actions/';
+
+const dispatchResultOne = store.dispatch({ type:'ADD_NUMBER'});
+const dispatchResultTwo = store.dispatch(testAsync());
+console.log('dispatchResultOne :', dispatchResultOne);
+console.log('dispatchResultTwo :', dispatchResultTwo);
 ReactDOM.render(
     <Provider store={store}>
-        {/* <App /> */}
-        <Counter/>
+        <App />
     </Provider>,
     document.getElementById('root'));
 
