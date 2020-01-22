@@ -29,7 +29,7 @@ url设计
 
 项目结构设计
 - src  
-- App.js 放置路由  
+|-- App.js 放置路由  
 |-- AuthRoute.jsx 认证拦截路由  
 |-- Login.jsx 登录界面
 
@@ -63,6 +63,7 @@ url设计
 
 |-- style 放置样式文件
 |---- style.css 所有组件的样式
+|---- empty.css 组件Empty的样式
 
 |-- redux redux相关设计
 |---- store.js 创建store

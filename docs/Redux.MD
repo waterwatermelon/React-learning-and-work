@@ -238,3 +238,7 @@ store.dispatch(addAddressAysnc()).then( json => console.log('json :', json););
 使用react-redux提供的mapDispatch函数。
 
 ## 异步数据流
+
+## Middleware
+Q:使用redux-thunk与不使用的区别？
+A:
