@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
+import { getAddressListAsync } from '../../redux/actions';
 import '../../style/style.css';
 class Address extends Component {
     constructor() {
         super();
         this.state = {
         }
+    }
+    componentDidMount() {
+        this.props.getAddressList().then(res => {
+            console.log('res :', res);
+        });
     }
     renderAddressList() {
         const { list } = this.props;
@@ -15,7 +20,7 @@ class Address extends Component {
         }
         return list.map(address => {
             return (
-                <div class="add">
+                <div key={address.id} class="add">
                     <div class="add-hd">
                         <span class="add-c-name">{address.community}</span>
                         <span class="fr add-ops">
@@ -52,7 +57,6 @@ class Address extends Component {
         });
     }
     render() {
-        const [address] = this.props.list;
         return (
             <div>
                 <div class="adds">
@@ -70,6 +74,12 @@ const mapStateToProps = state => {
         list: state.address.list,
     }
 }
+const mapDispatchToProps = dispatch => {
+    return {
+        getAddressList:() => dispatch(getAddressListAsync())
+    }
+}
 export default connect(
     mapStateToProps,
+    mapDispatchToProps,
 )(Address);

@@ -149,7 +149,9 @@ Redux应用中的数据的生命周期遵循下面4个步骤：
 
 ## 搭配React开发
 ### 安装react-redux
-
+```sh
+npm install --save react-redux
+```
 ### 容器组件和UI组件
 react-redux是基于容器组件和UI组件分离 的开发思想。
 

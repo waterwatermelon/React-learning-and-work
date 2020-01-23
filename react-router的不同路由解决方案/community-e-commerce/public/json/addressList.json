@@ -1,0 +1,17 @@
+[{
+    "id":2,
+    "community":"利刃社区",
+    "receiver":"郭德纲",
+    "phone":"13255550101",
+    "detail":"福建省福州市鼓楼区西湖社区7号楼",
+    "isSelf":true,
+    "isDefault":false
+},{
+    "id":1,
+    "community":"一尺社区",
+    "receiver":"杨德纲",
+    "phone":"13255550101",
+    "detail":"福建省福州市鼓楼区西湖社区8号楼",
+    "isSelf":false,
+    "isDefault":false
+}]

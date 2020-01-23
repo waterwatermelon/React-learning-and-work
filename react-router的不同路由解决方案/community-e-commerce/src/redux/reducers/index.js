@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
 import counter from './counter';
 import address from './address';
-export default combineReducers({ address,counter});
+import fetch from './fetch';
+
+export default combineReducers({ fetch,address,counter});

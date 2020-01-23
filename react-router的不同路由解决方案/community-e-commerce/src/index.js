@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 // 模块加载 寻找路径的方式 ？
 import { addNumber, testAsync } from './redux/actions/';
-import Empty from './public/Empty';
+// import Empty from './public/Empty';
 
 const dispatchResultOne = store.dispatch({ type:'ADD_NUMBER'});
 const dispatchResultTwo = store.dispatch(testAsync());

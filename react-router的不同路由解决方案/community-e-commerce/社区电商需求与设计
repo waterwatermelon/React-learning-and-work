@@ -33,9 +33,8 @@ url设计
 |-- AuthRoute.jsx 认证拦截路由  
 |-- Login.jsx 登录界面
 
-|-- page
+|-- page 页面
 |---- UserApp 用户侧应用的路由定义
-
 |---- Address 地址列表  
 |------ Address.jsx 地址列表
 |---- AddressDetail 地址  
@@ -57,7 +56,6 @@ url设计
 |-- public 通用组件
 |---- MenuTabs 菜单tab
 |---- SearchBar 搜索框
-
 |-- layout 布局
 |---- MainLayout 布局容器：底部固定布局的tab，同时底部有与tab等高的paddingBottom
 
@@ -70,11 +68,13 @@ url设计
 |---- reducers 放置reducer
 |------ index.js 组合所有子reducer
 |------ address.js 处理address分支的reducer
+|------ fetch.js 处理fetch发起请求，接受响应  
 |------ counter.js 处理couter分支的reducer（测试）
 |---- actions 
 |------ index.js action生成函数，包括处理异步操作的action
-|------ actionType.js action type 常量
+|------ actionType.js 常量：action type 
 
 
-TODO:完善我的地址页面，引入redux 
-1、处理添加地址ADD_ADDRESS（异步的形式）
+TODO:完善我的地址页面，引入redux
+1. 使用thunk处理网络请求
+=== 2、处理添加地址ADD_ADDRESS（异步的形式）
