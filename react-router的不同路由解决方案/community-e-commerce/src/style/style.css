@@ -1,9 +1,102 @@
+/* reset  */
+body {
+    /* 设备默认字体 */
+    font-family: "Microsoft YaHei", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    background-color: #f6f6f6;
+}
+
+div,
+ul,
+li,
+p,
+textarea {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+input{
+    outline: none;
+}
+
 .fr{
     float: right;
 }
+
 .btn{
     line-height: 2.6em;
     font-size: .2rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: .18rem 0 .2rem 0;
+    border-radius: .66rem;
+    font-size: .3rem;
+}
+
+/* login */
+.lg-container {
+    padding-top: .36rem;
+}
+
+.lg-box {
+    padding: 0 .32rem;
+    background-color: #fff;
+    box-shadow: 0 .04rem .28rem 0 rgba(48, 125, 39, 0.05);
+}
+
+.lg-row {
+    position: relative;
+    font-size: 0;
+    line-height: .8rem;
+    height: .8rem;
+}
+
+.lg-row:not(:last-child) {
+    border-bottom: 1px solid #EAEDF0;
+}
+
+.lg-title {
+    margin-bottom: .36rem;
+    font-size: .48rem;
+    color: #1E1F00;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+.lg-label {
+    display: inline-block;
+    width: 1.2rem;
+    font-size: .24rem;
+    color: #64676a;
+}
+
+.lg-input {
+    border: none;
+    color: #1E1F00;
+    font-size: .24rem;
+}
+
+.lg-input::placeholder {
+    font-size: .24rem;
+    color: #a9adb0;
+}
+
+
+.lg-ft {
+    padding: 0 .32rem;
+}
+
+.btn-lg {
+    margin: .32rem 0;
+    background: #89BC62;
+    border: none;
+    color: #fff;
+    letter-spacing: .1rem;
+
 }
 
 /* custome radio */
