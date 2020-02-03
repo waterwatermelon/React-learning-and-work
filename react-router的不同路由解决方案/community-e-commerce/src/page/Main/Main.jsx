@@ -2,6 +2,12 @@ import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../../layout/MainLayout.jsx';
 import SearchBar from '../../public/SearchBar.jsx';
+
+/**
+ * 首页
+ * @class Main
+ * @extends {Component}
+ */
 class Main extends Component{
 
     render(){

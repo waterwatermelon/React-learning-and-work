@@ -1,10 +1,16 @@
 import React,{Component} from 'react';
 import MenuTab from '../public/MenuTab';
+
+/**
+ * 布局组件 内容区域最小高度占据可视区高度
+ * @class MainLayout
+ * @extends {Component}
+ */
 class MainLayout extends Component{
     constructor(props){
         super(props);
         this.state = {
-            tabsHeight:'2rem'
+            tabsHeight:'.64rem'
         }
     }
     render(){

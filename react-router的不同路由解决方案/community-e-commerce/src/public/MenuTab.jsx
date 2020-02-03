@@ -3,7 +3,10 @@ import {
     Link
 } from 'react-router-dom';
 
-// todo:改造成根据props渲染按钮和菜单
+/**
+ * 菜单tab 固定在底部
+ * @returns
+ */
 function MenuTab(props) {
   return (
     <div style={{ position:'fixed',bottom:0,left:0,right:0,display:'flex',height:props.height,background:'#bef'}}>

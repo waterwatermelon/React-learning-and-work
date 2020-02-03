@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAddressListAsync } from '../../redux/actions';
 import '../../style/style.css';
+
+/**
+ * 地址列表
+ * @class Address
+ * @extends {Component}
+ */
 class Address extends Component {
     constructor() {
         super();
-        this.state = {
-        }
     }
     componentDidMount() {
         this.props.getAddressList().then(res => {
