@@ -241,6 +241,85 @@ store.dispatch(addAddressAysnc()).then( json => console.log('json :', json););
 
 ## 异步数据流
 
-## Middleware
+## Middleware （复杂）
 Q:使用redux-thunk与不使用的区别？
-A:
+A:将数据处理逻辑（例如异步操作）放在redux里，与放在UI层的区别。总之，使用redux能使UI层的state结构变得轻盈，UI层也可以减少交互逻辑的书写，方便排除问题（结合redux-logger插件）。缺点：项目结构变得臃肿，多出store、reducer部分的维护工作，甚至还会有多出action creator部分。
+
+redux middleware 提供的是 发起action之后，到达reducer之前的扩展点
+
+# 技巧
+## 使用对象展开运算符
+redux的设计宗旨 从不直接修改state。使用对象展开运算符...快速实现对象可枚举属性的拷贝
+## 减少样板代码
+样板代码 ？
+### Actions
+将每个action type定义成字符串常量：
+- 维护命名一致性
+- 审查现有功能
+- 可以更快地发现dispatch时的action拼写问题
+### Actions creator
+通过函数生成action，而不是在dispatch调用时内联一个action对象。  
+封装actionCreator
+```js
+// makeActionCreator 函数可以返回特定的action creator
+function makeActionCreator(type,argNames){
+    return function(...args){
+        const action = { type };
+        argNames.foreach((arg,index) => {
+            action[arg] = args[index]
+        });
+    }
+}
+const ADD_TODO = 'ADD_TODO';
+
+const addTodo = makeActionCreator(ADD_TODO,'todo');
+```
+### Reducer
+```js
+function createReducer(initialState,handlers) {
+    return function(state=initialState,action){
+        if (handlers[action.type]) {
+            return handlers[type](state,aciton);
+        } else {
+            return state;
+        }
+    }
+}
+import { ADD_TODO } from './actionType';
+const handlers = {
+    [ADD_TODO](state,action){
+        return { ...state,aciton.todo}
+    }
+}
+const todos = createReducer([],handlers);
+```
+reducers可以看做 action.type到handlers的映射
+
+## 服务端渲染
+
+## 编写测试
+### actions
+使用Jest
+### reducer
+
+## 撤销重做
+### redux-undo 
+封装Actions creator；对应的reducer；修改state的结构，添加了past,present,future。
+
+## 子应用隔离
+在子应用的根组件中创建store
+```js
+class SubApp extends Component {
+    constructor(){
+        this.store = createStore(reducer);
+    }
+    render(){
+        return (
+            <Provider store={this.store}>
+                <UserApp/>
+            </Provider>
+        )
+    }
+}
+```
+# TBC
