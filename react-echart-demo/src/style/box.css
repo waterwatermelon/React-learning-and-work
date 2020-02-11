@@ -1,0 +1,45 @@
+.chart-box{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin-top: .09rem;
+    border: 1px solid #27388b;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px .2rem .04rem #0c185a;
+}
+.chart-box::before{
+    content: '';
+    position: absolute;
+    left: -.5px;
+    bottom: -.5px;
+    width: .3rem;
+    height: .3rem;
+    border-left: .01rem solid #0191eb;
+    border-bottom: .01rem solid #0191eb;
+    z-index: 1;
+}
+.chart-box::after{
+    content: '';
+    position: absolute;
+    right: -.5px;
+    bottom: -.5px;
+    width: .3rem;
+    height: .3rem;
+    border-right: .01rem solid #0191eb;
+    border-bottom: .01rem solid #0191eb;
+    z-index: 1;
+}
+.chart-box-title {
+    line-height: 1.8em;
+    padding-left: .6em;
+    background-image: linear-gradient(to right,#18208c,#102a6d, transparent);
+    color: #33c1ed;
+    font-size: .22rem;
+}
+
+.chart-box-ctn {
+    /* flex-shrink: 0; */
+    flex-grow: 1;
+}
