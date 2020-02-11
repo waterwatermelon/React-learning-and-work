@@ -1,0 +1,21 @@
+.box {
+  color: #ff1bbc;
+}
+.lightShadow {
+  box-shadow: 0 0 4px 12px #88f;
+  border: 1px solid #aae;
+}
+.chart-box {
+  color: aliceblue;
+  box-shadow: 0 0 4px 12px #88f;
+  border: 1px solid #aae;
+}
+.header {
+  color: black;
+}
+.header .navigation {
+  font-size: 12px;
+}
+.header .logo {
+  width: 300px;
+}

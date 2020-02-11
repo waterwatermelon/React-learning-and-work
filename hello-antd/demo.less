@@ -1,0 +1,105 @@
+// 变量声明
+// 变量使用
+@base: #fa0a12;
+.box {
+    color: @base + #11a;
+}
+// mixins 混合:把某个规则集合混入到另一个规则集合
+// 定义一个规则集
+.lightShadow {
+    box-shadow: 0 0 4px 12px #88f;
+    border: 1px solid #aae;
+}
+// 在另一个规则集合中使用
+.chart-box {
+    color: aliceblue;
+    .lightShadow;
+}
+// 嵌套语法
+// css 写法
+// .header {
+//     color: black;
+// }
+// .header .navigation {
+//     font-size: 12px;
+// }
+// .header .logo {
+//     width: 300px;
+// }
+// less写法
+.header {
+    color:black;
+    .navigation {
+        font-size: 12px;
+    }
+    .logo {
+        width: 300px;
+    }
+}
+
+// 当前选择器的父元素 &
+// 待条件的指令，会将选择器规则写入自己条件作用域中
+// 嵌套指令和冒泡
+.screen-color {
+    @media screen {
+        color:green;
+        @media (mix-width:768px){
+            color:red;
+        }
+    }
+    @media tv {
+        color:black;
+    }
+}
+// 生成的css
+@media screen {
+    .screen-color{
+        color:green;
+    }
+}
+@media screen and (min-width:768px){
+    .screen-color {
+        color:red;
+    }
+}
+@media tv {
+    .screen-color {
+        color:black;
+    }
+}
+// 运算符
+// 算术运算符（加减乘除）可作用于任何数值、变量和颜色。计算的时候还会转换单位
+.add {
+    color:#aaa+#111；
+}
+// 无效运算
+@incomputable-units: 2 - 4cm + 3px;
+// 乘法与除法的时候不会转换数字。 
+@mutilply-result:2cm * 3mm; // result 6cm
+// 颜色的运算是作用在红、绿、蓝、透明度 4个维度。颜色的运算结果如果超出有效范围，则会取最边界的有效值。
+// 转椅 ~'anything'或者～"anything" 内部的anything会被直接当做值。
+// 函数 
+// less提供了许多函数，来转换颜色、操作字符串或数学运算。
+@width: 0.5;
+
+.class {
+  width: percentage(@width); // returns `50%`
+}
+
+// 命名空间与访问器namespace accessor
+// note:变量都是自己的命名空间下定义的
+.header {
+    .button {
+        border: 1px solid #000;
+    }
+}
+.footer {
+    .header > .button;
+}
+// 作用域
+// 括号域 变量声明具有提升作用
+// 导入
+// 通过导入一个文件，可以获取一个文件内的所有变量
+
+
+// ：global
