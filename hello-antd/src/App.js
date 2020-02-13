@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.less';
 import Main from './Main';
 import Test from './Test';
 import {
@@ -13,8 +13,8 @@ class App extends Component {
     return (
       <Router >
         <Switch >
-          <Route path='/test' component={Test}/>
-          <Route path='/' extra component={Main}/>
+          <Route path='/' component={Test}/>
+          <Route path='/test' extra component={Main}/>
         </Switch>
       </Router>
       // <Login/>

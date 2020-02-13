@@ -1,0 +1,46 @@
+/***** custome ******/
+.customSelect{
+    :global {
+        .ant-select-selection {
+            width: 200px;
+            max-height: 40px;
+            overflow: auto;
+        }
+    }
+} 
+.main {
+    background-image: url('/bg.png');
+} 
+.header {
+  background-color: transparent;
+}
+ 
+.content-ctn{
+    position: relative;
+    padding: 12px;
+    border: 1px solid #0a295c;
+    margin: 12px;
+    box-shadow: inset 0 0 20px 4px #0c185a;
+    &::before{
+        content: '';
+        position: absolute;
+        left: -.5px;
+        bottom: -.5px;
+        width: 30px;
+        height: 30px;
+        border-left: 1px solid #0191eb;
+        border-bottom: 1px solid #0191eb;
+        z-index: 1;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        right: -.5px;
+        bottom: -.5px;
+        width: 30px;
+        height: 30px;
+        border-right: 1px solid #0191eb;
+        border-bottom: 1px solid #0191eb;
+        z-index: 1;
+    }
+}

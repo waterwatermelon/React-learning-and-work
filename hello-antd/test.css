@@ -1,0 +1,7 @@
+.ant-table {
+  color: #fff;
+}
+.ant-table-thead > tr:hover,
+.ant-table-tbody > tr:hover {
+  background: #000;
+}
