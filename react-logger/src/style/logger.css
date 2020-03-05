@@ -1,0 +1,57 @@
+button:focus{
+    outline: none;
+}
+.logger {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 80%;
+    height: 50vh;
+    box-sizing: border-box;
+}
+.logger-box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    overflow-y: scroll;
+    
+}
+.logger-item{
+    color: rgb(255, 255, 255);
+    color: grey;
+    word-break: break-word;
+}   
+.logger-time{
+    color: grey;
+}
+.logger-debug{
+    color:#0667cf;
+
+}
+.logger-info{
+    color:#f3b600;
+}    
+.logger-warn{
+    color: #fa7000;
+}
+.logger-error{
+    color: red;
+}
+/* logger btns */
+.logger-btns{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.logger-btn+.logger-btn {
+    margin-left: .4em;
+}
+.logger-btn {
+    padding: .3em .8em;
+    border: 1px solid skyblue;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #abcdef;
+}
