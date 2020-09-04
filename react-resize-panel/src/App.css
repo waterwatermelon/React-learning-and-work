@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  background-color: #eee;
+  min-height: 100vh;
+  height: 100vh;
+}
+.sider {
+  /* width: 410px; */
+  height: 100%;
+  display: flex;
+  box-shadow: 1px 0px 4px 0px #5c5b5b;
+} 
+.sider-main {
+  /* width: 400px; */
+  height: 100%;
+  border: 1px solid #89a;
+  background-color: #89a;
+  flex: 1;
+
+}
+ 
+.sider-bar {
+  width: 16px;
+  border: 1px solid #333;
+  background-color: #234;
+  flex-basis: auto;
+}
+
+.resizer {
+  position: relative;
+  /* cursor: col-resize; */
+  background-color: darkgrey;
+}
+
+.resizer::before,
+.resizer::after {
+  position: absolute;
+  content: ''; 
+  top: 50%;
+  right: 0;
+  transform: translateY(-100%);
+  height: 30px;
+  border-left: 1px solid #333;
+  margin: 0 4px;
+}
+.resizer::before{
+  left: 0; 
+  cursor: col-resize;
+}
+.resizer::after{
+}
