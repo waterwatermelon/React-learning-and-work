@@ -9,29 +9,62 @@ export default class Box extends Component {
         canvas.height = 400;
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;
-        const ctx = canvas.getContext('2d');
-        this.drawSin(ctx);
+        this.speedX = 0.04;
+        this.offsetX = 0;
+        this.maxRange = 0.6;
+        this.nowRange = 0;
+        this.speedRange = 0.04;
+        // const ctx = canvas.getContext('2d');
+        this.drawCircle();
+        requestAnimationFrame(this.drawSin);
     }
-    drawSin = (ctx) => {
-        // calc point position
+    drawSin = () => {
+        const canvas = this.canvas;
+        const ctx = canvas.getContext('2d');
+
         const points = [];
-        const startX = 20;
-        const stepX = 20;
-        const offsetX = 0;
-        const offsetY = 200;
-        const waveHeight = 20;
+        const stepX = 10;
+        const startX = 0;
+        const waveHeight = 6;
         const waveWidth = 120;
         const canvasWidth = this.canvasWidth;
         const canvasHeight = this.canvasHeight;
-        for (let x = startX; x < this.canvasWidth; x += stepX) {
-            const y = waveHeight * Math.sin(x * 2 * Math.PI / waveWidth - offsetX) + offsetY;
-            points.push({ x, y });
-            ctx.lineTo(x,y);
+
+        this.offsetX = (this.offsetX + this.speedX) > this.canvasWidth ? 0 : (this.offsetX + this.speedX);
+        if (this.nowRange < this.maxRange) {
+            this.nowRange += this.speedRange;
         }
-        ctx.lineTo(canvasWidth,canvasHeight);
-        ctx.lineTo(startX,canvasHeight);
-        ctx.lineTo(points[0].x,points[0].y);
+
+        ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        ctx.beginPath();
+        for (let x = startX; x <= this.canvasWidth; x += stepX) {
+            const y1 = waveHeight * Math.sin(x * 2 * Math.PI / waveWidth - this.offsetX);
+
+            points.push({ x, y1: y1 + (1 - this.nowRange) * this.canvasHeight });
+            ctx.lineTo(x, y1 + (1 - this.nowRange) * this.canvasHeight);
+        }
+        ctx.lineTo(canvasWidth, canvasHeight);
+        ctx.lineTo(startX, canvasHeight);
+        ctx.lineTo(points[0].x, points[0].y1);
+        // ctx.stroke();
+        ctx.fillStyle = '#abcdef';
+        ctx.fill();
+        requestAnimationFrame(this.drawSin);
+
+    }
+    drawCircle = () => {
+        const ctx = this.canvas.getContext('2d');
+        const lineWidth = 6;
+        const r = this.canvasWidth / 2;
+        const cR = r - lineWidth;
+        ctx.save();
+        ctx.lineWidth = lineWidth;
+        ctx.strokeStyle = '#aaa';
+        ctx.beginPath();
+        ctx.arc(r, r, cR, 0, 2 * Math.PI);
         ctx.stroke();
+        ctx.restore();
+        ctx.clip();
     }
     render() {
         return (
