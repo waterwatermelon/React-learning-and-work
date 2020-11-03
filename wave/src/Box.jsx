@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import './box.css'
+import './box.css';
+
+import Wave from './Wave';
 export default class Box extends Component {
 
 
@@ -9,15 +11,28 @@ export default class Box extends Component {
         canvas.height = 400;
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;
+        // const canvasWidth = canvas.width;
+        // const canvasHeight = canvas.height;
         this.speedX = 0.04;
         this.offsetX = 0;
         this.maxRange = 0.6;
         this.nowRange = 0;
         this.speedRange = 0.04;
-        // const ctx = canvas.getContext('2d');
-        this.drawCircle();
-        requestAnimationFrame(this.drawSin);
+        this.drawCircle(); 
+        this.wave1 = new Wave({ canvas ,offsetX: 0 , fillStyle:'#abcdef',speedX:0.02});
+        this.wave2 = new Wave({ canvas ,offsetX: 2 , fillStyle:'#fedcba',speedX:0.04});
+        this.wave1.init();
+        this.wave2.init();
+        requestAnimationFrame(this.drawWave);
     }
+    drawWave = () => {
+        const ctx = this.canvas.getContext('2d');
+        ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        this.wave1.drawWave();
+        this.wave2.drawWave();
+        requestAnimationFrame(this.drawWave);
+    }
+    // 绘制水波 循环调用
     drawSin = () => {
         const canvas = this.canvas;
         const ctx = canvas.getContext('2d');
@@ -46,12 +61,12 @@ export default class Box extends Component {
         ctx.lineTo(canvasWidth, canvasHeight);
         ctx.lineTo(startX, canvasHeight);
         ctx.lineTo(points[0].x, points[0].y1);
-        // ctx.stroke();
         ctx.fillStyle = '#abcdef';
         ctx.fill();
         requestAnimationFrame(this.drawSin);
 
     }
+    // 绘制容器 调用一次
     drawCircle = () => {
         const ctx = this.canvas.getContext('2d');
         const lineWidth = 6;
