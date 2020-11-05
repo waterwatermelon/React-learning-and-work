@@ -1,22 +1,31 @@
 class Wave {
 
-    constructor({ canvas, offsetX ,fillStyle,speedX}) {
+    constructor({ canvas, offsetX ,fillStyle,speedX ,colors, waveHeight}) {
         this.canvas = canvas;
         this.offsetX = offsetX;
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;
+        this.waveHeight = waveHeight;
         this.fillStyle = fillStyle;
         this.speedX = speedX; 
         this.maxRange = 0.6;
         this.nowRange = 0;
         this.speedRange = 0.004;
         this.drawWave = this.drawWave.bind(this);
+        this.colors = colors;
     }
 
     init () {
         console.log('[wave] init');
-        // this.drawWave();
 
+    }
+
+    getChartColor(ctx) {
+        const radius = this.canvasWidth / 2;
+        const grd = ctx.createLinearGradient(radius,radius,radius,this.canvasHeight);
+        grd.addColorStop(0, this.colors[0]);
+        grd.addColorStop(1, this.colors[1]);
+        return grd;
     }
     drawWave() {
         console.log('[wave] draw');
@@ -28,8 +37,8 @@ class Wave {
         const points = [];
         const stepX = 10;
         const startX = 0;
-        const waveHeight = 6;
-        const waveWidth = 120;
+        const waveHeight = this.waveHeight;
+        const waveWidth = 100;
         const canvasWidth = this.canvasWidth;
         const canvasHeight = this.canvasHeight;
 
@@ -50,7 +59,7 @@ class Wave {
         ctx.lineTo(canvasWidth, canvasHeight);
         ctx.lineTo(startX, canvasHeight);
         ctx.lineTo(points[0].x, points[0].y1);
-        ctx.fillStyle = this.fillStyle;
+        ctx.fillStyle = this.getChartColor(ctx);
         ctx.fill(); 
         console.log('points', points); 
 

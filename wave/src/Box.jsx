@@ -7,8 +7,8 @@ export default class Box extends Component {
 
     componentDidMount() {
         const canvas = this.canvas;
-        canvas.width = 400;
-        canvas.height = 400;
+        canvas.width = 280;
+        canvas.height = 280;
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;
         // const canvasWidth = canvas.width;
@@ -19,8 +19,8 @@ export default class Box extends Component {
         this.nowRange = 0;
         this.speedRange = 0.04;
         this.drawCircle(); 
-        this.wave1 = new Wave({ canvas ,offsetX: 0 , fillStyle:'#abcdef',speedX:0.02});
-        this.wave2 = new Wave({ canvas ,offsetX: 2 , fillStyle:'#fedcba',speedX:0.04});
+        this.wave1 = new Wave({ canvas ,offsetX: 0 ,colors: ['#F39C6B', '#A0563B'],speedX:0.04,waveHeight:4 });
+        this.wave2 = new Wave({ canvas ,offsetX: 2 ,colors: ['rgba(243, 156, 107, 0.48)', 'rgba(160, 86, 59, 0.48)'],speedX:0.06,waveHeight:6});       
         this.wave1.init();
         this.wave2.init();
         requestAnimationFrame(this.drawWave);
