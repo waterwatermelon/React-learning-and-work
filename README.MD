@@ -9,6 +9,7 @@ demo
 - hello-antd-router-auth    添加了路由拦截
 - react-resize-panel        可调整宽度的多列面板  
 - wave          水波动画
+- data-to-pdf   将HTML转成PDF
 
 练习
 - state-hoist 状态提升练习
