@@ -14,7 +14,6 @@ const { Title, Text, Paragraph } = Typography;
 const papers = { 'a4': [{ w: 210, h: 316 }, { w: 595.28, h: 841.89 }],'b5':[{ w: 185, h: 260 }, { w: 492.02, h: 691.49 }] }
 
 function App() {
-  const tableRef = useRef();
   const [card, setCard] = useState(null);
   const [paper, setPaper] = useState('a4');
   const [waterMarker, setWaterMarker] = useState('');
@@ -78,7 +77,6 @@ function App() {
     ctx.restore();
   }
   function exportPDF() {
-    console.log('tableRef', tableRef);
     // 页面间隙？
     // const padding = 
     const scale = 2;
