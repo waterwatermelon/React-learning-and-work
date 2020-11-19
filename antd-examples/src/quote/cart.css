@@ -1,0 +1,120 @@
+:root {
+  --text-color: #333;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+.cart-item__checkbox {
+  flex-basis: 48px;
+  text-align: center;
+}
+.cart-item__img {
+  width: 150px;
+  height: 90px;
+}
+.cart-item__des {
+  width: 360px;
+  margin-left: 14px;
+}
+.cart-item__name {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.cart-item__price {
+  width: 120px;
+  margin-right: 14px;
+  font-size: 20px;
+  color: var(--text-color);
+  text-align: right;
+}
+.cart-item__amount {
+  width: 64px;
+}
+/* input-number */
+.cart-item__amount .ant-input-number-input {
+  text-align: right;
+  padding-right: 24px;
+}
+.cart-item__totalPrice {
+  width:160px;
+  font-size: 20px;
+  color:#C22121;
+  text-align: right;
+}
+
+.cart-item__op {
+  width: 120px;
+  text-align: right;
+} 
+.cart-item__op .ant-typography{ 
+  display: inline-block;
+  width: 100%;
+}
+
+.cart-footer {
+  position: sticky;
+  bottom: 0;
+  height: 85px;
+  margin-top: 10px;
+  display: flex;
+  align-items: stretch;  
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.cart-footer__checkbox {
+  flex-basis: 48px;
+  text-align: center;
+}
+.cart-footer-left { 
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;  
+}
+.cart-footer-right {
+  display: flex;
+  align-items: center;  
+  /* flex-basis: 60%; */
+}
+
+.cart-footer__amount {
+  width: 111px;
+  height: 20px;
+  margin-right: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #8C8C8C;
+}
+.cart-totalprice__label {
+  width: 45px;
+  height: 21px;
+  font-size: 15px;
+  color: #333333;
+  line-height: 21px;
+}
+.cart-totalprice__value {
+  width: 140px;
+  height: 33px;
+  font-size: 24px;
+  color: #C22121;
+  line-height: 33px;
+}
+.cart__quote-btn{
+  width: 130px;
+  height: 48px;
+  background: #C22121;
+  text-align: center;
+  color: #fff;
+  border: 0;
+}
+.cart__quote-btn:hover {
+  background: rgba(194, 33, 33, 0.8);
+  color: #fff;
+}
+.cart__quote-btn:focus {
+  background: #C22121;
+  color: #fff;
+}
