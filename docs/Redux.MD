@@ -215,16 +215,18 @@ export default function (state=initialState,action){
 // redux/acitons/index.js
 export function addAddressAysnc(data){
     // redux-thunk 接受这个回调，并传入dispatch。运行我们在一个异步操作过程再次触发dispatch
-    return function (dispatch) {
+    return function (dispatch, getState) {
         dispatch({type:'REQUEST_FECTH'});
         return fetch('./data.json').then(response => response.json);
     }
 }
 ```
+
+
 这个特殊action借助promise把一些异步操作封装在一个事务中，同时返回处理结果。
 ### 异步action调用
 ```js
-// index.js
+// store/index.js
 import { createStore,applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { addAddressAysnc } from './redux/actions/index.js';
@@ -235,9 +237,28 @@ store.dispatch(addAddressAysnc()).then( json => console.log('json :', json););
 2.在生成store时，应用中间件thunkMiddleware
 3.通过store.dispatch()调用刚才编写的特殊action，来验证`使用redux-thunk`是否成功
 
+### thunk注入额外参数
+```js
+// store/index.js
+import { createStore,applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { addAddressAysnc } from './redux/actions/index.js';
+const store = createStore(
+    reducers,
+    applyMiddleware(thunkMiddleware.withExtraArgument(api)));
 
-### 连接到UI
-使用react-redux提供的mapDispatch函数。
+// store/actionCreator.js
+function aysncOp() {
+    // 第三个参数为初始化时注入的额外参数
+    return (dispatch, getState,api) => {
+
+    }；
+}；
+```
+
+
+### 连接redux与UI （react-redux）
+使用react-redux提供的connect函数、Provider组件
 
 ## 异步数据流
 
