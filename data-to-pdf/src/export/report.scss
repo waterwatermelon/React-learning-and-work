@@ -1,0 +1,99 @@
+.report-page {
+  .ant-spin-blur::after {
+    opacity: 0.6;
+  }
+}
+.preview-box {
+  padding: 12px;
+  background-color: #f1f1f1;
+}
+.report-box {
+  $bg-color: #2A73A4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 1122px;
+  overflow: visible;
+  margin:0 auto 20px;
+  background-color: $bg-color;
+  
+  .ant-descriptions-bordered .ant-descriptions-view {
+    border: 1px solid $bg-color;
+  }
+  
+  .ant-table.ant-table-bordered > .ant-table-title {
+    border-radius: 0;
+    border: 1px solid $bg-color;
+    border-bottom: 0;
+  }
+   
+  .ant-descriptions-view {
+    border-radius: 0;
+  }
+  .ant-descriptions-item-label {
+    font-weight: bold;
+    color: $bg-color;
+    background-color: #fff;
+  }
+  .ant-descriptions-item-content {
+    color: $bg-color;
+  }
+  .ant-descriptions-bordered .ant-descriptions-item-label,
+  .ant-descriptions-bordered .ant-descriptions-item-content {
+    border-right: 1px solid $bg-color;
+    border-bottom: 1px solid $bg-color;
+  }
+  .ant-descriptions-bordered .ant-descriptions-row:last-child .ant-descriptions-item-label,
+  .ant-descriptions-bordered .ant-descriptions-row:last-child .ant-descriptions-item-content {
+    border-bottom: 0;
+  }
+  .ant-descriptions-bordered .ant-descriptions-item-content:last-child {
+    border-right: none;
+  }
+  .ant-descriptions-bordered .ant-descriptions-item-label:last-child {
+    border-right: none;
+    border-bottom: none;
+  }
+  .ant-table {
+    color: $bg-color;
+  }
+  // table
+  .ant-table.ant-table-bordered > .ant-table-container {
+    border: 1px solid $bg-color;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td {
+    border-right: 1px solid $bg-color;
+  }
+  .ant-table-thead > tr > th {
+    font-weight: bold;
+    color: $bg-color;
+    border-bottom: 1px solid $bg-color;
+    background: #fff;
+  }
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid $bg-color;
+  }
+}
+
+.report-header {
+  padding: 24px;
+  .report__title{
+    margin-top: 20px;
+    text-align: center;
+    color: whitesmoke;
+  }
+}
+.report-body {
+  padding: 16px;
+  background-color: #fff;
+  flex: 1 0 auto;
+}
+.report-footer {
+  padding: 24px 32px 16px;
+}
+.report-summary__item {
+  margin-right: 2em;
+}
