@@ -3,6 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import {  Route, Switch, Link } from 'react-router-dom';
 import Cart from './quote/Cart'
 import Collection from './quote/Collection';
+import ProductEditor from './quote/editor';
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
  
@@ -40,6 +41,11 @@ function App(props) {
                     报价管理
                   </Link>
                 </Menu.Item>
+                <Menu.Item key='/product-editor'>
+                  <Link to='/product-editor'>
+                    产品编辑
+                  </Link>
+                </Menu.Item>
                 <Menu.Item key='/collection'>
                   <Link to='/collection'>
                     我的收藏
@@ -59,6 +65,7 @@ function App(props) {
               <Route path='/cart' component={Cart}></Route>
               <Route path='/quotation' component={Quotation}></Route>
               <Route path='/collection' component={Collection}></Route>
+              <Route path='/product-editor' component={ProductEditor}></Route>
             </Switch>
           </Content>
         </Layout>
