@@ -60,6 +60,7 @@ class PreviewBtn extends BtnMenu {
  * @param {*} props
  * @returns
  */
+// TODO:model 改成drawer
 function PreviewModal(props) {
   const { visible ,htmlText, close } =props;
 
