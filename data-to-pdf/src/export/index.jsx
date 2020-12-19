@@ -5,7 +5,7 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { priceFormatter, moneyToChinese } from 'src/util/util';
 import { Spin } from 'antd';
-import { mockQuotation } from './data';
+import { mockQuotation, mockAgentDetail } from './data';
 import './report.scss';
 const { DescriptionItem } = Descriptions;
 const { Text, Title, Paragraph } = Typography;
@@ -59,42 +59,7 @@ export function ExportPriview(props) {
     setQuotation(mockQuotation);
   }
   function getAgentDetail() {
-    const mockAgentDetail = {
-      businessDuty: "商务负责人",
-      businessEmail: "1234567890@qq.com",
-      businessHead: "王五",
-      businessPhone: "12345678901",
-      companyAddress: "福建福州仓山区",
-      companyBusiness: "什么都做",
-      companyCities: 320500,
-      companyCounty: 320508,
-      companyLegal: "施凤娇",
-      companyLogo: [{ name: "Screenshot from 2020-11-06 13-53-12.png", fileId: "5e596d80-3510-11eb-880c-7db890a63091" }],
-      companyName: "施凤娇代理的公司",
-      companyPeople: "500",
-      companyProvinces: 320000,
-      companySetup: "2011-05-26",
-      creditEmail: "1234567890@qq.com",
-      creditIdcard: "1234567890",
-      creditLegal: "张三啊",
-      creditPhone: "12345678901",
-      creditSex: "male",
-      id: 17,
-      isAssigned: true,
-      otherDuty: null,
-      otherEmail: null,
-      otherHead: null,
-      otherPhone: null,
-      professionalDuty: "业务负责人",
-      professionalEmail: "1234567890@qq.com",
-      professionalHead: "李四啊",
-      professionalPhone: "12345678901",
-      qualificationFiles: [{ name: "Screenshot from 2020-11-06 13-53-12.png", fileId: "6796ff70-3510-11eb-975d-7137fad12878" }],
-      registerCapital: "好多钱",
-      registerCode: "12312312213",
-      registerTime: "2020-12-01",
-      saleName: "A销售",
-    };
+    
     return setAgentDetail(mockAgentDetail);
   }
   function handleChangeWaterMarker(e) {
