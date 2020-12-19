@@ -6,6 +6,18 @@
 .preview-box {
   padding: 12px;
   background-color: #f1f1f1;
+  // 轮播图 页码指示器 样式
+  .ant-carousel .slick-dots li {
+    width: 24px;
+    margin: 8px 6px;
+    button {
+      width: 24px;
+      font-size:14px; 
+      color:#333;
+      height:24px;
+      border-radius:50%;
+    }
+  }
 }
 .report-box {
   $bg-color: #2A73A4;
@@ -16,7 +28,7 @@
   overflow: visible;
   margin:0 auto 20px;
   background-color: $bg-color;
-  
+  box-sizing: border-box;
   .ant-descriptions-bordered .ant-descriptions-view {
     border: 1px solid $bg-color;
   }

@@ -143,6 +143,7 @@ export function ExportPriview(props) {
     }
     ctx.restore();
   }
+  // 获取文件名称
   function getReportFilename() {
     const defaultName = 'report.pdf';
     if (!quotation) {
@@ -152,15 +153,17 @@ export function ExportPriview(props) {
   }
   // 导出pdf
   async function exportPDF() {
-    const pageDOMs = document.getElementsByClassName('report-box');
+    let pageDOMs = document.getElementsByClassName('report-box');
     const dataUrls = [];
     setComputing(true);
+    // 删减轮播图组件添加的重复页面
+    if (pageDOMs.length !== 1) {
+      pageDOMs = [].slice.call(pageDOMs,1,pageData.length+1);
+    }
     try {
       for (let i = 0; i < pageDOMs.length; i++) {
         const page = pageDOMs[i];
-        // console.time(`gen ${i} canvas`);
         const dataUrl = await dom2DataUrl(page);
-        // console.timeEnd(`gen ${i} canvas`);
         dataUrls.push(dataUrl);
       }
       transformDataUrlsToPDF(dataUrls);
@@ -221,7 +224,7 @@ export function ExportPriview(props) {
     if (logos.length === 0) {
       return '';
     }
-    return logos[0]?.fileId;
+    return logos[0] ?.fileId;
   }
   // 产品清单添加序号
   function transformProductList(list) {
@@ -526,24 +529,9 @@ export function ExportPriview(props) {
     setAutoPage(true);
     setPageData(pages);
   }
-  const contentStlye = {
-    height:'100%',
-    lineHeight:'160px',
-    fontSize: '24px',
-    color:'#fff',
-    textAlign:'center',
-    background: '#364d79',
-  };
+
   return (
     <div className='report-page'>
-      <Carousel autoplay>
-        <div >
-          <div style={contentStlye}>11</div>
-        </div>
-        {/* <div>         
-         <div style={contentStlye}>22</div>
-        </div> */}
-      </Carousel>
       <Spin spinning={computing} tip='正在导出文件,请等待...' indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}>
         <Row gutter={[16, 16]}>
           {/* 操作栏 */}
@@ -568,21 +556,22 @@ export function ExportPriview(props) {
           {/* 预览 */}
           <Col span={24}>
             <div className='preview-box' ref={previewRef}>
-              {/* {
-                pageData && pageData.map(item => <item.content addLogo={addLogo} agentDetail={agentDetail} />)
-              } */}
+              {/* 轮播显示多张纸 */}
+              <Carousel
+                dotPosition={'left'}
+                customPaging={i => (<button >{i + 1}</button>)}
+              >
+                {
+                  pageData && pageData.map(item =>
+                    (
+                      <item.content addLogo={addLogo} agentDetail={agentDetail} />
+                    )
+                  )
+                }
+
+              </Carousel>
             </div>
-            <Carousel autoplay>
-              {/* <div >
-                <div style={contentStlye}>11</div>
-              </div>
-               */}
 
-              {                  
-                pageData && pageData.map(item => <item.content addLogo={addLogo} agentDetail={agentDetail} />)
-              }
-
-            </Carousel>
           </Col>
         </Row>
       </Spin>
