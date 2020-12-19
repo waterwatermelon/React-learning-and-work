@@ -4,9 +4,9 @@ import { LoadingOutlined } from '@ant-design/icons';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { priceFormatter, moneyToChinese } from 'src/util/util';
-import './report.scss';
 import { Spin } from 'antd';
 import { mockQuotation } from './data';
+import './report.scss';
 const { DescriptionItem } = Descriptions;
 const { Text, Title, Paragraph } = Typography;
 // 第一项单位 mm， 第二项单位 pt 第三项 px
@@ -17,18 +17,14 @@ const papers = { 'a4': [{ w: 210, h: 316 }, { w: 595, h: 842 }, { w: 794, h: 112
  * 导出预览页面
  * @export
  * @param {object} props
- * @param {object} props.agentDetail 代理商信息
  * @returns
  */
 // TODO:纸张尺寸
 export function ExportPriview(props) {
-
-
-
-  const { agentDetail } = props;
   const [addLogo, setAddLogo] = useState(false);
   const [waterMarker, setWaterMarker] = useState('');
   const [quotation, setQuotation] = useState(null);
+  const [agentDetail, setAgentDetail] = useState(null);
   const [pageData, setPageData] = useState([]);
   const [init, setInit] = useState(false);
   const [autoPage, setAutoPage] = useState(false);
@@ -45,11 +41,11 @@ export function ExportPriview(props) {
     getQuotationDetail();
     getAgentDetail();
   }, []);
+
   useEffect(() => {
     if (!init && quotation) {
       initPageData();
     }
-
   }, [quotation]);
 
   useEffect(() => {
@@ -99,7 +95,7 @@ export function ExportPriview(props) {
       registerTime: "2020-12-01",
       saleName: "A销售",
     };
-    return mockAgentDetail;
+    return setAgentDetail(mockAgentDetail);
   }
   function handleChangeWaterMarker(e) {
     setWaterMarker(e.target.value);
@@ -277,7 +273,7 @@ export function ExportPriview(props) {
         <Row >
           <Col span={12}>
             <Text style={{ color: '#fff' }}>我们衷心感谢您的询价，并期待与您合作成功</Text>
-            <Title level={1} style={{ color: 'white', fontSize: '20px' }} >{props.agentDetail ? props.agentDetail.companyName || '(正在获取...)' : '(...)'}</Title><br />
+            <Title level={1} style={{ color: 'white', fontSize: '20px' }} >{agentDetail ? agentDetail.companyName || '(正在获取...)' : '(...)'}</Title><br />
           </Col>
           <Col span={12}>
             {
@@ -478,7 +474,7 @@ export function ExportPriview(props) {
               <ContactBox />
               <ProductTable showTotal={showTotal} list={list} />
             </ReportBody>
-            <ReportFooter addLogo={props.addLogo} agentDetail={props.agentDetail} />
+            <ReportFooter addLogo={props.addLogo} agentDetail={agentDetail} />
           </ReportBox>
         );
 
@@ -519,7 +515,7 @@ export function ExportPriview(props) {
             <ReportBody >
               <ProductTable showTotal={showTotal} list={list} />
             </ReportBody>
-            <ReportFooter addLogo={props.addLogo} agentDetail={props.agentDetail} />
+            <ReportFooter addLogo={props.addLogo} agentDetail={agentDetail} />
           </ReportBox>
         );
       }
