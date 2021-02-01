@@ -5,6 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+function onPerEntry(metric) {
+  console.log('metric', metric);
+}
+// 报告性能测量结果
+reportWebVitals(onPerEntry);
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
