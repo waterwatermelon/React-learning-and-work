@@ -10,7 +10,8 @@ body{
   height: 100vh;
   box-sizing: border-box;
   background: url('/bg.png') no-repeat top center;
-  background-color:#020414; 
+  /* background-color:#020414;  */
+  background-color: #fafafa;
 }
 
 /* app-title */
@@ -36,15 +37,18 @@ body{
   display: flex;
   flex-grow: 1;
   padding: 0 10px 10px;
+  justify-content: space-around;
+  background-color: #002;
 }
 .main-left,.main-right{
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   height: 100%; 
 }  
 .main-middle {
-  flex-grow: 1; 
+  /* flex-grow: 1;  */
+  width: 30%;
   position: relative;
 }
 
