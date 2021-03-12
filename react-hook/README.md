@@ -50,3 +50,8 @@ function Container() {
 
 Table是函数组件，没有ref对象。需要借助forwardRef来转发ref，借助useImperativeHandle(ref, {}),将部分属性挂载到ref。
 > 使用场景：父组件需要引用子组件的实例，但是子组件是一个函数组件。
+
+## useCallback
+作用1：缓存内部函数实例，减少组件重新渲染的次数
+
+useCallback配合Memo使用可以减少props没有变化的组件重新渲染次数，优化性能。只使用其中一个，不会起到优化性能的作用。

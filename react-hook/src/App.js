@@ -1,6 +1,9 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './App.css';
-
+import Box from './layout/Box';
+import UseCallbackComponentBefore from './UseCallbackComponentBefore';
+import UseCallbackComponentAfter from './UseCallbackComponentAfter';
+import UseEffectComponent from './UseEffectComponent';
 function RefFunctionComponent(props) {
   const divRef = useRef(/* initialValue */);
   function changeColor() {
@@ -16,23 +19,23 @@ function RefFunctionComponent(props) {
 function App() {
   return (
     <div className="App">
-
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: ' center',
-        width: '400px',
-        padding: '16px',
-        border: '1px solid #e0e0e0',
-      }}>
-
-        <h3 >function  component (useRef)</h3>
+      <Box title={'function  component (useRef)'}>
         <RefFunctionComponent />
-      </div>
+      </Box>
 
+      <Box title={'function component useEffect'}>
+        <UseEffectComponent />
+      </Box>
 
+      <Box title={'use callback before'}>
+        <UseCallbackComponentBefore />
+      </Box>
+      <Box title={'use callback after'}>
+        <UseCallbackComponentAfter />
+      </Box>
     </div>
+
+
   );
 }
 
