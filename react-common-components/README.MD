@@ -1,3 +1,8 @@
+## 项目说明
+React组件库开发、测试环境
+
+技术栈： React + Webpack + scss 
+
 ## npm 命令说明
 npm run build 编译库文件
 
