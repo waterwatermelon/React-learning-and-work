@@ -1,16 +1,14 @@
-import { useEffect, useRef } from 'react';
-
 import './App.css';
-import LinkNode from './LinkNode';
-import DeviceRelation from './DeviceRelation';
+// import LinkNode from './LinkNode';
+// import DeviceRelation from './DeviceRelation';
+import TopologyEditPanel from './pages/topology/TopologyEditPanel';
 
 function App() {
 
 
   return (
     <div className="App">
-      <DeviceRelation />
-      <LinkNode />
+      <TopologyEditPanel />
     </div>
   );
 }

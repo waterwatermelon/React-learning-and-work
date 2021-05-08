@@ -1,0 +1,47 @@
+.header {
+  background-color: #fff;
+}
+
+.sider {
+  display: flex;
+ 
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+
+  .device-list {
+    flex-grow: 1;
+    .link-selected {
+      background-color: #eee;
+    }
+  }
+
+  .bar {
+    width: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    cursor: ew-resize;
+
+    >span {
+      width: 4px;
+      height: 24px;
+      border-left:1px solid #d8d8d8;
+      border-right:1px solid #d8d8d8;
+    }
+
+    &:hover {
+      background-color: #f8f8fa;
+    }
+  }
+}
+
+.detail {
+  height: 100%;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #eee;
+
+}

@@ -7,7 +7,7 @@ import Jtopo from 'jtopo-in-node';
  * 功能： 查看
  */
 export default function DeviceRelation() {
-  let stage =  null;
+  let stage = null;
   const canvasRef = useRef();
   const node = (scene, x, y, imgPath) => {
     const node = new Jtopo.Node();
@@ -46,7 +46,8 @@ export default function DeviceRelation() {
     stage.eagleEye.visible = true;
     const scene = new Jtopo.Scene(stage);
     scene.background = 'http://www.jtopo.com/demo/img/bg.jpg';
-    const s1 = node(scene, 305, 43, 'server.png');
+    // const s1 = node(scene, 305, 43, 'server.png');
+    const s1 = node(scene, null, null, 'server.png');
     s1.alarm = '2 w';
     const s2 = node(scene, 365, 43, 'server.png');
     const s3 = node(scene, 425, 43, 'server.png');
@@ -81,11 +82,11 @@ export default function DeviceRelation() {
     h3.text = 'h3';
     hostLink(scene, g2, h3);
   }
-  const handleViewToJson  = () => {
+  const handleViewToJson = () => {
     const json = stage.toJson();
     console.log(`json`, json);
   }
-  
+
   const handleExpand = () => {
     stage.wheelZoom = 2;
   }
@@ -97,7 +98,7 @@ export default function DeviceRelation() {
 
   return (
     <div>
-      <button onClick={handleViewToJson}>to json</button> 
+      <button onClick={handleViewToJson}>to json</button>
       <button onClick={handleExpand}> expand</button>
       <canvas ref={canvasRef} width={'300px'} height={'300px'} />
     </div>
