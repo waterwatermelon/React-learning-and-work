@@ -8,7 +8,8 @@ interface IProps {
 
 const StatelessComponent: SFC<IProps> = (props) => {
   const name: string = props.name;
-  return (<div>
+  return (
+  <div>
     hello StatelessComponent: {name}
   </div>)
 }

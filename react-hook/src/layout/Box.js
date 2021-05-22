@@ -7,8 +7,8 @@ export default function Box(props) {
       style={{
         display: 'inline-flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: ' center',
+        justifyContent: 'start',
+        alignItems: ' start',
         width: '400px',
         height: '400px',
         padding: '16px',

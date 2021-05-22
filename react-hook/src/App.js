@@ -4,6 +4,7 @@ import Box from './layout/Box';
 import UseCallbackComponentBefore from './UseCallbackComponentBefore';
 import UseCallbackComponentAfter from './UseCallbackComponentAfter';
 import UseEffectComponent from './UseEffectComponent';
+import UseRefArrayComponent from './UseRefArrayComponent';
 function RefFunctionComponent(props) {
   const divRef = useRef(/* initialValue */);
   function changeColor() {
@@ -32,6 +33,9 @@ function App() {
       </Box>
       <Box title={'use callback after'}>
         <UseCallbackComponentAfter />
+      </Box>
+      <Box>
+        <UseRefArrayComponent />
       </Box>
     </div>
 
