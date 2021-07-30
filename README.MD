@@ -4,19 +4,23 @@
 
 ## 文件目录说明
 文档  
-- docs 存放文档
+- docs 存放笔记
 
 demo 
 - antd-examples antd4的使用实例
+- data-to-pdf   将HTML转成PDF的实例
+- dumi-demo     使用dumi的demo
+- dumi-demo-webpack 在dumi-demo的基础上，添加了webpack编译组件库
 - hello react   hello word项目
 - hello-antd    使用antd修饰hello项目
 - hello-antd-router-auth    添加了路由拦截
-- hello-ts    使用typescript编写react组件
-- react-resize-panel        可调整宽度的多列面板  
-- wave          水波动画
-- data-to-pdf   将HTML转成PDF的实例
+- hello-ts      使用typescript编写react组件
 - react-common-components react组件库的编译环境示例
-
+- react-hook    记录hook的使用笔记
+- react-resize-panel        可调整宽度的多列面板  
+- react-native  记录react-native的使用
+  - hello       搭建react-native的环境和初始项目
+- wave          使用canvas 绘制水波
 
 练习
 - state-hoist 状态提升练习
