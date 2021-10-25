@@ -60,7 +60,7 @@ class PreviewBtn extends BtnMenu {
  * @param {*} props
  * @returns
  */
-// TODO:model 改成drawer
+ 
 function PreviewModal(props) {
   const { visible ,htmlText, close } =props;
 
@@ -193,10 +193,10 @@ function WangEditor(props, ref) {
   }
 
   return (
-    <div>
+    <>
       <div id="editor" ></div>
       <PreviewModal visible={isPreview} htmlText={previewContent} close={closePreview}></PreviewModal>
-    </div>
+    </>
   );
 }
 

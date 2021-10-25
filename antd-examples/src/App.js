@@ -1,16 +1,17 @@
 import './App.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import {  Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import Cart from './quote/Cart'
 import Collection from './quote/Collection';
 import ProductEditor from './quote/editor';
 import DeviceSelect from './olt/DevcieSelect';
+import FormList from './olt/FormList';
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
- 
+
 function Quotation() {
   return 'quotation';
-} 
+}
 function App(props) {
   return (
     <Layout style={{ height: '100vh' }}>
@@ -58,8 +59,12 @@ function App(props) {
                   <Link to='/device-select'>
                     设备选择
                   </Link>
-                  </Menu.Item>
-                <Menu.Item key='5'>option5</Menu.Item>
+                </Menu.Item>
+                <Menu.Item key='/form-list'>
+                  <Link to='/form-list'>
+                    form list
+                  </Link>
+                </Menu.Item>
                 <Menu.Item key='6'>option6</Menu.Item>
               </SubMenu>
             </Menu>
@@ -73,6 +78,7 @@ function App(props) {
               <Route path='/product-editor' component={ProductEditor}></Route>
               {/*  */}
               <Route path='/device-select' component={DeviceSelect} />
+              <Route path='/form-list' component={FormList} />
             </Switch>
           </Content>
         </Layout>
