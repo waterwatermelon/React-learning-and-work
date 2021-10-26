@@ -6,6 +6,7 @@ import Collection from './quote/Collection';
 import ProductEditor from './quote/editor';
 import DeviceSelect from './olt/DevcieSelect';
 import FormList from './olt/FormList';
+import SearchBox from './components/example/SearchBoxExample';
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -67,9 +68,17 @@ function App(props) {
                 </Menu.Item>
                 <Menu.Item key='6'>option6</Menu.Item>
               </SubMenu>
+              <SubMenu key='sub3' title='组件' >
+                <Menu.Item key=''>
+                  <Link to='/com/search'>
+                    搜索栏
+                  </Link>
+                </Menu.Item>
+              </SubMenu>
             </Menu>
           </Sider>
           <Content style={{ padding: '24px', minHeight: 280 }}>
+
             {/* Route */}
             <Switch>
               <Route path='/cart' component={Cart}></Route>
@@ -79,6 +88,7 @@ function App(props) {
               {/*  */}
               <Route path='/device-select' component={DeviceSelect} />
               <Route path='/form-list' component={FormList} />
+              <Route path='/com/search' component={SearchBox}/>
             </Switch>
           </Content>
         </Layout>
