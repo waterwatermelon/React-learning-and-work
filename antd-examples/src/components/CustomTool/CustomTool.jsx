@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Space, Row, Col, Popover } from "antd";
-import { DownOutlined, UpOutlined } from '@ant-design/icons';
+import { DownOutlined, UpOutlined, FilterOutlined } from '@ant-design/icons';
 import CommonFormItem from "../CommonForm/CommonFormItem";
 import './custom-tool.scss'
 
@@ -94,7 +94,6 @@ export function SearchBox(props) {
 
   const [span, setSpan] = useState();
   useEffect(() => {
-    console.log(`colSpan`, colSpan);
 
     const spans = [3, 4, 6, 8, 12, 24];
     if (spans.indexOf(colSpan) === -1) {
@@ -131,7 +130,9 @@ export function SearchBox(props) {
             trigger='click'
             getPopupContainer={trigger => trigger.parentNode}
           >
-            <Button >搜索栏</Button>
+            <Button icon={<FilterOutlined />}>
+              过滤
+            </Button>
           </Popover>
         </div>
         : <Search submit={searchSubmit} schema={searchSchema} layout={layout} name={name} span={span} />

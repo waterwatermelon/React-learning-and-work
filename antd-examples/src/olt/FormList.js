@@ -1,36 +1,74 @@
-import React from 'react'
 import { useEffect } from 'react';
-import { Form, Input } from 'antd'
+import { Form, Input, Button, Space, InputNumber } from 'antd'
+import { CloseOutlined } from '@ant-design/icons';
+
+function ItemRow(props) {
+  const { name, remove } = props;
+  return (
+    <Space>
+
+      <Form.Item
+        label='label1'
+        name={[name, 'label']}
+        fieldKey={[props.fieldKey, 'label']}
+        >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label='label2'
+        name={[name, 'age']}
+        fieldKey={[props.fieldKey, 'age']}
+        >
+        <InputNumber />
+      </Form.Item>
+      <Form.Item >
+        <CloseOutlined onClick={() => remove(name)} />
+      </Form.Item>
+    </Space>
+  );
+}
+
 
 export default function FormList() {
   const users = [{
     label: '1',
+    age: 22
+  }, {
+    label: '2'
   }];
 
   const [form] = Form.useForm();
+
+  const handleSubmit = () => {
+    form.validateFields().then(values => {
+      console.log(`values`, values);
+    })
+  }
   useEffect(() => {
     form.setFieldsValue({ users: users })
   }, []);
   return (
     <div>
 
-      FormList
       <Form form={form}>
         <Form.List name='users'>
-          {fields =>
+          {(fields, { add, remove }) =>
+            <>
+              {fields.map(field =>
+                <>
+                  <ItemRow {...field} remove={remove} />
+                  <CloseOutlined onClick={() => remove(field.name)} />
+                </>
+              )}
 
-            fields.map(field => {
-              console.log(`field`, field);
-              return (
-
-                <Form.Item {...field}>
-                  <Input />
-                </Form.Item>
-              )
-            })
+              <Button block onClick={() => { add() }}>添加一行</Button>
+            </>
           }
         </Form.List>
+        <Form.Item>
+          <Button type='primary' onClick={handleSubmit}>提交</Button>
+        </Form.Item>
       </Form>
-    </div>
+    </div >
   )
 }

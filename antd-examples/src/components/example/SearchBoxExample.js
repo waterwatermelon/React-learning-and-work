@@ -12,8 +12,10 @@ export default function SearchBoxExample() {
     <div>
       <SearchBox
         title='title'
-        span={6}
+        // mode ['normal','collapse', ''] 
+        // 搜索栏的表现形式：普通 通过按钮打开 
         collapse={true}
+        span={6}
         searchSchema={[{
           form: {
             formLabel: 'label1',
@@ -49,7 +51,7 @@ export default function SearchBoxExample() {
           content: {
             type: 'DatePicker',
             isRange: true,
-            showTime: true, 
+            showTime: true,
           }
         }, {
           form: {
