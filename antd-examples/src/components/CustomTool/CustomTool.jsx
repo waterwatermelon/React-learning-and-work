@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Form, Button, Space, Row, Col, Popover } from "antd";
-import { DownOutlined, UpOutlined} from '@ant-design/icons';
+import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import CommonFormItem from "../CommonForm/CommonFormItem";
 import './custom-tool.scss'
 
@@ -48,7 +48,7 @@ export function Search(props) {
               <Button id='search-btn' type="primary" htmlType="submit">
                 搜索
               </Button>
-              <Button type='link' onClick={handleToggleFold} icon={fold ? <DownOutlined />: <UpOutlined/> }>{fold ? '展开' : '折叠'}</Button>
+              <Button type='link' onClick={handleToggleFold} icon={fold ? <DownOutlined /> : <UpOutlined />}>{fold ? '展开' : '折叠'}</Button>
             </Space>
           </Form.Item>
         </Col>
@@ -81,16 +81,35 @@ export function SearchBox(props) {
     searchSchema = [],
     searchSubmit,
 
-    span = 8,
+    span: colSpan = 8,
     layout = {},
     name = 'search',
-
+    // popover
+    // { style, innerStyle , className, trigger, getPopupContainer }
     popoverStyle = {
       width: '1200px'
     },
     popoverInnerStyle = {},
   } = props;
 
+  const [span, setSpan] = useState();
+  useEffect(() => {
+    console.log(`colSpan`, colSpan);
+
+    const spans = [3, 4, 6, 8, 12, 24];
+    if (spans.indexOf(colSpan) === -1) {
+      console.warn(`[SearchBox] span的取值范围为 ${spans}`);
+      // adjust span
+      for (let i = 0; i < spans.length; i++) {
+        if (colSpan < spans[i]) {
+          setSpan(spans[i]);
+          break;
+        }
+      }
+    } else {
+      setSpan(colSpan);
+    }
+  }, [colSpan]);
   return (
     <div className={`search_box`}>
       {collapse
