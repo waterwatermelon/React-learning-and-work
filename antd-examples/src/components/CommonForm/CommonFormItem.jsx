@@ -197,7 +197,7 @@ export default function CommonFormItem(props) {
   return (
     <>
       {schema ? schema.map((item, i) => {
-        return (<Col id={item.form.name + '-col'} key={i} span={span}><FormItem item={item} /></Col>);
+        return (<Col id={item.form.name + '-col'} key={i} span={typeof span === 'number' && span} { ...span}><FormItem item={item} /></Col>);
       }) : ''}
     </>
   );

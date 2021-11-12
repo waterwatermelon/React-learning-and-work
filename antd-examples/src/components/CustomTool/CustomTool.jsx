@@ -48,6 +48,7 @@ export function Search(props) {
               <Button id='search-btn' type="primary" htmlType="submit">
                 搜索
               </Button>
+              {/* TODO:判断是否超过一行 */}
               <Button type='link' onClick={handleToggleFold} icon={fold ? <DownOutlined /> : <UpOutlined />}>{fold ? '展开' : '折叠'}</Button>
             </Space>
           </Form.Item>
@@ -108,6 +109,8 @@ export function SearchBox(props) {
     } else {
       setSpan(colSpan);
     }
+    setSpan(colSpan);
+
   }, [colSpan]);
   return (
     <div className={`search_box`}>

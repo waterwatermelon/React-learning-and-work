@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 import { Transfer, Button, Row, Col } from 'antd'
 
 const getMockData = () => {

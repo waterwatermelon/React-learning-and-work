@@ -7,3 +7,7 @@ html,body {
     height:80vh;
     background: #fff;
 }
+.sn-form {
+    width: 80%;
+    margin: 0 auto;
+}

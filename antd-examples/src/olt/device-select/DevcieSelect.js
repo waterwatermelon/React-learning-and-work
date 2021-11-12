@@ -1,12 +1,8 @@
-import { Transfer, Button, Row, Col, Card, Space } from 'antd'
+import { Card, Space } from 'antd'
 import ListTransfer from './ListTransfer'
 import TableTransfer from './TableTransfer'
 
-
 export default function DevcieSelect() {
-
-
-
 
   return (
     <Space direction='vertical'>

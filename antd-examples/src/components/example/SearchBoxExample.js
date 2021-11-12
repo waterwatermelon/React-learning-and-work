@@ -1,6 +1,7 @@
 import { SearchBox } from '../CustomTool/CustomTool';
 import { useState } from 'react';
 import { Divider } from 'antd';
+import ReactJson from 'react-json-view';
 export default function SearchBoxExample() {
   const [condition, setCondition] = useState({});
 
@@ -14,7 +15,7 @@ export default function SearchBoxExample() {
         title='title'
         // mode ['normal','collapse', ''] 
         // 搜索栏的表现形式：普通 通过按钮打开 
-        collapse={true}
+        // collapse={true}
         span={6}
         searchSchema={[{
           form: {
@@ -53,38 +54,38 @@ export default function SearchBoxExample() {
             isRange: true,
             showTime: true,
           }
-        }, {
-          form: {
-            formLabel: 'label'
-          },
-          content: {
-            type: 'text',
-            value: 'value'
-          }
-        }, {
-          form: {
-            formLabel: 'label'
-          },
-          content: {
-            type: 'text',
-            value: 'value'
-          }
-        }, {
-          form: {
-            formLabel: 'label'
-          },
-          content: {
-            type: 'text',
-            value: 'value'
-          }
-        }, {
-          form: {
-            formLabel: 'label'
-          },
-          content: {
-            type: 'text',
-            value: 'value'
-          }
+          // }, {
+          //   form: {
+          //     formLabel: 'label'
+          //   },
+          //   content: {
+          //     type: 'text',
+          //     value: 'value'
+          //   }
+          // }, {
+          //   form: {
+          //     formLabel: 'label'
+          //   },
+          //   content: {
+          //     type: 'text',
+          //     value: 'value'
+          //   }
+          // }, {
+          //   form: {
+          //     formLabel: 'label'
+          //   },
+          //   content: {
+          //     type: 'text',
+          //     value: 'value'
+          //   }
+          // }, {
+          //   form: {
+          //     formLabel: 'label'
+          //   },
+          //   content: {
+          //     type: 'text',
+          //     value: 'value'
+          //   }
         }]}
         searchSubmit={onSearch}
       />
@@ -96,6 +97,7 @@ export default function SearchBoxExample() {
       {
         JSON.stringify(condition)
       }
+      <ReactJson src={condition} />
     </div>
   )
 }
