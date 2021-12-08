@@ -18,4 +18,4 @@ import { Button } from 'antd';
 
 
 ## 问题
-antdesign formlist存在假删除的设计?
+- [x] Q:ant-design formlist存在假删除的设计? A:版本问题
