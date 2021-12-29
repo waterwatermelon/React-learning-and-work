@@ -1,9 +1,7 @@
 
-
-
 function App() {
   return (
-    <div className='bg-gray-100 p-4'>
+    <div className='bg-gray-100 dark:bg-gray-800 p-4'>
       {/* header */}
       <div className='max-w-sm mx-auto bg-white shadow-md space-x-4 p-2 rounded-lg'>
         <span className='text-lg'>
