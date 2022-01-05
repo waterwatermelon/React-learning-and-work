@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  @apply bg-indigo-500 p-2 pt-1 pb-1 rounded-sm text-yellow-50 ; 
+@layer components{
+  .btn {
+    @apply p-2 pt-1 pb-1 rounded-sm text-yellow-50 ; 
+  }
+}
+
+.btn-default {
+  @apply bg-gray-500;
+}
+.btn-blue {
+  background: theme('colors.blue.400');
+}
+.btn-primary {
+  @apply bg-indigo-400;
 }

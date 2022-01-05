@@ -4,10 +4,14 @@ function App() {
     <div className='bg-gray-100 dark:bg-gray-800 p-4'>
       {/* header */}
       <div className='max-w-sm mx-auto bg-white shadow-md space-x-4 p-2 rounded-lg'>
-        <span className='text-lg'>
+        <span className='text-lg text-gray-500 '>
           hello
         </span>
-        <span className='text-gray-500'>tailwind</span>
+        <span className='print:text-red-400'>tailwind</span>
+        <span className='text-orange-200'>orange-200</span>
+        <span className='text-orange-300'>orange-300</span>
+        <span className='text-orange-400'>orange-400</span>
+        <span className='text-orange-500'>orange-500</span>
         <button className='p-2 rounded-md hover:bg-black hover:text-white' >button</button>
       </div>
       {/* content TODO:布局 */}
@@ -23,8 +27,10 @@ function App() {
       </div>
 
       <div className='mt-2'>
-        <button className='bg-indigo-500 p-2 pt-1 pb-1 rounded-sm text-yellow-50 hover:cursor-pointer'>button</button>
-        <button className='btn'>button</button>
+        <button className='bg-indigo-500 p-2 py-1 rounded-sm text-yellow-50 hover:cursor-pointer'>button</button>
+        <button className='btn btn-default'>button</button>
+        <button className='btn btn-blue'>button</button>
+        <button className='btn btn-primary'>button</button>
       </div>
       <select className='bg-white focus:outline-none' >
         <option className=' '>1</option>
