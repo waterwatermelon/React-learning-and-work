@@ -14,16 +14,46 @@ function App() {
         <span className='text-orange-500'>orange-500</span>
         <button className='p-2 rounded-md hover:bg-black hover:text-white' >button</button>
       </div>
+      <div className='bg-gray-200 p-2 rounded m-2'>
+        <article className='prose'>
+          <h3>吹梦到西洲</h3>
+          <span>作者</span>
+          <p>海水梦悠悠，我愁君亦愁。</p>
+          <p>南风知我意，吹梦到西洲。</p>
+
+          <ul>
+            <li>1</li>
+            <li>12</li>
+          </ul>
+          <code>
+            code here...
+          </code>
+        </article>
+      </div>
+      <div className='bg-gray-200 m-2 p-2 rounded'>
+        <ul className='list-disc list-inside'>
+          <li>1</li>
+          <li>2</li>
+        </ul>
+      </div>
       {/* content TODO:布局 */}
-      <div className='bg-red-200 p-2 mt-2 rounded-xl'>
+      <div className='bg-red-200 bg-stripes bg-stripes-white p-2 mt-2 rounded-xl'>
         <img className='w-20 h-20 bg-black-800' />
         <div className=''>content</div>
       </div>
 
-      <div className='mt-2'>
-        <label className='text-gray-600 mr-1'>label</label>
-        <input className='border-2 border-green-700 p-1 rounded-md focus:outline-none text-gray-700 '>
-        </input>
+      <div className='bg-orange-200 mt-2 p-2 rounded'>
+        <div>
+
+          <label className='text-gray-600 mr-1'>label</label>
+          <input className='border-2 border-green-700 p-1 rounded-md focus:outline-none text-gray-700 '>
+          </input>
+        </div>
+        <div>
+
+          <label>checkbox </label>
+          <input type='checkbox'className='text-pink-400 rounded' />
+        </div>
       </div>
 
       <div className='mt-2'>
@@ -36,6 +66,11 @@ function App() {
         <option className=' '>1</option>
         <option>2</option>
       </select>
+
+      <div className='container bg-gray-200 space-x-4 rounded p-2'>
+        <div className='bg-pink-400 inline-block rounded p-2'>inline block</div>
+        <div className='bg-pink-400 inline-block rounded p-2'>inline block</div>
+      </div>
     </div>
   );
 }
