@@ -52,7 +52,7 @@ function App() {
         <div>
 
           <label>checkbox </label>
-          <input type='checkbox'className='text-pink-400 rounded' />
+          <input type='checkbox' className='text-pink-400 rounded' />
         </div>
       </div>
 
@@ -70,6 +70,28 @@ function App() {
       <div className='container bg-gray-200 space-x-4 rounded p-2'>
         <div className='bg-pink-400 inline-block rounded p-2'>inline block</div>
         <div className='bg-pink-400 inline-block rounded p-2'>inline block</div>
+      </div>
+
+      <h4>九宫格-网格布局</h4>
+      <div className='grid grid-cols-3 gap-4 bg-green-200 mt-2 p-4'>
+        <div className='bg-orange-200'>1</div>
+        <div className='bg-orange-200'>2</div>
+        <div className='bg-orange-200'>3</div>
+        <div className='bg-orange-200'>4</div>
+        <div className='bg-orange-200 col-span-2'>5</div>
+        <div className='bg-orange-200'>6</div>
+        <div className='bg-orange-200'>7</div>
+        <div className='bg-orange-200'>8</div>
+        <div className='bg-orange-200'>9</div>
+      </div>
+
+      <div className='grid grid-cols-6 gap-4 bg-blue-200 mt-2 p-4'>
+        <div className='bg-orange-200 col-start-2'>1</div>
+        <div className='bg-orange-200'>2</div>
+        <div className='bg-orange-200'>3</div>
+        <div className='bg-orange-200 col-start-3 col-end-6'>4</div>
+        <div className='bg-orange-200 col-span-2'>5</div>
+        <div className='bg-orange-200'>6</div>
       </div>
     </div>
   );
