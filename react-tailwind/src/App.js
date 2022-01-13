@@ -14,6 +14,7 @@ function App() {
         <span className='text-orange-500'>orange-500</span>
         <button className='p-2 rounded-md hover:bg-black hover:text-white' >button</button>
       </div>
+      <h4>prose </h4>
       <div className='bg-gray-200 p-2 rounded m-2'>
         <article className='prose'>
           <h3>吹梦到西洲</h3>
@@ -30,6 +31,7 @@ function App() {
           </code>
         </article>
       </div>
+      <h4>list</h4>
       <div className='bg-gray-200 m-2 p-2 rounded'>
         <ul className='list-disc list-inside'>
           <li>1</li>
@@ -92,6 +94,28 @@ function App() {
         <div className='bg-orange-200 col-start-3 col-end-6'>4</div>
         <div className='bg-orange-200 col-span-2'>5</div>
         <div className='bg-orange-200'>6</div>
+      </div>
+
+      <h4> flex</h4>
+      <div className='flex flex-wrap content-center bg-pink-200 p-4 mt-4 h-40'>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>1</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>2</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>3</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>4</div>
+      </div>
+
+      <div className='flex flex-wrap items-center bg-blue-200 p-4 mt-4 h-40'>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>1</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>2</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>3</div>
+        <div className='bg-orange-200 text-gray-600 w-1/3'>4</div>
+      </div>
+      <h4> flex + space</h4>
+      <div className='flex bg-green-200 mt-4 p-4 rounded space-x-4'>
+        <div className='w-20 h-20 bg-orange-200'>1</div>
+        <div className='w-20 h-20 bg-orange-200'>2</div>
+        <div className='w-20 h-20 bg-orange-200'>3</div>
+        <div className='w-20 h-20 bg-orange-200'>4</div>
       </div>
     </div>
   );
