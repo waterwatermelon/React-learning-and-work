@@ -117,6 +117,10 @@ function App() {
         <div className='w-20 h-20 bg-orange-200'>3</div>
         <div className='w-20 h-20 bg-orange-200'>4</div>
       </div>
+      <h4>背景 background 渐变(最多三种颜色)</h4>
+      <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 to-purple-400'></div>
+      <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 via-pink-300 to-purple-400'></div>
+      <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 via-orange-300  to-purple-400'></div>
     </div>
   );
 }
