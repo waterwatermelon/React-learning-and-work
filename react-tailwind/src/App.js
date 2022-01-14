@@ -121,6 +121,46 @@ function App() {
       <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 to-purple-400'></div>
       <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 via-pink-300 to-purple-400'></div>
       <div className='mt-4 w-1/2 h-10 rounded bg-gradient-to-r from-blue-300 via-orange-300  to-purple-400'></div>
+      <h4>border</h4>
+      <div className='container grid grid-cols-12 gap-1 bg-gray-200 p-4'>
+        <div className='bg-indigo-300 w-20 h-20 rounded'> rounded</div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-sm'>rounded-sm </div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-xl'>rounded-xl </div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-3xl'>rounded-3xl </div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-t'>rounded-t </div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-tl'>rounded-tl </div>
+        <div className='bg-indigo-300 w-20 h-20 rounded-full'>rounded-full </div>
+        <div className='bg-indigo-300 w-20 h-10 rounded-full'>rounded-full </div>
+      </div>
+      <div className='container grid grid-cols-12 gap-1 bg-gray-200 p-4'>
+        <div className='bg-indigo-300 border-indigo-600 w-20 h-20 border-2'> border-2</div> 
+        <div className='bg-indigo-300 border-indigo-600 w-20 h-20 border-l-2'> border-l-2</div> 
+        <div className='bg-indigo-300 border-indigo-600 w-20 h-20 border-b-2'> border-b-2</div> 
+        <div className='bg-indigo-300 border-indigo-600 w-20 h-20 border-4'> border-4</div> 
+      </div>
+      <div className='container grid grid-cols-12 bg-gray-200 p-4 divide-x-4 divide-orange-200'>
+        <div className='bg-indigo-300 '> content</div> 
+        <div className='bg-indigo-300 '> content</div> 
+        <div className='bg-indigo-300 '> content</div> 
+        <div className='bg-indigo-300 '> content</div> 
+      </div>
+      <div className='container grid grid-cols-12 gap-1 bg-gray-200 p-4 '>
+        <div className='w-20 h-20 border-4 border-indigo-400 border-solid'> </div> 
+        <div className='w-20 h-20 border-4 border-indigo-400 border-dashed'> </div> 
+        <div className='w-20 h-20 border-4 border-indigo-400 border-dotted'> </div> 
+        <div className='w-20 h-20 border-4 border-indigo-400 border-double'> </div> 
+      </div>
+      <div className='container grid grid-cols-12 gap-1 bg-gray-200 p-4 '>
+        <div className='w-20 h-20 bg-indigo-400 ring-4'> ring-4</div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-0'>ring-offset-0 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-2'>ring-offset-2 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-4'>ring-offset-4 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-0 ring-offset-red-300'>ring-offset-red-300 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-2 ring-offset-red-300'>ring-offset-red-300 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-offset-4 ring-offset-red-300'>ring-offset-red-300 </div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-4 ring-orange-300'> ring-orange-300</div> 
+        <div className='w-20 h-20 bg-indigo-400 ring-inset ring-4 ring-orange-300'>  ring-inset</div> 
+      </div>
     </div>
   );
 }
