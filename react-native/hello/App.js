@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { ScrollView, Text, } from 'react-native';
-import { MyTextInput, MyList, MyFetchButton, MySectionList, MyStepIndicator, Test, FixedDimensionBasic, } from './page';
+import { MyTextInput, MyList, MyFetchButton, MySectionList, MyStepIndicator, Test, FixedDimensionBasic,FlexDirectionBasic } from './page';
 
 const App = () => {
   console.log('hello');
@@ -19,6 +19,7 @@ const App = () => {
       <Test />
       <MyTextInput />
       <FixedDimensionBasic />
+      <FlexDirectionBasic />
       <MyList />
       <MySectionList />
       <MyStepIndicator />
