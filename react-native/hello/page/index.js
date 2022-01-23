@@ -9,3 +9,4 @@ export { default as MyStepIndicator } from './MyStepIndicator';
 
 export { default as FixedDimensionBasic } from './FixedDimensionBasic';
 export { default as FlexDirectionBasic } from './FlexDirectionBasic';
+export { default as Images } from './Images';

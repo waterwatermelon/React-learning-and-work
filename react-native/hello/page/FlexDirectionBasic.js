@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-
+import { PreviewLayout } from './layout/PreviewLayout'
 const styles = StyleSheet.create({
   box: {
     width: 50,
@@ -29,62 +29,11 @@ function Inner() {
   )
 }
 export default function FlexDirectionBasic() {
-  return (<PreviewLayout >
+  const options = ['row', 'column', 'row-reverse', 'column-reverse'];
+  return (<PreviewLayout
+    label='flexDirection'
+    options={options}>
     <Inner />
   </PreviewLayout>);
 }
 
-function PreviewLayout(props) {
-  const { children, } = props;
-  const options = ['row', 'column', 'row-reverse', 'column-reverse'];
-  const [selectedValue, setSelectedValue] = useState(options[0]);
-  return (
-    <View style={{
-      padding: 10,
-      borderColor: 'black',
-      borderWidth: 2,
-    }} >
-      <View style={{
-        flex: 1,
-        flexDirection: 'row',
-      }}>
-
-        {
-          options.map(option => (
-            <Text
-              style={[{
-                width: '24%',
-                padding: 4,
-                justifyContent: 'center',
-                marginRight: '1%',
-                backgroundColor: 'white',
-                color: 'orange',
-                borderRadius: 4,
-                borderColor: 'orange',
-                borderWidth: 1,
-              },
-              option === selectedValue ? {
-                color: 'white',
-                backgroundColor: 'orange'
-              } : null]}
-              onPress={() => setSelectedValue(option)}
-            >
-              {option}
-            </Text>
-          ))
-        }
-      </View>
-      <View
-        style={[{
-          flex: 1,
-          padding: 10,
-          height: 200,
-          borderColor: 'steelblue',
-          borderWidth: 2,
-        }, {
-          flexDirection: selectedValue
-        }]}>
-        {children}
-      </View>
-    </View>);
-}
