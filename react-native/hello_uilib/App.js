@@ -31,6 +31,13 @@ const colors = [
   '#8B1079', '#A0138E', '#B13DAC', '#C164BD', '#D08BCD', '#E0B1DE', '#EFD8EE', '#F7EBF7'
 ];
 
+// 加载自定义颜色，可以通过颜色类Colors和颜色修饰器属性来访问
+// 全局通用？
+Colors.loadColors({
+  orangeNew: '#e00', // 补充新颜色
+});
+console.log('Colors.isDark(Colors.grey10)', Colors.isDark(Colors.grey10));
+console.log('Colors.isDark(Colors.grey80)', Colors.isDark(Colors.grey80));
 
 const App = () => {
 
@@ -38,18 +45,20 @@ const App = () => {
   return (
     <ScrollView>
       <Text>UILIB</Text>
+      <View margin-10>
+        <Button
+          enableShadow
+          label='button'
+        />
+        <Button label='button' borderRadius={0} />
+        <Button label='disabled' disabled />
+        <Button
+          enableShadow
+          label='label'
+          iconSource={icon}
+        />
+      </View>
 
-      <Button
-        enableShadow
-        label='button'
-      />
-      <Button label='button' borderRadius={0} />
-      <Button label='disabled' disabled />
-      <Button
-        enableShadow
-        label='label'
-        iconSource={icon}
-      />
       <View margin-10 >
         <Card
           enableShadow
@@ -108,6 +117,8 @@ const App = () => {
         <ProgressBar progress={40} progressColor={Colors.orange60} />
       </View>
       <View padding-10 margin-10>
+        <Text orangeNew>orangeNew</Text>
+        <Text color={Colors.orangeNew}>orangeNew</Text>
         <Text color={Colors.orange20}>orange20</Text>
         <Text color={Colors.orange60}>orange60</Text>
         <Text text10>text10</Text>
@@ -124,8 +135,8 @@ const App = () => {
           <Checkbox label='label' value={true} iconColor={Colors.red20} />
           <Checkbox label='label' value={true} iconColor={Colors.red20} disabled />
           <Checkbox label='label' value={true} color={Colors.orange20} />
-          <Switch value={true}/>
-          <Switch value={false}/>
+          <Switch value={true} />
+          <Switch value={false} />
         </Card>
       </View>
       <View padding-12>
