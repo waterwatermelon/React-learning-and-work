@@ -1,0 +1,22 @@
+code {
+  background-color: #f0f0f0;
+  padding: 12px;
+  color: #666;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  margin: 4px 0;
+  padding: 4px;
+  border-left: 3px solid #ccc;
+  background-color: #f0f0f0;
+  color: #666;
+}
+blockquote::before {
+  content: ">>";
+  color: #4d7a9f;
+  margin-right: 4px;
+}
