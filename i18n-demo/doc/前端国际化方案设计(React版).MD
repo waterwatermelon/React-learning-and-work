@@ -69,6 +69,14 @@ export default i18n;
 // zh_cn.js
 const zh_cn = {
   title: '标题',
+   global: {
+    greet: {
+      morning: '早上好',
+      noon: '中午好!',
+      afternoon: '下午好',
+      night: '晚上好'
+    },
+  },
   // 通用或者多次使用的文本放在common空间
   common: {
     confirm: {
@@ -289,9 +297,37 @@ function MyTable() {
 export default MyTable;
 
 ```
+
+5.在组件外部使用 
+由于是在react组件外，无法使用hook,可以直接使用`i18next.t`这个API。
+```js
+// util.js
+import i18n from '../lang/i18n';
+// 获取问候语句 
+export function getGreetText() {
+  // 获取当前时间
+  let timeNow = new Date();
+  // 获取当前小时
+  let hours = timeNow.getHours();
+  // 设置默认文字
+  let text = '';
+  // 判断当前时间段
+  if (hours >= 0 && hours <= 10) {
+    text =  i18n.t('global.greet.morning');
+  } else if (hours > 10 && hours <= 13) {
+    text =  i18n.t('global.greet.noon');
+  } else if (hours > 13 && hours <= 18) {
+    text =  i18n.t('global.greet.afternoon');
+  } else if (hours > 18 && hours <= 24) {
+    text =  i18n.t('global.greet.night');
+  }
+  // 返回当前时间段对应的状态
+  return text;
+}
+
+```
+
 > [t函数API介绍](https://www.i18next.com/overview/api#t)
-
-
 ## 组件库的国际化设计
 组件库需要提供默认的语言包。组件库也使用i18next，完成多语言切换。
 （可选操作）外部应用在注册自身语言包时候，可以将注册组件库的语言包来覆盖组件库自身的原有的语言包。

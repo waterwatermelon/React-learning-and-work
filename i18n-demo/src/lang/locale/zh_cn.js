@@ -1,5 +1,13 @@
 const zh_cn = {
   title: '标题',
+  global: {
+    greet: {
+      morning: '早上好',
+      noon: '中午好!',
+      afternoon: '下午好',
+      night: '晚上好'
+    },
+  },
   // 通用或者多次使用的文本放在common空间
   common: {
     confirm: {

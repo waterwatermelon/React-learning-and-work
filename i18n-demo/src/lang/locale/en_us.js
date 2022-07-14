@@ -1,5 +1,13 @@
 const en_us = {
   title: 'title',
+  global: {
+    greet: {
+      morning: 'good morning',
+      noon: 'good noon',
+      afternoon: 'good afternoon',
+      night: 'good night',
+    },
+  },
   common: {
     confirm: {
       title: 'confirm',

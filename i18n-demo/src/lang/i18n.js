@@ -12,13 +12,14 @@ console.log('snUiLocales', snUiLocales);
 //   }
 // };
 const filenames = Object.keys(languages);
+// 获取资源 getResource
 const resources = {};
 for (let i = 0; i < filenames.length; i++) {
-  const e = filenames[i];
-  resources[e] = {
+  const languageName = filenames[i];
+  resources[languageName] = {
     translation: {
-      ...languages[e],
-      ...snUiLocales[e],
+      ...languages[languageName],
+      ...snUiLocales[languageName],
     }
   };
 };
