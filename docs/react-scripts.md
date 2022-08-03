@@ -49,5 +49,19 @@
 
 ### 配置工厂 - webpack.config.js
 
+### 读取环境参数 env.js
+项目中的环境配置文件：
+
+```sh
+# 按照如下顺序生效
+.env 
+.env.local 
+.env.[NODE_ENV]
+.env.[NODE_ENV].local
+```
+- getClientEnvironment(publicUrl): { raw, stringified }
+1.按照优先级，读取上述文件的环境参数。并将他们挂载到`process.env`。
+2.返回以`REACT_APP`前缀的key。
+
 ## 参考链接
 [react-scripts流程及源码分析 - 掘金](https://juejin.cn/post/6844903951893004296)
