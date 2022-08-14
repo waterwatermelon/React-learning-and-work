@@ -35,10 +35,8 @@
 ## 执行流程
 执行命令`react-scripts xx`时，调用`./bin/react-scripts.js`脚本。该脚本根据传入的第2个参数，调用`./scritps`目录下的对应脚本。
 
-### start
+### eject
 
-
-### build
 1.设置环境变量`BABEL_ENV`、`NODE_ENV`为`production`
 2.加载自定义环境变量
 3.检查必要的入口文件（作为入口的index.html和js）
@@ -54,6 +52,20 @@
 9.编译结束，调用回调函数
 9.1 编译失败，输出异常日志，异常退出进程
 9.2 编译成功，输出bundle等文件大小的编译结果
+
+### start
+
+1.设置环境变量`BABEL_ENV`、`NODE_ENV`为`development`
+2.加载自定义的环境变量配置
+3.检查必要的入口文件（index.html和js）
+4.读取ip和port
+5.检测是否配置了browserlist。如果最终没有browserlist，则退出。
+6.查找可用端口：先确定默认端口是否可用，如果没有则顺延到下一个端口。
+7.配置createCompiler的options并执行，返回一个compiler
+8.载入代理配置，并配置代理服务
+9.创建开发服务配置，具体的配置代码在`webpackDevServer.config.js`
+10.运行开发服务器，返回一个devServer
+11.启动开发服务器，如果是在交互式模式下清理控制台，再打开浏览器
 
 ### 配置工厂 - webpack.config.js
 
