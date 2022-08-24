@@ -69,13 +69,25 @@ export class Stage {
     this.ctx.rect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.fill();
     this.ctx.closePath();
+    
+    // 绘制波点
+    const dot = { r: 2, fillStyle: '#f6f6f6' };
+    this.ctx.fillStyle = dot.fillStyle;
+    for (let x = 0; x < this.canvas.width + 20; x += 20) {
+      for (let y = 0; y < this.canvas.height + 18; y += 18) {
+        this.ctx.beginPath();
+        this.ctx.arc(x, y, dot.r, 0, 2 * Math.PI);
+        this.ctx.fill();
+        this.ctx.closePath();
+      }
+    }
     this.ctx.restore();
   }
 
   paintFrame() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.paintBackground();
-    // TODO:给子元素排序
+    // 给子元素排序
     this.children.sort((a, b) => a.zIndex - b.zIndex);
     this.children.forEach(e => {
       e.paint(this.ctx);
