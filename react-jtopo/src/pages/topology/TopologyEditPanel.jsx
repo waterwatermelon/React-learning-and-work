@@ -74,7 +74,7 @@ export default function TopologyEditPanel() {
                             <div  className='link-selected' topo-div-type="topo-link" topo-linktype="line"
                               draggable="false"
                               onClick={() => editor.lineType = 'line'}>
-                              <img class="link-icon-style"
+                              <img alt='' class="link-icon-style"
                                 src="static/jtopo/img/line.png" alt='直线' />
                               <br /><span>直线</span>
                             </div>
@@ -85,7 +85,7 @@ export default function TopologyEditPanel() {
                             <div topo-div-type="topo-link" topo-linktype="foldline"
                               draggable="false"
                               onClick={() => { editor.lineType = 'foldLine'; editor.config.direction = 'horizontal' }}>
-                              <img class="link-icon-style"
+                              <img alt='' class="link-icon-style"
                                 src="static/jtopo/img/foldline_horizontal.png" alt='折线(横向)' />
                               <br /><span>折线(横向)</span>
                             </div>
@@ -96,7 +96,7 @@ export default function TopologyEditPanel() {
                             <div topo-div-type="topo-link" topo-linktype="foldline"
                               draggable="false"
                               onClick={() => { editor.lineType = 'foldLine'; editor.config.direction = 'vertical'; }}>
-                              <img class="link-icon-style"
+                              <img alt='' class="link-icon-style"
                                 src="static/jtopo/img/foldline_vertical.png" alt='折线(纵向)' />
                               <br /><span>折线(纵向)</span>
                             </div>
@@ -107,7 +107,7 @@ export default function TopologyEditPanel() {
                             <div topo-div-type="topo-link" topo-linktype="flexline"
                               draggable="false"
                               onClick={() => { editor.lineType = 'flexLine'; editor.config.direction = 'horizontal'; }}>
-                              <img class="link-icon-style"
+                              <img alt='' class="link-icon-style"
                                 src="static/jtopo/img/flexline_horizontal.png" alt='二次折线(横向)' />
                               <br /><span>二次折线(横向)</span>
                             </div>

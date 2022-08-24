@@ -1,14 +1,12 @@
 import './App.css';
-// import LinkNode from './LinkNode';
-// import DeviceRelation from './DeviceRelation';
-import TopologyEditPanel from './pages/topology/TopologyEditPanel';
+import STopoTest from './lib/STopoTest'; 
 
 function App() {
 
 
   return (
-    <div className="App">
-      <TopologyEditPanel />
+    <div className="App"> 
+      <STopoTest />
     </div>
   );
 }
