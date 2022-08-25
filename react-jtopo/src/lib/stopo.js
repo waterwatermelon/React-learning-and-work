@@ -19,6 +19,34 @@ export function generateUUID() {
 /* util end */
 
 /* model start */
+class MessageBus {
+  constructor(props) {
+    const { name } = props;
+    this.name = name;
+    this.map = {};
+  }
+  subscribe(event, handler) {
+    if (!this.map[event]) {
+      this.map[event] = [];
+    }
+    this.map[event].push(handler);
+  }
+  unsubscribe() {
+
+  }
+
+  dispatch(eventName, event) {
+    const handlerList = this.map[eventName];
+    if (handlerList) {
+      for (let i = 0; i < handlerList.length; i++) {
+        const handler = handlerList[i];
+        handler(event)
+      }
+    }
+  }
+
+}
+
 class TopoEvent {
   constructor(props) {
     // super(props)
@@ -34,8 +62,9 @@ export class Stage {
     this.timer = null;
     this.children = [];
     this.frames = 2;
-
+    this.messageBus = new MessageBus('stage-message-bus');
   }
+
   init() {
     const nodeA = new Node({ x: 80, y: 60 });
     const nodeB = new Node({ x: 120, y: 120 });
@@ -44,9 +73,14 @@ export class Stage {
     this.children.push(nodeB);
     this.children.push(link);
     this.timer = setInterval(this.paintFrame.bind(this), 1 / this.frames);
-    const events = ['click', 'mouseover', 'mousemove', 'mouseout', 'keydown', 'keyup', 'keypress'];
+    // const events = ['click', 'mouseover', 'mousemove', 'mouseout', 'keydown', 'keyup', 'keypress'];
+    const events = ['click'];
     events.map(eventName => {
-      this.canvas.addEventListener(eventName, getEventHandler('stage', eventName))
+      this.canvas.addEventListener(eventName, e => {
+        // TODO:处理事件属性，计算鼠标点击的位置在画布上的xy
+        getEventHandler('stage', eventName)(e);
+        this.dispatchEvent(eventName, e)
+      })
     })
     // 
     // this.canvas.addEventListener('keydown', e => {
@@ -69,7 +103,7 @@ export class Stage {
     this.ctx.rect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.fill();
     this.ctx.closePath();
-    
+
     // 绘制波点
     const dot = { r: 2, fillStyle: '#f6f6f6' };
     this.ctx.fillStyle = dot.fillStyle;
@@ -94,6 +128,13 @@ export class Stage {
     });
   }
 
+  on(eventName, handler) {
+    this.messageBus.subscribe(eventName, handler);
+  }
+
+  dispatchEvent(eventName, event) {
+    this.messageBus.dispatch(eventName, event);
+  }
 }
 
 class Element {
@@ -101,14 +142,22 @@ class Element {
     this.id = generateUUID();
     this.x = x;
     this.y = y;
+    this.size = 32;
     this.zIndex = 0; // 元素的在层叠上下文中的等级
   }
+  isInElement({ x, y }) {
+    
+    if (x > this.x && x < this.x + this.size && y > this.y && y < this.y + this.size ) {
+      return true;  
+    }
+    return false;
+  }
+
 }
 
 class DisplayElement extends Element {
   constructor(props) {
     super(props);
-    this.size = 32;
     this.isHidden = false;
   }
   paint(ctx) {
