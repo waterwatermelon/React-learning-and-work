@@ -54,7 +54,23 @@ class TopoEvent {
     this.target = null;// instanceof Element
   }
 }
+class Color {
+  constructor({ r, g, b, a = 1 }) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.a = a;
+  }
+  // 修改颜色
 
+  toDomString() {
+    return `rgba(${this.r},${this.g},${this.b},${this.a})`;
+  }
+
+  toJson() {
+    return { r: this.r, g: this.g, b: this.b, a: this.a };
+  }
+}
 export class Stage {
   constructor(canvas) {
     this.canvas = canvas;
@@ -146,9 +162,8 @@ class Element {
     this.zIndex = 0; // 元素的在层叠上下文中的等级
   }
   isInElement({ x, y }) {
-    
-    if (x > this.x && x < this.x + this.size && y > this.y && y < this.y + this.size ) {
-      return true;  
+    if (x > this.x && x < this.x + this.size && y > this.y && y < this.y + this.size) {
+      return true;
     }
     return false;
   }
@@ -159,12 +174,15 @@ class DisplayElement extends Element {
   constructor(props) {
     super(props);
     this.isHidden = false;
+    this.backgroundColor = new Color({ r: 0, g: 0, b: 0, a: 0 });
   }
   paint(ctx) {
     ctx.save();
     ctx.strokeStyle = '#cdf';
+    ctx.fillStyle = this.backgroundColor.toDomString();
     ctx.beginPath();
     ctx.rect(this.x, this.y, this.size, this.size);
+    ctx.fill();
     ctx.stroke();
     ctx.closePath();
     ctx.restore();
@@ -178,6 +196,8 @@ class Node extends DisplayElement {
     this.showJunction = true;
     this.jointIndex = 0; // 0 1 2 3
     this.zIndex = 2;
+    this.backgroundColor = new Color({ r: 210, g: 20, b: 30, a: 1 });
+
   }
 
   getJointPoint() {
