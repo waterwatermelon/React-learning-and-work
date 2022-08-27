@@ -37,6 +37,7 @@
 
 ### eject
 
+### build
 1.设置环境变量`BABEL_ENV`、`NODE_ENV`为`production`
 2.加载自定义环境变量
 3.检查必要的入口文件（作为入口的index.html和js）
