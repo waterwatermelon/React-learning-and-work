@@ -65,7 +65,7 @@ export default function GroupDemo() {
   }, []);
   return (
     <div>
-      <h2> Simple Demo</h2>
+      <h2> Group Demo</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>

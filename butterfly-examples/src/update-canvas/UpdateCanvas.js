@@ -5,19 +5,27 @@ import BaseNode from './BaseNode';
 export default function UpdateCanvas() {
   const canvasRef = useRef();
   const handleUpdate = () => {
+    const data = canvasRef.current.getDataMap();
+    console.log('data', data)
     canvasRef.current.redraw({
-      nodes: [{
-        id:'aaa',
-        label: 'aaa',
-        Class: BaseNode,
-      }]
+      ...data,
+      nodes: [
+        ...data.nodes,
+        {
+          id: 'test1',
+          name: 'update',
+          Class: BaseNode,
+        }],
     }, () => {
       console.log('[redraw][finish]');
       const dataMap = canvasRef.current.getDataMap();
       console.log('dataMap', dataMap);
       const node = canvasRef.current.getNode('aaa');
-      console.log('node', node);      
+      console.log('node', node);
     })
+    // const node = canvasRef.current.getNode('test1');
+    // console.log('node', node)
+    // node.options.name = 'update';
   };
   useEffect(() => {
     canvasRef.current = new Canvas({

@@ -13,9 +13,9 @@ export default function App() {
 
   return (
     <div>
-      <GroupDemo />
+      {/* <GroupDemo /> */}
       {/* <TooltipMenu /> */}
-      {/* <UpdateCanvas /> */}
+      <UpdateCanvas />
       {/* <LineStyle /> */}
       {/* <EndPointDemo />  */}
     </div>
