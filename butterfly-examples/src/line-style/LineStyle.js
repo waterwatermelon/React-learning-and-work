@@ -1,25 +1,24 @@
 import { useEffect } from 'react'
-import { Canvas, Edge } from 'butterfly-dag';
+import { Canvas } from 'butterfly-dag';
 import Node from './BaseNode';
+import Edge from './Edge';
 
-export default function LinkWithArchor() {
+export default function LineStyle() {
   useEffect(() => {
     const canvas = new Canvas({
       root: document.getElementById('butterfly-box'),
       disLinkable: true, // 可删除连线
-      linkable: false,    // 可连线
+      linkable: true,    // 可连线
       draggable: true,   // 可拖动
       zoomable: true,    // 可放大
       moveable: true,    // 可平移
       theme: {
         edge: {
-          // shapeType: 'AdvancedBezier',
+          shapeType: 'AdvancedBezier',
           arrow: true
         }
       },
-
     });
-    
     canvas.draw({
       nodes: [{
         id: '1',
@@ -92,9 +91,9 @@ export default function LinkWithArchor() {
         sourceNode: '1',
         targetNode: '4',
         type: 'endpoint',
+        lineType: 'dash-line',
         arrow: true,
         arrowPosition: 0.5,
-        shapeType: 'AdvancedBezier',
         Class: Edge
       },
       {
@@ -103,6 +102,7 @@ export default function LinkWithArchor() {
         sourceNode: '2',
         targetNode: '4',
         type: 'endpoint',
+        lineType: 'strong-line',
         arrow: true,
         arrowPosition: 0.5,
         Class: Edge
@@ -115,14 +115,14 @@ export default function LinkWithArchor() {
         type: 'endpoint',
         arrow: true,
         arrowPosition: 0.5,
-        shapeType: 'Straight',
         Class: Edge
       },],
     });
+    
   }, []);
   return (
     <div>
-      <h2> LinkWithArchor</h2>
+      <h2> Line Style</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
