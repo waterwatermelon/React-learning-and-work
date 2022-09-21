@@ -13,6 +13,7 @@ export default function App() {
 
   return (
     <div>
+      <LinkWithArchor />
       {/* <GroupDemo /> */}
       {/* <TooltipMenu /> */}
       <UpdateCanvas />
