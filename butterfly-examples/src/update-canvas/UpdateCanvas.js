@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Canvas, Group, Node, Edge } from 'butterfly-dag';
 
 import BaseNode from './BaseNode';
+import ImageNode from '../image-node/ImageNode';
 export default function UpdateCanvas() {
   const canvasRef = useRef();
   const handleUpdate = () => {
@@ -27,6 +28,14 @@ export default function UpdateCanvas() {
     // console.log('node', node)
     // node.options.name = 'update';
   };
+  const updateNode = (node) => {
+    node.update(Math.random() > 0.5 ? 'alarm' : 'offline');
+  };
+
+  const destroyNode = node => {
+    node.destroy()
+  };
+
   useEffect(() => {
     canvasRef.current = new Canvas({
       root: document.getElementById('butterfly-box'),
@@ -66,7 +75,12 @@ export default function UpdateCanvas() {
         Class: BaseNode,
         degree: 3,
         size: 10,
-      },],
+      }, {
+        id: 'image-node',
+        name: 'image',
+        Class: ImageNode,
+        bgSrc: '/images/olt.png',
+      }],
       edges: [{
         id: 'edge2',
         source: 'test1',
@@ -75,10 +89,17 @@ export default function UpdateCanvas() {
         Class: Edge,
       },],
     });
-
+    canvasRef.current.on('events', data => {
+      const { type, node } = data;
+      console.log('type', type);
+      if (type === 'node:click' && node) {
+        // destroyNode(node);
+        updateNode(node);
+      }
+    });
   }, []);
   return (
-    <div>
+    <div className='ns-update'>
       <h2> Update Canvas</h2>
       <div id='butterfly-box' className='butterfly-box'>
 

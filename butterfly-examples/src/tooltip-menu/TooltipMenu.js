@@ -90,7 +90,7 @@ export default function TooltipMenu() {
 
   }, []);
   return (
-    <div>
+    <div className='ns-tooltip'>
       <h2> Tooltip Menu </h2>
       <div id='butterfly-box' className='butterfly-box'>
 

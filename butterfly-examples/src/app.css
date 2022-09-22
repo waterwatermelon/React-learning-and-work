@@ -1,3 +1,7 @@
+#root {
+  padding: 12px;
+  background-color: #fefefe;
+}
 .butterfly-box {
   width: 800px;
   height: 600px;

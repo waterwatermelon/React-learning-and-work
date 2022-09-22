@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { Canvas, Group, Node, Edge } from 'butterfly-dag';
 
-import BaseNode from './BaseNode';
-export default function GroupDemo() {
+import ImageNode from './ImageNode';
+export default function App() {
 
   useEffect(() => {
     const canvas = new Canvas({
       root: document.getElementById('butterfly-box'),
       disLinkable: true, // 可删除连线
-      linkable: true,    // 可连线
+      linkable: false,    // 可连线
       draggable: true,   // 可拖动
       zoomable: true,    // 可放大
       moveable: true,    // 可平移
@@ -23,23 +23,15 @@ export default function GroupDemo() {
       // },
     });
     canvas.draw({
-      groups: [{
-        id: 'group1',
-        options: {
-          title: 'group1',
-        },
-        width: 400,
-        // scope: 'group1',
-        draggable: true,
-        resize: true,
-      }],
+      groups: [],
       nodes: [{
         id: 'test1',
         name: '小蝴蝶',
         type: 'main',
         iconType: 'iconapplication',
         className: 'icon-background',
-        Class: BaseNode,
+        bgSrc: '/images/olt.png',
+        Class: ImageNode,
         degree: 10,
         size: 10,
       }, {
@@ -48,8 +40,9 @@ export default function GroupDemo() {
         type: 'prop',
         iconType: 'iconapplication',
         className: 'icon-background',
+        bgSrc: '/images/splitter.png',
         // Class: Node,
-        Class: BaseNode,
+        Class: ImageNode,
         degree: 3,
         size: 10,
       },],
@@ -61,11 +54,11 @@ export default function GroupDemo() {
         Class: Edge,
       },],
     });
-
+    
   }, []);
   return (
-    <div className='ns-group'>
-      <h2> Group Demo</h2>
+    <div>
+      <h2> Image Node</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>

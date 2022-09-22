@@ -1,0 +1,24 @@
+.img-node-box {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+ 
+  background: rgba(247, 215, 156, 0.1);
+
+  .node-img {
+    width: 100%;
+  }
+ 
+ 
+
+  .name-box {
+    display: block;
+    height: 60px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #aaa;
+  }
+}

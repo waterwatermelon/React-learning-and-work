@@ -1,67 +1,36 @@
-import React, { useEffect } from 'react'
-import { Canvas, Group, Node, Edge } from 'butterfly-dag';
+import { Node } from 'butterfly-dag';
+import $ from 'jquery';
+import './image-node.scss';
+class ImageNode extends Node {
+  constructor(opts) {
+    super(opts);    
+    this.userData = {
+      alarm: '/images/olt_alarm.png',
+      offline: '/images/olt_offline.png',
+    };
+  }
+  draw = (opts) => {
+    console.log('opts', opts)
+    const container = document.createElement('div');
+    container.classList.add('img-node-box');
+    container.id = opts.id;
+    container.style.top = opts.top + 'px';
+    container.style.left = opts.left + 'px';
+    const img = document.createElement('img');
+    img.classList.add('node-img');
+    img.src = opts.options.bgSrc;
+    container.appendChild(img);
+    this._createText(container);
+    return container;
+  }
+  _createText(dom = this.dom) {
+    $('<span class="name-box"></span>').text(this.options.name).appendTo(dom);
+  }
 
-import BaseNode from './BaseNode';
-export default function App() {
-
-  useEffect(() => {
-    const canvas = new Canvas({
-      root: document.getElementById('butterfly-box'),
-      disLinkable: true, // 可删除连线
-      linkable: false,    // 可连线
-      draggable: true,   // 可拖动
-      zoomable: true,    // 可放大
-      moveable: true,    // 可平移
-      // layout: {
-      //   type: 'concentricLayout',
-      //   options: {
-      //     maxLevelDiff: 0.5,
-      //     sortBy: 'degree',
-      //     minNodeSpacing: 100,
-      //     preventOverlap: true,
-      //   },
-      // },
-    });
-    canvas.draw({
-      groups: [],
-      nodes: [{
-        id: 'test1',
-        name: '小蝴蝶',
-        type: 'main',
-        iconType: 'iconapplication',
-        className: 'icon-background',
-        bgSrc: '/images/olt.png',
-        Class: BaseNode,
-        degree: 10,
-        size: 10,
-      }, {
-        id: 'test2',
-        name: '自定义',
-        type: 'prop',
-        iconType: 'iconapplication',
-        className: 'icon-background',
-        bgSrc: '/images/splitter.png',
-        // Class: Node,
-        Class: BaseNode,
-        degree: 3,
-        size: 10,
-      },],
-      edges: [{
-        id: 'edge2',
-        source: 'test1',
-        target: 'test2',
-        label: 'text',
-        Class: Edge,
-      },],
-    });
-    
-  }, []);
-  return (
-    <div>
-      <h2> Image Node</h2>
-      <div id='butterfly-box' className='butterfly-box'>
-
-      </div>
-    </div>
-  )
+  update(status) {
+    const imgDom = this.dom.getElementsByClassName('node-img');
+    imgDom[0].src = this.userData[status];
+  }
 }
+
+export default ImageNode;
