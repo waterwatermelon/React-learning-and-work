@@ -80,6 +80,10 @@ export default function UpdateCanvas() {
         name: 'image',
         Class: ImageNode,
         bgSrc: '/images/olt.png',
+        userData: {
+          alarm: '/images/olt_alarm.png',
+          offline: '/images/olt_offline.png',
+        },
       }],
       edges: [{
         id: 'edge2',

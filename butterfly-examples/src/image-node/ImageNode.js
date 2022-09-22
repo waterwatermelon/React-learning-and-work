@@ -4,10 +4,11 @@ import './image-node.scss';
 class ImageNode extends Node {
   constructor(opts) {
     super(opts);    
-    this.userData = {
-      alarm: '/images/olt_alarm.png',
-      offline: '/images/olt_offline.png',
-    };
+    this.userData = opts.userData;
+    //  {
+    //   alarm: '/images/olt_alarm.png',
+    //   offline: '/images/olt_offline.png',
+    // };
   }
   draw = (opts) => {
     console.log('opts', opts)
