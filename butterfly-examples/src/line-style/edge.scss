@@ -1,7 +1,24 @@
-.dash-line {
-  stroke-dasharray: 3 2;
-}
+.ns-line-style {
+  .dash-line {
+    stroke-dasharray: 3 2;
+  }
 
-.butterflies-link.strong-line {
-  stroke-width: 2;
+  .butterflies-link.strong-line {
+    stroke-width: 2;
+  }
+
+  .error,
+  .red {
+    stroke: #e22f2f;
+  }
+
+  .warn,
+  .yellow {
+    stroke: #ffa500;
+  }
+
+  .success,
+  .green {
+    stroke: #66b866;
+  }
 }

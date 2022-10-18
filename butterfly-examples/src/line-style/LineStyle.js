@@ -91,10 +91,12 @@ export default function LineStyle() {
         sourceNode: '1',
         targetNode: '4',
         type: 'endpoint',
-        lineType: 'dash-line',
         arrow: true,
         arrowPosition: 0.5,
-        Class: Edge
+        Class: Edge,
+        // custom property
+        lineType: 'dash-line',
+        color: 'red',
       },
       {
         source: 'bottom',
@@ -102,10 +104,11 @@ export default function LineStyle() {
         sourceNode: '2',
         targetNode: '4',
         type: 'endpoint',
-        lineType: 'strong-line',
         arrow: true,
         arrowPosition: 0.5,
-        Class: Edge
+        Class: Edge,
+        lineType: 'strong-line',
+        color: 'warn',
       },
       {
         source: 'bottom',
@@ -115,13 +118,15 @@ export default function LineStyle() {
         type: 'endpoint',
         arrow: true,
         arrowPosition: 0.5,
-        Class: Edge
+        Class: Edge,
+        // lineType: 'strong-line',
+        color: 'green',
       },],
     });
-    
+
   }, []);
   return (
-    <div>
+    <div className='ns-line-style'>
       <h2> Line Style</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
