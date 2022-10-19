@@ -9,7 +9,7 @@
     "ahooks": "^3.7.2",
     "antd": "^4.22.8",
     "butterfly-dag": "^4.3.8",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.4.2",
