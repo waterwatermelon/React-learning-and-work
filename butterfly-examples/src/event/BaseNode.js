@@ -1,12 +1,16 @@
-import {Node} from 'butterfly-dag';
+import { Node } from 'butterfly-dag';
 import $ from 'jquery';
 import './basenode.scss';
 class BaseNode extends Node {
   constructor(opts) {
     super(opts);
     this.options = opts;
+    this.on('events', data => {
+      console.log('data', data);
+      console.log('node listen event');
+    })
   }
-  draw = (opts) => {
+  draw(opts) {
     let container = $('<div class="decision-new-node"></div>')
       .attr('id', opts.id)
       .css('top', opts.top + 'px')
@@ -26,6 +30,16 @@ class BaseNode extends Node {
   }
   _createText(dom = this.dom) {
     $('<span class="name-box"></span>').text(this.options.label).appendTo(dom);
+  }
+
+  focus() {
+    console.log('this', this)
+    console.log('this.dom.classList', this.dom.classList)
+    this.dom.classList.add('decision-new-node-selected');
+  }
+
+  unFocus() {
+    this.dom.classList.remove('decision-new-node-selected');
   }
 }
 

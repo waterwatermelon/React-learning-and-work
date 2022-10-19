@@ -187,6 +187,9 @@ export default function LinkWithArchor() {
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
+      <div className='butterfly-guide'>
+        悬浮锚点，能看到锚点的文本标签
+      </div>
     </div>
   )
 }

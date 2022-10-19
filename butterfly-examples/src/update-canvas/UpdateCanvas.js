@@ -4,13 +4,14 @@ import BaseNode from './BaseNode';
 import ImageNode from '../image-node/ImageNode';
 import { useInterval } from 'ahooks';
 import { delay } from '../fetchs';
+import { EVENT_TYPE } from '../constant';
 
 
 export default function UpdateCanvas() {
   const canvasRef = useRef();
   const [autoUpdate, setAutoUpdate] = useState(false);
   const [updateNodeTime, setUpdateNodeTime] = useState();
-  const [updating, setUpdating] = useState(false);
+  // const [updating, setUpdating] = useState(false);
 
   // 如何获取所有节点？
   const updateNode = (node) => {
@@ -23,7 +24,7 @@ export default function UpdateCanvas() {
     console.log('typeof dataMap', typeof dataMap);
     console.log('canvasRef.current.nodes', canvasRef.current.nodes);
     const nodes = dataMap.nodes;
-    setUpdating(true);
+    // setUpdating(true);
     console.log('[UpdateCanvas] get node state [start]');
     delay(2000)
       .then(() => {
@@ -32,7 +33,7 @@ export default function UpdateCanvas() {
         for (const node of nodes) {
           node.update(Math.random() > 0.5 ? 'alarm' : 'offline');
         }
-        setUpdating(false);
+        // setUpdating(false);
       });
   }
 
@@ -96,8 +97,7 @@ export default function UpdateCanvas() {
     canvasRef.current.on('events', data => {
       const { type, node } = data;
       console.log('type', type);
-      if (type === 'node:click' && node) {
-        // destroyNode(node);
+      if (type === EVENT_TYPE.NODE_CLICK && node) {
         updateNode(node);
       }
     });

@@ -4,14 +4,10 @@ import './image-node.scss';
 class ImageNode extends Node {
   constructor(opts) {
     super(opts);    
-    this.userData = opts.userData;
-    //  {
-    //   alarm: '/images/olt_alarm.png',
-    //   offline: '/images/olt_offline.png',
-    // };
+    this.userData = opts.userData;  
   }
+
   draw = (opts) => {
-    console.log('opts', opts)
     const container = document.createElement('div');
     container.classList.add('img-node-box');
     container.id = opts.id;
@@ -24,6 +20,7 @@ class ImageNode extends Node {
     this._createText(container);
     return container;
   }
+  
   _createText(dom = this.dom) {
     $('<span class="name-box"></span>').text(this.options.name).appendTo(dom);
   }

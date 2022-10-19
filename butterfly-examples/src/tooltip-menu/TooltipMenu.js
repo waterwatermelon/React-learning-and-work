@@ -95,7 +95,9 @@ export default function TooltipMenu() {
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
-
+      <div className='butterfly-guide'>
+        点击或悬浮节点，显示菜单或者提示信息
+      </div>
     </div>
   )
 }

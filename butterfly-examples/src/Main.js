@@ -28,6 +28,10 @@ export default function Main() {
             key: '/main/simple',
           },
           {
+            label: 'event',
+            key: '/main/event',
+          },
+          {
             label: 'archor',
             key: '/main/archor',
           },

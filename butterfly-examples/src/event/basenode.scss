@@ -3,18 +3,9 @@
   height: 28px;
   line-height: 28px;
   width: 60px;
-  // line-height: 60px;
-  // text-align: center;
-  // background: @butterfly-theme-color;
-  // border-radius:@butterfly-box-radius;
-  // border: @butterfly-box-border;
-  // box-shadow: @butterfly-box-shadow;
-  // color: @butterfly-normal-font-color;
 
   background: rgba(255, 166, 0, 0.2);
-  // border-radius: 50%;
-  border: 1px solid rgb(248, 250, 153);
-  // box-shadow: @butterfly-box-shadow;
+  border: 2px solid rgb(248, 250, 153);
   color: white;
 
   .icon-box {
@@ -28,7 +19,6 @@
     left: 2px;
 
     .newIconfont {
-      // color: @butterfly-overlay-font-color;
       color: #ff0;
     }
   }
@@ -45,4 +35,8 @@
     text-align: center;
     color: #aaa;
   }
+}
+
+.decision-new-node-selected {
+  border: 2px solid orange;
 }

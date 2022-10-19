@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Main from './Main';
 import Simple from './simple/Simple';
+import EventDemo from './event/EventDemo';
 import LinkWithArchor from './archor/LinkWithArchor';
 import GroupDemo from './group/GroupDemo';
 import UpdateCanvas from './update-canvas/UpdateCanvas';
@@ -21,6 +22,9 @@ export default function Router() {
       path: 'simple',
       element: <Simple />,
     }, {
+      path: 'event',
+      element: <EventDemo />,
+    },{
       path: 'archor',
       element: <LinkWithArchor />,
     }, {

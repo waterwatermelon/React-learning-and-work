@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { Canvas, Edge } from 'butterfly-dag';
 import Node from './BaseNode';
+import { EnhanceCanvas } from './EnhanceCanvas';
 
 export default function Event() {
   useEffect(() => {
-    const canvas = new Canvas({
+    const canvas = new EnhanceCanvas({
       root: document.getElementById('butterfly-box'),
       disLinkable: true, // 可删除连线
       linkable: true,    // 可连线
@@ -18,6 +19,8 @@ export default function Event() {
         }
       },
     });
+    // NOTE:开启框选模式
+    // canvas.isSelectMode = true;
     canvas.draw({
       nodes: [{
         id: '1',
@@ -115,25 +118,16 @@ export default function Event() {
         Class: Edge
       },],
     });
-    canvas.on('events', data => {
-      console.log('[canvas][event] data', data);
-      const { node, edge, dragEndpoint } = data;
-      if (node) {
-        console.log('node', node);
-      }
-      if (edge) {
-        console.log('edge', edge)
-      }
-      if(dragEndpoint) {
-        console.log('dragEndpoint', dragEndpoint);
-      }
-    })
+  
   }, []);
   return (
     <div>
       <h2> Event Demo</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
+      </div>
+      <div className='butterfly-guide'>
+        实现节点单选效果
       </div>
     </div>
   )

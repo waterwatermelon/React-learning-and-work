@@ -52,7 +52,6 @@ export default function App() {
         Class: Edge,
       },],
     });
-    
   }, []);
   return (
     <div className='ns-simple'>
