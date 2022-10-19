@@ -1,10 +1,37 @@
+html,
+body,
 #root {
-  padding: 12px;
-  background-color: #fefefe;
+  height: 100%;
 }
+
 .butterfly-box {
   width: 800px;
   height: 600px;
   border: 1px solid grey;
 }
- 
+.butterfly-operate { 
+  border: 1px dashed grey;
+  padding: 8px 4px;
+  margin: 4px 0;
+}
+
+.butterfly-guide {
+  border: 1px dashed grey;
+  padding: 8px 4px;
+  margin: 4px 0;
+  color: grey;
+}
+
+.butterfly-guide::before {
+  content: 'i';
+  display: inline-block;
+  font-size: 12px;
+  width: 1.42em;
+  height: 1.42em;
+  line-height: 1.42em;
+  text-align: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background-color: #fff;
+  color: rgb(212, 156, 0);
+}

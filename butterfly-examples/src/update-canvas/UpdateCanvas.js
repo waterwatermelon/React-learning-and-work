@@ -1,40 +1,40 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Canvas, Group, Node, Edge } from 'butterfly-dag';
-
 import BaseNode from './BaseNode';
 import ImageNode from '../image-node/ImageNode';
+import { useInterval } from 'ahooks';
+import { delay } from '../fetchs';
+
+
 export default function UpdateCanvas() {
   const canvasRef = useRef();
-  const handleUpdate = () => {
-    const data = canvasRef.current.getDataMap();
-    console.log('data', data)
-    canvasRef.current.redraw({
-      ...data,
-      nodes: [
-        ...data.nodes,
-        {
-          id: 'test1',
-          name: 'update',
-          Class: BaseNode,
-        }],
-    }, () => {
-      console.log('[redraw][finish]');
-      const dataMap = canvasRef.current.getDataMap();
-      console.log('dataMap', dataMap);
-      const node = canvasRef.current.getNode('aaa');
-      console.log('node', node);
-    })
-    // const node = canvasRef.current.getNode('test1');
-    // console.log('node', node)
-    // node.options.name = 'update';
-  };
+  const [autoUpdate, setAutoUpdate] = useState(false);
+  const [updateNodeTime, setUpdateNodeTime] = useState();
+  const [updating, setUpdating] = useState(false);
+
+  // 如何获取所有节点？
   const updateNode = (node) => {
     node.update(Math.random() > 0.5 ? 'alarm' : 'offline');
   };
 
-  const destroyNode = node => {
-    node.destroy()
-  };
+  const getAllNodes = () => {
+    const dataMap = canvasRef.current.getDataMap();
+    console.log('dataMap', dataMap);
+    console.log('typeof dataMap', typeof dataMap);
+    console.log('canvasRef.current.nodes', canvasRef.current.nodes);
+    const nodes = dataMap.nodes;
+    setUpdating(true);
+    console.log('[UpdateCanvas] get node state [start]');
+    delay(2000)
+      .then(() => {
+        console.log('autoUpdate', autoUpdate)
+        console.log('[UpdateCanvas] get node state [finish]');
+        for (const node of nodes) {
+          node.update(Math.random() > 0.5 ? 'alarm' : 'offline');
+        }
+        setUpdating(false);
+      });
+  }
 
   useEffect(() => {
     canvasRef.current = new Canvas({
@@ -102,13 +102,33 @@ export default function UpdateCanvas() {
       }
     });
   }, []);
+
+  useEffect(() => {
+    if (autoUpdate) {
+      setUpdateNodeTime(5000);
+    } else {
+      setUpdateNodeTime();
+    }
+  }, [autoUpdate]);
+
+  useInterval(getAllNodes, updateNodeTime);
+
   return (
     <div className='ns-update'>
       <h2> Update Canvas</h2>
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
-      <button onClick={handleUpdate}> update </button>
+
+      <div className='butterfly-operate'>
+        {/* <button onClick={handleRedraw}> redraw （bug)</button> */}
+
+        <input type='checkbox' value={autoUpdate} onChange={e => setAutoUpdate(e.target.checked)} /> 自动更新
+      </div>
+      <div className='butterfly-guide'>
+        点击节点，随机更新节点颜色
+      </div>
+
     </div>
   )
 }

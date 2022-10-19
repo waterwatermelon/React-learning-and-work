@@ -33,21 +33,7 @@ export class EndPointWithLabel extends Endpoint {
     } else if (opts.orientation.join() === ENDPOINT_ORIENTATION.RIGHT.join()) {
       text.classList.add('endpoint-text-right');
     }
-    // switch (opts.orientation) {
-    //   case ENDPOINT_ORIENTATION.UP:
-    //     break;
-    //   case ENDPOINT_ORIENTATION.DOWN:
-    //     text.classList.add('endpoint-text-bottom');
-    //     break;
-    //   case ENDPOINT_ORIENTATION.LEFT:
-    //     text.classList.add('endpoint-text-left');
-    //     break;
-    //   case ENDPOINT_ORIENTATION.RIGHT:
-    //     text.classList.add('endpoint-text-right');
-    //     break;
-    //   default:
-    //     break;
-    // }
+    
     console.log('opts', opts);
     _dom.appendChild(text);
     return _dom;

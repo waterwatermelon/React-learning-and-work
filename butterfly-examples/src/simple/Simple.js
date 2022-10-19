@@ -55,7 +55,7 @@ export default function App() {
     
   }, []);
   return (
-    <div>
+    <div className='ns-simple'>
       <h2> Simple Demo</h2>
       <div id='butterfly-box' className='butterfly-box'>
 

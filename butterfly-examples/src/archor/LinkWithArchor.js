@@ -90,24 +90,59 @@ export default function LinkWithArchor() {
       {
         id: 'node-5',
         label: '多锚点',
+        top: 20,
+        left: 30,
         className: '',
         Class: Node,
         endpoints: [{
           id: 'b1',
           orientation: [-1, 0],
           pos: [0, 0.2],
+          Class: EndPointWithLabel,
           label: 'b1',
-          Class: EndPointWithLabel
         }, {
           id: 'b2',
           orientation: [-1, 0],
           pos: [0, 0.8],
-          Class: EndPointWithLabel
+          Class: EndPointWithLabel,
+          // label: '',
         }, {
           id: 'b3',
           orientation: [0, 1],
-          pos: [0.6, 0]
-        }]
+          pos: [0.2, 0],
+          Class: EndPointWithLabel,
+          label: 'b3',
+        }, {
+          id: 'b4',
+          orientation: [0, 1],
+          pos: [0.8, 0],
+          Class: EndPointWithLabel,
+          label: 'b4',
+        }, {
+          id: 'b5',
+          orientation: [1, 0],
+          pos: [0, 0.8],
+          Class: EndPointWithLabel,
+          label: 'b5',
+        }, {
+          id: 'b6',
+          orientation: [1, 0],
+          pos: [0, 0.2],
+          Class: EndPointWithLabel,
+          label: 'b6',
+        }, {
+          id: 'b7',
+          orientation: [0, -1],
+          pos: [0.8, 0],
+          Class: EndPointWithLabel,
+          label: 'b7',
+        }, {
+          id: 'b8',
+          orientation: [0, -1],
+          pos: [0.2, 0],
+          Class: EndPointWithLabel,
+          label: 'b8',
+        },]
       },
 
       ],
