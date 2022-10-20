@@ -59,6 +59,7 @@ export default function App() {
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
+      <div className='butterfly-guide'>最基础的DEMO</div>
     </div>
   )
 }

@@ -69,6 +69,7 @@ export default function GroupDemo() {
       <div id='butterfly-box' className='butterfly-box'>
 
       </div>
+      <div className='butterfly-guide'>使用Group对节点分组（存在BUG）</div>
     </div>
   )
 }
