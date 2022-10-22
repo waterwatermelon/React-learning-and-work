@@ -73,14 +73,18 @@ export default function TooltipMenu() {
         }
         if (node.id.includes('2')) {
           Tips.createMenu({
-            className: 'butterfly-custom-menu',
+            // className: 'butterfly-custom-menu',
+            className: 'custom-menu-box',
             targetDom: node.dom,
             genTipDom: () => {
               const dom = document.createElement('div');
-              dom.innerText = 'Menu';
+              // dom.classList.add('custom-menu-box');
+              const child = document.createElement('div');
+              child.innerText = 'text in menu';
+              dom.append(child);
               return dom;
             },
-            action: 'clic',
+            action: 'click',
             closable: true,
           });
         }
