@@ -1,24 +1,57 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas, Group, Node, Edge } from 'butterfly-dag';
 import BaseNode from './BaseNode';
+import { EVENT_TYPE } from '../constant';
+
+const TOPO_MODEL = {
+  HUB_SPOKE: 'HUB_SPOKE',
+  FULL_MESH: 'FULL_MESH',
+};
+
+const TUNNEL_TYPE = {
+  IPSEC: 'IPSEC',
+  VXLAN: 'VXLAN',
+};
 
 export function DeviceView() {
 
+  const [selectedData, setSelectedData] = useState();
+  
+  // 业务层数据
   const deviceViewData = {
     topoModel: 'HUB_SPOKE',
     deviceList: [{
-      id: 1,
+      id: 111,
       sn: 'SN',
-      role: '',
-      // 图片
+      role: 'HUB',
+      // TODO:图片
       subNetList: [{
         interfaceName: 'LAN1',
-        subNet: '10.10.10.1/24',
+        subNetwork: '10.10.10.1/24',
         vlan: 1,
       }]
     },],
   };
 
+  // 渲染层数据
+  const displayData = {
+    nodes: [{
+      id: 1,
+      name: 'SN',
+      Class: BaseNode,
+      userData: {
+        deviceId: 111 ,
+        connectInterface: 'g0/0',
+        subNetList: [{
+          interfaceName: 'LAN1',
+          subNetwork: '10.10.10.1/24',
+          vlan: 1,
+        }]
+      }
+    }],
+  };
+
+  // TODO:业务层数据
   useEffect(() => {
     const canvas = new Canvas({
       root: document.getElementById('device-box'),
@@ -31,42 +64,19 @@ export function DeviceView() {
         type: 'concentricLayout',
         options: {
           maxLevelDiff: 0.5,
-          sortBy: 'degree',
-          minNodeSpacing: 100,
-          preventOverlap: true,
         },
       },
     });
-    canvas.draw({
-      groups: [],
-      nodes: [{
-        id: 'test1',
-        name: '小蝴蝶',
-        type: 'main',
-        iconType: 'iconapplication',
-        className: 'icon-background',
-        Class: BaseNode,
-        degree: 10,
-        size: 10,
-      }, {
-        id: 'test2',
-        name: '自定义',
-        type: 'prop',
-        iconType: 'iconapplication',
-        className: 'icon-background',
-        Class: BaseNode,
-        degree: 3,
-        size: 10,
-      },],
-      edges: [{
-        id: 'edge2',
-        source: 'test1',
-        target: 'test2',
-        label: 'text',
-        Class: Edge,
-      },],
-    });
 
+    canvas.draw(displayData);
+    canvas.on('events', data => {
+      const { type, node } = data;
+      if (type.includes(EVENT_TYPE.NODE_CLICK)) {
+        console.log('node', node);
+        // 通过节点信息找到对应的业务数据
+      }
+    });
+    
   }, []);
   return (
     <div className='device-view'>
