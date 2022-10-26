@@ -13,6 +13,7 @@ import TooltipMenu from './tooltip-menu/TooltipMenu';
 import LineStyle from './line-style/LineStyle';
 import Tabs from './tabs/Tabs';
 import Topo from './topo/Topo';
+import ThemeDemo from './theme/ThemeDemo';
 export default function Router() {
 
   const router = createBrowserRouter([{
@@ -24,7 +25,7 @@ export default function Router() {
     }, {
       path: 'event',
       element: <EventDemo />,
-    },{
+    }, {
       path: 'archor',
       element: <LinkWithArchor />,
     }, {
@@ -42,6 +43,9 @@ export default function Router() {
     }, {
       path: 'tabs',
       element: <Tabs />,
+    }, {
+      path: 'theme',
+      element: <ThemeDemo />,
     }, {
       path: 'topo',
       element: <Topo />,

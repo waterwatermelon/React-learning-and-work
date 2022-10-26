@@ -54,7 +54,12 @@ export default function Main() {
           {
             label: 'tabs',
             key: '/main/tabs',
-          }, {
+          },
+          {
+            label: 'theme',
+            key: '/main/theme',
+          },
+          {
             label: 'topo',
             key: '/main/topo',
           }]}
