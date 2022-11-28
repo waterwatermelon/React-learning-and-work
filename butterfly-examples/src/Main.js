@@ -62,6 +62,10 @@ export default function Main() {
           {
             label: 'topo',
             key: '/main/topo',
+          },
+          {
+            label: 'in modal',
+            key: '/main/modal',
           }]}
           onClick={handleClick}
         />

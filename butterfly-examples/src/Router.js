@@ -14,6 +14,7 @@ import LineStyle from './line-style/LineStyle';
 import Tabs from './tabs/Tabs';
 import Topo from './topo/Topo';
 import ThemeDemo from './theme/ThemeDemo';
+import InModal from './modal/InModal';
 export default function Router() {
 
   const router = createBrowserRouter([{
@@ -49,6 +50,9 @@ export default function Router() {
     }, {
       path: 'topo',
       element: <Topo />,
+    }, {
+      path : 'modal',
+      element: <InModal />,
     }],
   }]);
 
