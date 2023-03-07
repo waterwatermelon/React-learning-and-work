@@ -1,5 +1,6 @@
 const zh_cn = {
   title: '标题',
+  title: '也是标题',
   global: {
     greet: {
       morning: '早上好',
@@ -58,6 +59,13 @@ const zh_cn = {
     // eg：参数name在使用时候由用户传入
     deleteMessage: '你确定要删除{{name}}?',
   },
+  group: {
+    form: {
+      label: {
+        name: '用户组'
+      }
+    }
+  }
   // ... 
   // 其他模块以此类推
 };

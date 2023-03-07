@@ -1,11 +1,11 @@
 import React from 'react'
-import TranslationViewer from './TranslationViewer'
+import TranslationViewer from './translation-viewer/TranslationViewer';
 
 function App() {
   return (
-    <div>
+    <>
       <TranslationViewer />
-    </div>
+    </>
   )
 }
 
