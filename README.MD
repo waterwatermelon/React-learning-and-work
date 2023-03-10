@@ -9,8 +9,16 @@
 DEMO
 - antd-examples     antd4的使用实例
 - data-to-pdf       将HTML转成PDF的实例
-- dumi-demo         使用dumi的demo
-- dumi-demo-webpack 在dumi-demo的基础上，添加了webpack编译组件库
+- dumi
+  - v1
+    - dumi-v1-demo  dumi的使用案例
+    - dumi-v1-demo-webpack 在dumi-v1-demo的基础上，添加了webpack编译组件库
+  - v2
+    - dumi-v2-demo-01 使用静态站点模板创建的dumi项目
+    - dumi-v2-demo-02 使用组件库模板创建的dumi项目
+    - dumi-v2-demo-03 dumi主题包项目
+    - dumi-v2-demo-04 使用组件库模板创建的dumi项目，并使用了移动端dumi主题包dumi-theme-mobile
+- happy-ui          使用docz搭建组件库文档
 - hello react       hello word项目
 - hello-antd        使用antd修饰hello项目
 - hello-antd-router-auth    添加了路由拦截
