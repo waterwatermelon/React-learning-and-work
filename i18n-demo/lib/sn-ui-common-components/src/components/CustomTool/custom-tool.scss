@@ -1,0 +1,37 @@
+.search_box {
+  width: 100%;
+  // margin: 0 0 16px 0;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  .search-col{
+    max-width: 80%;
+    min-width: 80%;
+  }
+  .ant-form-inline .ant-form-item {
+    margin-bottom: 8px;
+  }
+
+  .search-btn-container {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  // .search-btn {
+  //   float: right;
+  // }
+
+  // .search-btn::after {
+  //   clear: both;
+  // }
+}
+
+// .search_box.btn_right {
+//   .search-btn {
+//     float: right;
+//   }
+
+//   .search-btn::after {
+//     clear: both;
+//   }
+// }

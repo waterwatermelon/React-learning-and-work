@@ -1,0 +1,13 @@
+.tool_box {
+  margin: 0 0 16px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-table {
+  //覆盖选择列的样式
+  table tr th.ant-table-selection-column {
+    padding: 8px 8px;
+    text-align: center;
+  }
+}

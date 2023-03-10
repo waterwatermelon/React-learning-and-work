@@ -1,0 +1,32 @@
+.left-panel {
+  position: relative;
+  height: 100%;
+
+  .left-panel-menu {
+    height: 100%;
+
+    &:hover {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+
+
+
+  .menu-fold-btn {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    z-index: 1;
+    padding: 12px 4px;
+    margin: auto;
+    background-color: #fff;
+    color: #888;
+    transform: translate(100%, -50%);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    &:hover {
+      color: #1890ff;
+    }
+  }
+}

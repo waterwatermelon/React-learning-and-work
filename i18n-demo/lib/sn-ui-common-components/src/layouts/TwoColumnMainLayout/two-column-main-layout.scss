@@ -1,0 +1,15 @@
+.two-column-main {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  .main-left {
+    flex-basis: auto;
+    height: 100%;
+    background-color: #fff;
+  }
+  .main-right {
+    flex-grow: 1;
+    padding: 12px;
+    overflow-y: scroll;
+  }
+}
