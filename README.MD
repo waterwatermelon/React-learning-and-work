@@ -27,7 +27,7 @@ DEMO
 - react-hook        记录hook的使用笔记
 - react-resize-panel        可调整宽度的多列面板  
 - react-native        记录react-native的使用
-  - hello             搭建react-native的环境和初始项目
+  - hello             搭建react-native的环境和初始项目，学习RN原生组件
   - hello_navigation  react-navigation使用案例
   - hello_uilib       uilib使用案例
 - react-tailwind    在react项目中使用tailwind样式库

@@ -1,5 +1,5 @@
-import { Form, Input, Select } from 'antd'
-import { useTranslation } from 'react-i18next'
+import { Form, Input, Select } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 export default function MyForm() {
   const { t } = useTranslation();

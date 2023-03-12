@@ -1,0 +1,45 @@
+{
+  "common": {
+    "confirm": {
+      "title": ""
+    },
+    "table": {
+      "operate": ""
+    }
+  },
+  "global": {
+    "greet": {
+      "afternoon": "",
+      "morning": "",
+      "night": "",
+      "noon": ""
+    }
+  },
+  "noTranslation": "",
+  "title": "",
+  "title-sub": "",
+  "user": {
+    "deleteMessage": "",
+    "enum": {
+      "status": {
+        "disable": "",
+        "enable": ""
+      }
+    },
+    "label": {
+      "group": "",
+      "ip": "",
+      "name": "",
+      "status": ""
+    },
+    "tooltip": {
+      "name": ""
+    },
+    "validator": {
+      "ip": {
+        "format": "",
+        "range": ""
+      }
+    }
+  }
+}

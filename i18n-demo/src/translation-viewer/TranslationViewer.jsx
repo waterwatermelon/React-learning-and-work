@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 import i18n from '../lang/i18n';
 import './translation-viewer.css';
-
+import extractTranslation from '../extractTranslation/translation';
+console.log(extractTranslation);
 // const allResource = [{
 //   key: 'title',
 //   translation: [{ lang: 'zh_cn', value: '标题' }]
@@ -12,7 +13,7 @@ import './translation-viewer.css';
 
 function TranslationViewer() {
   const colSpan = 6;
-  const languageList = ['zh_cn', 'en_us'];
+  const languages = ['zh_cn', 'en_us'];
 
   const [form] = Form.useForm();
   const [allResource, setAllResource] = useState([]);
@@ -26,47 +27,35 @@ function TranslationViewer() {
   }
 
   function getResource() {
-    // ① collect
-    const languages = ['zh_cn', 'en_us'];
-    const collectList = []; // { key, lang, translation }
-    languages.forEach(lang => {
-      const resourceBundle = i18n.getResourceBundle(lang);
-      const schemas = flatObject(resourceBundle);
-      schemas.forEach(schema => {
-        const { key, value } = schema;
-        collectList.push({
-          key,
-          translation: value,
-          lang,
-        });
-      });
-    });
-
-    // ② aggregate
     const aggregateList = [];
-    collectList.forEach(resource => {
-      const { key } = resource;
-      const index = aggregateList.findIndex(e => e.key === key);
 
-      if (index === -1) {
+    const flatExtractKeys = flatObject(extractTranslation).map(e => e.key);
 
-        const translation = [];
-        languageList.forEach(lang => {
-          const collectItem = collectList.find(e => e.key === key && e.lang === lang);
-          translation.push({
-            lang: lang,
-            value: collectItem?.translation,
-            isLoss: !Boolean(collectItem),
+    flatExtractKeys.forEach((extractKey) => {
+      const translations = [];
+      languages.forEach(lang => {
+        const resourceBundle = i18n.getResourceBundle(lang);
+        const flatResources = flatObject(resourceBundle);
+        const resourceItem = flatResources.find(e => e.key === extractKey);
+        if (resourceItem) {
+          translations.push({
+            lang,
+            value: resourceItem.value,
           });
-        });
-        aggregateList.push({
-          key,
-          translation,
-        });
-      }
+        } else {
+          translations.push({
+            lang,
+            isLoss: true,
+          });
+        }
+      });
+      aggregateList.push({
+        key: extractKey,
+        translations,
+      })
     });
-    setAllResource(aggregateList);
-    setDisplayList(aggregateList);
+    setAllResource([...aggregateList,]);
+    setDisplayList([...aggregateList,]);
   }
 
   function filter() {
@@ -75,12 +64,10 @@ function TranslationViewer() {
     if (condition.key) {
       filterList = filterList.filter(e => e.key.includes(condition.key));
     }
-    console.log('filterList', filterList);
     if (condition.loss) {
-      filterList = filterList.filter(e => e.translation.some(t => t.isLoss))
+      filterList = filterList.filter(e => e.translations.some(t => t.isLoss))
     }
     setDisplayList(filterList);
-
   }
 
   useEffect(() => {
@@ -88,30 +75,37 @@ function TranslationViewer() {
   }, []);
   return (
     <Layout>
-      <Form className='list' form={form} >
-        <Row gutter={[8, 8]}>
-          <Col span={colSpan}>
-            <Form.Item label='key' name={'key'}>
-              <Input />
-            </Form.Item>
-          </Col>
-          <Col span={colSpan}>
-            <Form.Item label='loss' valuePropName='checked' name={'loss'}>
-              <Checkbox />
-            </Form.Item>
-          </Col>
-          <Col>
-            <Button htmlType='submit' onClick={filter}>过滤</Button>
-          </Col>
-        </Row>
-      </Form>
+      <Card className='search-box'>
+        <Form className='list' form={form} >
+          <Row gutter={[8, 8]}>
+            <Col span={colSpan}>
+              <Form.Item label='key' name={'key'}>
+                <Input />
+              </Form.Item>
+            </Col>
+            <Col span={colSpan}>
+              <Form.Item label='loss' valuePropName='checked' name={'loss'}>
+                <Checkbox />
+              </Form.Item>
+            </Col>
+            <Col>
+              <Button htmlType='submit' onClick={filter}>过滤</Button>
+            </Col>
+          </Row>
+          <Row>
+            {/* TODO: */}
+            {/* <Button> 列表 视图</Button> */}
+            {/* <Button> JSON 视图</Button> */}
+          </Row>
+        </Form>
+      </Card>
       <Divider />
       {/* List */}
       <List
         className='list'
         dataSource={displayList}
         renderItem={(resource) => {
-          const { translation, key } = resource;
+          const { translations, key } = resource;
           return (<Card className='mt-12' key={key}>
             <Row>
               <Col span={6}>
@@ -124,7 +118,7 @@ function TranslationViewer() {
               </Col>
               <Col span={18}>
                 {
-                  translation.map(translate => {
+                  translations.map(translate => {
                     return <div>
                       [{translate.lang}]: {translate.isLoss
                         ? <Typography.Text type='danger'> <AlertFilled /> LOSS</Typography.Text>
@@ -138,6 +132,8 @@ function TranslationViewer() {
         }}
         pagination={{
           size: 10,
+          total: displayList.length,
+          showTotal: (total, range) => `共${total}项数据`,
         }} />
     </Layout>
   )
