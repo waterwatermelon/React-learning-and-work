@@ -13,7 +13,8 @@
     "react": "18.2.0",
     "react-native": "0.71.4",
     "react-native-file-access": "^2.5.3",
-    "react-native-file-selector": "^1.0.2"
+    "react-native-file-selector": "^1.0.2",
+    "react-native-ping": "^1.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

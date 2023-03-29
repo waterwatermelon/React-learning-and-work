@@ -6,6 +6,7 @@ import {
 
 import FileAccessTest from './FileAccessTest';
 import FileSelectorTest from './FileSelectorTest';
+import PingTest from './PingTest';
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <FileAccessTest />
-      <FileSelectorTest />
+      {/* <FileAccessTest />
+      <FileSelectorTest /> */}
+      <PingTest />
     </SafeAreaView>
   );
 }
