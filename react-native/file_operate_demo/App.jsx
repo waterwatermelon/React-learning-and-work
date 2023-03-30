@@ -3,10 +3,11 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
+import FetchBlobTest from './app/FetchBlobTest';
 
-import FileAccessTest from './FileAccessTest';
-import FileSelectorTest from './FileSelectorTest';
-import PingTest from './PingTest';
+import FileAccessTest from './app/FileAccessTest';
+import FileSelectorTest from './app/FileSelectorTest';
+import PingTest from './app/PingTest';
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      {/* <FileAccessTest />
-      <FileSelectorTest /> */}
-      <PingTest />
+      <FileAccessTest />
+      <FileSelectorTest /> 
+      {/* <PingTest /> */}
+      <FetchBlobTest />
     </SafeAreaView>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import Ping from 'react-native-ping';
+import Header from '../component/Header';
 
 function PingTest() {
   const [ip, setIp] = useState('');
@@ -57,6 +58,7 @@ function PingTest() {
 
   return (
     <View >
+      <Header title='Ping Test'/>
       <View style={styles.box}>
         <Text>IP地址</Text>
         <TextInput
@@ -77,6 +79,10 @@ function PingTest() {
 }
 
 const styles = StyleSheet.create({
+  page: {
+    borderWidth: 1,
+  },
+   
   box: {
     padding: 12,
     margin: 12,
@@ -87,5 +93,5 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     // borderColor: 'skyblue',
   }
-})
+});
 export default PingTest;

@@ -3,10 +3,13 @@ import {
   Button,
   StatusBar,
   Text,
+  View,
 } from 'react-native';
 
 
 import RNFileSelector from 'react-native-file-selector';
+import { styles } from './style';
+import Header from '../component/Header';
 
 function FileSelectorTest() {
 
@@ -29,12 +32,11 @@ function FileSelectorTest() {
 
   return (
     <>
-      <StatusBar />
-      <Text >File Picker</Text>
-
-      <Button onPress={openFileSelector} title='open file' />
+      <Header title='File Picker' />
+      <View style={styles.box}>
+        <Button onPress={openFileSelector} title='open file' />
+      </View>
       <RNFileSelector title='file selector' path={path} visible={visible} onDone={handleDone} onCancel={handleCancel} />
-
     </>
   );
 }
