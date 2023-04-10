@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
-  box: {
+  card: {
     display: 'flex',
     padding: 12,
-    margin: 4,
+    marginHorizontal: 12,
+    marginVertical: 8,
+    backgroundColor: '#fff',
   },
   marginBottom: {
     marginBottom: 10,

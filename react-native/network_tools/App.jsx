@@ -16,6 +16,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import NetInfo from './app/NetInfo';
 import PingTest from './app/PingTest';
 
 
@@ -36,6 +37,7 @@ function App() {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <PingTest />
+        <NetInfo />
       </ScrollView>
     </SafeAreaView>
   );

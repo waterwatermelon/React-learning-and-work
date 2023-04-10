@@ -1,7 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 
-function Header(props) {
+interface HeaderProps {
+  title?: string;
+}
+function Header(props: HeaderProps) {
   const { title = '' } = props;
   return (
     <View style={styles.header}>

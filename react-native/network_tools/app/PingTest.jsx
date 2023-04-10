@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import Ping from 'react-native-ping';
+import { styles } from './style';
 import Header from '../component/Header';
 
 function PingTest() {
@@ -73,7 +74,7 @@ function PingTest() {
   return (
     <View >
       <Header title='Ping Test' />
-      <View style={styles.box}>
+      <View style={styles.card}>
         <Text>IP地址</Text>
         <TextInput
           // style={styles.input}
@@ -81,11 +82,11 @@ function PingTest() {
           value={ip}
           onChangeText={setIp} />
       </View>
-      <View style={styles.box}>
+      <View style={styles.card}>
         <Button title='ping' onPress={pingTest} />
         <Button title='ping(multip)' onPress={pingTestMultipart} />
       </View>
-      <View style={styles.box}>
+      <View style={styles.card}>
         <Text> result </Text>
         {
           resultList.map(result => {
@@ -99,20 +100,20 @@ function PingTest() {
   )
 }
 
-const styles = StyleSheet.create({
-  page: {
-    borderWidth: 1,
-  },
+// const styles = StyleSheet.create({
+  // page: {
+  //   borderWidth: 1,
+  // },
 
-  box: {
-    padding: 12,
-    margin: 12,
-    borderWidth: 1,
-    borderColor: 'skyblue',
-  },
-  input: {
-    // borderWidth: 1,
-    // borderColor: 'skyblue',
-  }
-});
+  // box: {
+  //   padding: 12,
+  //   margin: 12,
+  //   borderWidth: 1,
+  //   borderColor: 'skyblue',
+  // },
+  // input: {
+  //   // borderWidth: 1,
+  //   // borderColor: 'skyblue',
+  // }
+// });
 export default PingTest;
