@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Button } from 'react-native';
 import RNEChartsPro from 'react-native-echarts-pro';
+import TreeChart from './charts/TreeChart';
 
 function RNEChartsPage() {
   const [pieOption, setPieOption] = useState({
@@ -47,6 +48,10 @@ function RNEChartsPage() {
 
   return (
     <>
+      <View>
+
+        <TreeChart />
+      </View>
       <View >
         <View style={{ width: 120 }}>
           <Button title='饼图随机数据' onPress={handleGenRandomData} />
@@ -92,7 +97,7 @@ function RNEChartsPage() {
                   // distance: -12,
                   show: false,
                 },
-                axisLine :{
+                axisLine: {
                   lineStyle: {
                     color: [[1, '#eaeaf0']],
                     width: 16,
@@ -109,18 +114,18 @@ function RNEChartsPage() {
                   color: 'blue',
                 },
                 detail: {
-                  formatter: ['{value}{b|MBps}','{sub|下载速度测试中}'].join('\n'),
+                  formatter: ['{value}{b|MBps}', '{sub|下载速度测试中}'].join('\n'),
                   fontSize: 30,
                   rich: {
-                    
+
                     b: {
                       color: '#666',
-                       fontSize: 16,
+                      fontSize: 16,
                     },
                     sub: {
-                      color: '#666',  
-                    fontSize: 14
-                      
+                      color: '#666',
+                      fontSize: 14
+
                     }
                   }
                 },
@@ -134,6 +139,7 @@ function RNEChartsPage() {
             ]
           }} />
       </View>
+
     </>
   )
 }
