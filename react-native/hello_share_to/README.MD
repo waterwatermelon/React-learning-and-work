@@ -1,0 +1,1 @@
+- MainActivity能够被激活，但是ShareActivity不能会被激活
