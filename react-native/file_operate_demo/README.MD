@@ -3,15 +3,16 @@
 ## 工具
 - react-native-file-selector：文件选择可视化
 - react-native-file-access：访问文件系统相关API
-- react-native-ping：在手机上执行ping命令
-
+- rn-fetch-blob：
+    - 以二进制格式处理网络请求，并与文件系统打通
+    - 基于react-native-fetch-blob改造
 ## 实现功能
 
 ```
 ├── App.jsx
 ├── FileAccessTest.jsx react-native-file-access功能测试 
 ├── FileSelectorTest.jsx react-native-file-selector功能测试 
-└── PingTest.jsx react-native-ping功能测试
+└── FetchBlobTest.jsx rn-fetch-blob功能测试
 ```
 
 ### FileAccessTest.jsx 
@@ -25,9 +26,10 @@
 ### FileSelectorTest.jsx 
 打开文件选择器。
 
-### PingTest.jsx
-- 单次ping测试
-- 多次ping测试
+
+### FetchBlobTest.jsx
+- 文件流下载
+- 文件上传
 
 ## 参考资料
 - [RN上传文档组件react-native-file-selector - 简书](https://www.jianshu.com/p/f22d8220f0a1)
