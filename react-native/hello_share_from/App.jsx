@@ -12,19 +12,23 @@ import {
   ScrollView,
 } from 'react-native';
 import Share from 'react-native-share';
+// import ShareExtension from 'rn-extensions-share';
+function App() {  
 
 
-function App(): JSX.Element {
-
-
-
+  // const handleUrlSchema = () => {
+  //   // ShareExtension.openURL('tel://')
+  // };
+  
   const handleShare = () => {
     Share.open({
-      message: 'from share',
-      email: '1044264633@qq.com',
-    }).then(res => {
+      message: 'from [react-native-share]',
+      title: 't',
+    })
+    .then(res => {
       console.log('success:', res)
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('share err:', err);
     });
   };
@@ -34,7 +38,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
       >
         <Button title='share(text)' onPress={handleShare} />
-
+        {/* <Button title='tel://' onPress={handleUrlSchema} /> */}
       </ScrollView>
     </SafeAreaView>
   );
