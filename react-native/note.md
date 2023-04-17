@@ -16,3 +16,7 @@ ref:React.ElementRef<typeof View>
 - ref.measureInWindow((x,y,w,h) => {}:void)
 
 参考资料：https://reactnative.cn/docs/0.68/new-architecture-library-intro#migrating-measure
+
+
+## 开发环境
+metro 配置 https://facebook.github.io/metro/docs/configuration/

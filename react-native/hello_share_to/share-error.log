@@ -1,0 +1,134 @@
+04-17 02:37:57.084   546   546 I vinput  : type=1400 audit(0.0:1242): avc: denied { read } for path="socket:[15616]" dev="sockfs" ino=15616 scontext=u:r:vinput:s0 tcontext=u:r:vinput:s0 tclass=tcp_socket permissive=1
+04-17 02:37:57.090  3845  3845 E unknown:ReactNative: Got DOWN touch before receiving UP or CANCEL from last gesture
+04-17 02:37:57.860   567  3578 I ActivityManager: START u0 {act=android.intent.action.CHOOSER flg=0x40000000 cmp=android/com.android.internal.app.ChooserActivity (has extras)} from uid 10074
+04-17 02:37:57.872   537   537 D Sensors : batch handle 1, but there is no batch sensor in genymotion
+04-17 02:37:57.878  3522  3522 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@5276a4d
+04-17 02:37:57.985   567   590 I ActivityManager: Displayed android/com.android.internal.app.ChooserActivity: +103ms (total +20s108ms)
+04-17 02:37:59.227   567  1625 I ActivityManager: START u0 {act=android.intent.action.SEND typ=text/plain flg=0xb080001 cmp=com.hello_share_to/.ShareApplication clip={text/plain T:from share} (has extras)} from uid 10074
+04-17 02:37:59.227   567  1625 I ActivityManager: Ignoring FLAG_ACTIVITY_NEW_DOCUMENT, launchMode is "singleInstance" or "singleTask"
+04-17 02:37:59.297  4418  4418 I Zygote  : seccomp disabled by setenforce 0
+04-17 02:37:59.301  4418  4418 I .hello_share_t: Late-enabling -Xcheck:jni
+04-17 02:37:59.305   567   584 I ActivityManager: Start proc 4418:com.hello_share_to/u0a75 for activity com.hello_share_to/.ShareApplication
+04-17 02:37:59.307  3845  3883 E eglCodecCommon: goldfish_dma_create_region: could not obtain fd to device! fd -1 errno=2
+04-17 02:37:59.313  3845  3887 I ReactNativeJNI: Memory warning (pressure level: TRIM_MEMORY_UI_HIDDEN) received by JS VM, ignoring because it's non-severe
+04-17 02:37:59.330  4418  4418 W .hello_share_t: Unexpected CPU variant for X86 using defaults: x86
+04-17 02:37:59.348   230   230 I storaged: type=1400 audit(0.0:1243): avc: denied { read } for name="stat" dev="sysfs" ino=8710 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+04-17 02:37:59.598  4418  4418 W .hello_share_t: Accessing hidden field Landroid/os/Trace;->TRACE_TAG_APP:J (light greylist, reflection)
+04-17 02:37:59.598  4418  4418 W .hello_share_t: Accessing hidden method Landroid/os/Trace;->isTagEnabled(J)Z (light greylist, reflection)
+04-17 02:37:59.618  4418  4418 V fb-UnpackingSoSource: locked dso store /data/user/0/com.hello_share_to/lib-main
+04-17 02:37:59.620  4418  4418 I fb-UnpackingSoSource: dso store is up-to-date: /data/user/0/com.hello_share_to/lib-main
+04-17 02:37:59.620  4418  4418 V fb-UnpackingSoSource: releasing dso store lock for /data/user/0/com.hello_share_to/lib-main
+04-17 02:37:59.631  4418  4418 W unknown:ReactInstanceManagerBuilder: You're not setting the JS Engine Resolution Algorithm. We'll try to load JSC first, and if it fails we'll fallback to Hermes
+04-17 02:37:59.631  4418  4418 V SoLoader: libjscexecutor.so not found on /data/data/com.hello_share_to/lib-main
+04-17 02:37:59.631  4418  4418 V SoLoader: libjscexecutor.so not found on /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.631  4418  4418 V SoLoader: libjscexecutor.so not found on /system/vendor/lib
+04-17 02:37:59.632  4418  4418 V SoLoader: libjscexecutor.so not found on /system/lib
+04-17 02:37:59.633  4418  4418 E SoLoader: couldn't find DSO to load: libjscexecutor.so
+04-17 02:37:59.633  4418  4418 E SoLoader: 	SoSource 0: com.facebook.soloader.ApkSoSource[root = /data/data/com.hello_share_to/lib-main flags = 1]
+04-17 02:37:59.633  4418  4418 E SoLoader: 	SoSource 1: com.facebook.soloader.DirectorySoSource[root = /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86 flags = 0]
+04-17 02:37:59.633  4418  4418 E SoLoader: 	SoSource 2: com.facebook.soloader.DirectorySoSource[root = /system/vendor/lib flags = 2]
+04-17 02:37:59.633  4418  4418 E SoLoader: 	SoSource 3: com.facebook.soloader.DirectorySoSource[root = /system/lib flags = 2]
+04-17 02:37:59.633  4418  4418 E SoLoader: 	Native lib dir: /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.633  4418  4418 E SoLoader:  result: 0
+04-17 02:37:59.634  4418  4418 V SoLoader: libhermes.so not found on /data/data/com.hello_share_to/lib-main
+04-17 02:37:59.635  4418  4418 D SoLoader: libhermes.so found on /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.635  4418  4418 D SoLoader: Not resolving dependencies for libhermes.so
+04-17 02:37:59.642  4418  4418 V SoLoader: libhermes_executor.so not found on /data/data/com.hello_share_to/lib-main
+04-17 02:37:59.642  4418  4418 D SoLoader: libhermes_executor.so found on /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.642  4418  4418 D SoLoader: Not resolving dependencies for libhermes_executor.so
+04-17 02:37:59.699   544  1059 W SurfaceFlinger: Attempting to set client state on removed layer: Dim Layer for - Task=45#0
+04-17 02:37:59.699   544  1059 W SurfaceFlinger: Attempting to destroy on removed layer: Dim Layer for - Task=45#0
+04-17 02:37:59.735  4418  4418 W .hello_share_t: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (light greylist, reflection)
+04-17 02:37:59.735  4418  4418 W .hello_share_t: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (light greylist, reflection)
+04-17 02:37:59.735  4418  4418 W .hello_share_t: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (light greylist, reflection)
+04-17 02:37:59.735  4418  4418 W .hello_share_t: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (light greylist, reflection)
+04-17 02:37:59.741  4418  4418 W .hello_share_t: Accessing hidden method Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard; (light greylist, reflection)
+04-17 02:37:59.741  4418  4418 W .hello_share_t: Accessing hidden method Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V (light greylist, reflection)
+04-17 02:37:59.741  4418  4418 W .hello_share_t: Accessing hidden method Ldalvik/system/CloseGuard;->warnIfOpen()V (light greylist, reflection)
+04-17 02:37:59.742  4418  4418 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+04-17 02:37:59.746   537   537 D Sensors : batch handle 1, but there is no batch sensor in genymotion
+04-17 02:37:59.755  4418  4439 V SoLoader: libfbjni.so not found on /data/data/com.hello_share_to/lib-main
+04-17 02:37:59.755  4418  4439 D SoLoader: libfbjni.so found on /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.755  4418  4439 D SoLoader: Not resolving dependencies for libfbjni.so
+04-17 02:37:59.761  4418  4439 V SoLoader: libflipper.so not found on /data/data/com.hello_share_to/lib-main
+04-17 02:37:59.761  4418  4439 D SoLoader: libflipper.so found on /data/app/com.hello_share_to-YiRdHy-zGm98VBX4K_tcow==/lib/x86
+04-17 02:37:59.761  4418  4439 D SoLoader: Not resolving dependencies for libflipper.so
+04-17 02:37:59.779  4418  4441 W unknown:InspectorPackagerConnection: Couldn't connect to packager, will silently retry
+04-17 02:37:59.784  4418  4418 W .hello_share_t: Accessing hidden field Landroid/view/View;->mKeyedTags:Landroid/util/SparseArray; (light greylist, reflection)
+04-17 02:37:59.784  4418  4418 W .hello_share_t: Accessing hidden field Landroid/view/View;->mListenerInfo:Landroid/view/View$ListenerInfo; (light greylist, reflection)
+04-17 02:37:59.785  4418  4418 W .hello_share_t: Accessing hidden field Landroid/view/View$ListenerInfo;->mOnClickListener:Landroid/view/View$OnClickListener; (light greylist, reflection)
+04-17 02:37:59.790  4418  4418 I flipper : flipper: FlipperClient::addPlugin Inspector
+04-17 02:37:59.792  4418  4418 I flipper : flipper: FlipperClient::addPlugin Databases
+04-17 02:37:59.794  4418  4418 I flipper : flipper: FlipperClient::addPlugin Preferences
+04-17 02:37:59.794  4418  4418 I flipper : flipper: FlipperClient::addPlugin CrashReporter
+04-17 02:37:59.797  4418  4418 I flipper : flipper: FlipperClient::addPlugin Network
+04-17 02:37:59.803  4418  4451 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+04-17 02:37:59.800  4418  4418 I com.hello_share_to: type=1400 audit(0.0:1246): avc: denied { write } for comm=45474C20496E6974 name="property_service" dev="tmpfs" ino=9331 scontext=u:r:untrusted_app:s0:c75,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+04-17 02:37:59.800  4418  4418 I com.hello_share_to: type=1400 audit(0.0:1247): avc: denied { connectto } for comm=45474C20496E6974 path="/dev/socket/property_service" scontext=u:r:untrusted_app:s0:c75,c256,c512,c768 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+04-17 02:37:59.806  4418  4451 D vndksupport: Loading /vendor/lib/egl/libGLES_emulation.so from current namespace instead of sphal namespace.
+04-17 02:37:59.810  4418  4418 D AndroidRuntime: Shutting down VM
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: FATAL EXCEPTION: main
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: Process: com.hello_share_to, PID: 4418
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.hello_share_to/com.hello_share_to.ShareApplication}: java.lang.ClassCastException: com.hello_share_to.ShareApplication cannot be cast to android.app.Activity
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2843)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3048)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:78)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:108)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:68)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1808)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:193)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6669)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:493)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: Caused by: java.lang.ClassCastException: com.hello_share_to.ShareApplication cannot be cast to android.app.Activity
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:69)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateActivity(CoreComponentFactory.java:45)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.Instrumentation.newActivity(Instrumentation.java:1215)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2831)
+04-17 02:37:59.815  4418  4418 E AndroidRuntime: 	... 11 more
+04-17 02:37:59.817   567  1625 W ActivityManager:   Force finishing activity com.hello_share_to/.ShareApplication
+04-17 02:37:59.818  4418  4439 W System.err: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+04-17 02:37:59.818  4418  4439 W System.err: SLF4J: Defaulting to no-operation (NOP) logger implementation
+04-17 02:37:59.818  4418  4439 W System.err: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+04-17 02:37:59.821   567   583 I ActivityManager: Showing crash dialog for package com.hello_share_to u0
+04-17 02:37:59.825  4418  4451 E libEGL  : load_driver(/vendor/lib/egl/libGLES_emulation.so): dlopen failed: library "/vendor/lib/egl/libGLES_emulation.so" not found
+04-17 02:37:59.825  4418  4451 D vndksupport: Loading /vendor/lib/egl/libEGL_emulation.so from current namespace instead of sphal namespace.
+04-17 02:37:59.829  4418  4451 D libEGL  : loaded /vendor/lib/egl/libEGL_emulation.so
+04-17 02:37:59.831  4418  4451 D vndksupport: Loading /vendor/lib/egl/libGLESv1_CM_emulation.so from current namespace instead of sphal namespace.
+04-17 02:37:59.832  4418  4451 D libEGL  : loaded /vendor/lib/egl/libGLESv1_CM_emulation.so
+04-17 02:37:59.840   567   567 I RenderThread: type=1400 audit(0.0:1248): avc: denied { write } for name="local_opengl" dev="tmpfs" ino=12516 scontext=u:r:system_server:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+04-17 02:37:59.846   567  2213 D         : HostConnection::get() New Host Connection established 0xbe1f89f0, tid 2213
+04-17 02:37:59.847   567  2213 D         : HostComposition ext GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_gles_max_version_3_1 
+04-17 02:37:59.849   567  2213 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+04-17 02:37:59.849   567  2213 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+04-17 02:37:59.849   567  2213 I OpenGLRenderer: Initialized EGL, version 1.4
+04-17 02:37:59.849   567  2213 D OpenGLRenderer: Swap behavior 1
+04-17 02:37:59.849   567  2213 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-17 02:37:59.849   567  2213 D OpenGLRenderer: Swap behavior 0
+04-17 02:37:59.856   567  2213 D EGL_emulation: eglCreateContext: 0xdecc5ce0: maj 3 min 1 rcv 4
+04-17 02:37:59.860  4418  4451 D vndksupport: Loading /vendor/lib/egl/libGLESv2_emulation.so from current namespace instead of sphal namespace.
+04-17 02:37:59.861  4418  4451 D libEGL  : loaded /vendor/lib/egl/libGLESv2_emulation.so
+04-17 02:37:59.887   544   628 W SurfaceFlinger: Attempting to set client state on removed layer: com.hello_share/com.hello_share.MainActivity#0
+04-17 02:37:59.887   544   628 W SurfaceFlinger: Attempting to destroy on removed layer: com.hello_share/com.hello_share.MainActivity#0
+04-17 02:37:59.921  3522  3542 E eglCodecCommon: goldfish_dma_create_region: could not obtain fd to device! fd -1 errno=2
+04-17 02:38:00.319   567   582 W ActivityManager: Activity pause timeout for ActivityRecord{6f44142 u0 com.hello_share_to/.ShareApplication t45 f}
+04-17 02:38:00.343  3845  3887 I ReactNativeJS: 'share err:', [Error: User did not share]
+04-17 02:38:00.607   544   561 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.hello_share_to#0
+04-17 02:38:00.607   544   561 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.hello_share_to#0
+04-17 02:38:00.892   533   533 I health@2.0-serv: type=1400 audit(0.0:1258): avc: denied { read } for name="capacity" dev="fuse" ino=8 scontext=u:r:hal_health_default:s0 tcontext=u:object_r:fuse:s0 tclass=file permissive=1
+04-17 02:38:00.892   533   533 I health@2.0-serv: type=1400 audit(0.0:1259): avc: denied { open } for path="/dev/pipe/battery/BAT0/capacity" dev="fuse" ino=8 scontext=u:r:hal_health_default:s0 tcontext=u:object_r:fuse:s0 tclass=file permissive=1
+04-17 02:38:00.892   533   533 I health@2.0-serv: type=1400 audit(0.0:1260): avc: denied { getattr } for path="/dev/pipe/battery/BAT0/capacity" dev="fuse" ino=8 scontext=u:r:hal_health_default:s0 tcontext=u:object_r:fuse:s0 tclass=file permissive=1
+04-17 02:38:01.052   567   583 D AutofillManager: No AutofillClient for android on context android.app.ContextImpl@7269f51
+04-17 02:38:01.108   567  1625 W ActivityManager:   Force finishing activity com.hello_share_to/.ShareApplication
+04-17 02:38:01.114   567  1625 I ActivityManager: Killing 4418:com.hello_share_to/u0a75 (adj 900): crash
+04-17 02:38:01.120   567   585 W libprocessgroup: kill(-4418, 9) failed: No such process
+04-17 02:38:01.132   567  2213 D OpenGLRenderer: endAllActiveAnimators on 0xb8c14f00 (RippleDrawable) with handle 0xbe1e6c80
+04-17 02:38:01.152   537   661 D Sensors : batch handle 1, but there is no batch sensor in genymotion
+04-17 02:38:01.153   498   498 I Zygote  : Process 4418 exited due to signal (9)
+04-17 02:38:01.164   567   585 W libprocessgroup: kill(-4418, 9) failed: No such process
+04-17 02:38:01.164   567   585 I libprocessgroup: Successfully killed process cgroup uid 10075 pid 4418 in 43ms
+04-17 02:38:01.315   544   628 W SurfaceFlinger: Attempting to set client state on removed layer: Dim Layer for - mAboveAppWindowsContainers#0
+04-17 02:38:01.315   544   628 W SurfaceFlinger: Attempting to destroy on removed layer: Dim Layer for - mAboveAppWindowsContainers#0
+04-17 02:38:01.321   544   628 W SurfaceFlinger: Attempting to destroy on removed layer: 3755e52 Application Error: com.hello_share_to#0

@@ -20,28 +20,21 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        <intent-filter > 
-          <action android:name="android.intent.action.SEND" /> 
-          <category android:name="android.intent.category.DEFAULT"/>
-          <!-- for share text include -->
-          <data android:mimeType="text/plain"/>
-          <!-- for share images include -->
-          <data android:mimeType="image/*"/>
-        </intent-filter > 
+       
       </activity>
 
-      <!-- <activity 
+      <activity 
       android:name=".ShareApplication"
       android:label="@string/title_activity_share"
       android:exported="true">
       <intent-filter > 
         <action android:name="android.intent.action.SEND" /> 
         <category android:name="android.intent.category.DEFAULT"/>
-        for share text include
+        <!-- for share text include -->
         <data android:mimeType="text/plain"/>
-        for share images include
+        <!-- for share images include -->
         <data android:mimeType="image/*"/>
       </intent-filter > 
-      </activity > -->
+      </activity >
     </application>
 </manifest>
