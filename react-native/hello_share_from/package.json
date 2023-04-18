@@ -7,14 +7,15 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.71.6",
+    "react-native-file-selector": "^1.0.2",
     "react-native-share": "^8.2.2",
-    "react-native-share-extension": "^2.0.0",
-    "rn-extensions-share": "^2.4.0"
+    "react-native-view-shot": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

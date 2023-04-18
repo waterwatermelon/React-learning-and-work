@@ -5,40 +5,75 @@
  * @format
  */
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Button,
+  Image,
   SafeAreaView,
   ScrollView,
 } from 'react-native';
 import Share from 'react-native-share';
-// import ShareExtension from 'rn-extensions-share';
-function App() {  
+import ViewShot from 'react-native-view-shot';
+
+function App() {
 
 
+  // TODO:使用URLschema打开某个APP
   // const handleUrlSchema = () => {
   //   // ShareExtension.openURL('tel://')
+  //   Share.open({
+  //     url: 'sharereceiver://',
+  //   });
   // };
-  
-  const handleShare = () => {
-    Share.open({
+  const viewShotRef = useRef();
+  const [uri, setUri] = useState('');
+  const handleShareText = () => {
+    const options = {
       message: 'from [react-native-share]',
       title: 't',
-    })
-    .then(res => {
-      console.log('success:', res)
-    })
-    .catch(err => {
-      console.log('share err:', err);
-    });
+      isNewTask: true,
+    };
+    // console.log('options', options);
+    Share.open(options)
+      .then(res => {
+        console.log('success:', res)
+      })
+      .catch(err => {
+        console.log('share err:', err);
+      });
+  };
+
+  const handleSharePic = () => {
+    viewShotRef.current.capture()
+      .then(uri => {
+        console.log('uri:', uri);
+        Share.open({
+          title: 'share pic',
+          url: uri,
+          // filename: 'shot.png',
+          type: 'image/png',
+          isNewTask: true,
+        });
+        setUri(uri);
+      })
+      .catch(err => {
+        console.error(err)
+      });
   };
   return (
     <SafeAreaView style={{}}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-      >
-        <Button title='share(text)' onPress={handleShare} />
-        {/* <Button title='tel://' onPress={handleUrlSchema} /> */}
+      <ScrollView      >
+        <ViewShot ref={viewShotRef} options = {{fileName:'shot-'}}>
+          <Button title='share(text)' onPress={handleShareText} />
+          <Button title='share(file)' onPress={handleSharePic} />
+        </ViewShot>
+
+        <Image style={{
+          width: 200,
+          height: 120,
+          borderWidth: 2,
+          borderColor: 'red',
+        }} source={{ uri }} />
       </ScrollView>
     </SafeAreaView>
   );
