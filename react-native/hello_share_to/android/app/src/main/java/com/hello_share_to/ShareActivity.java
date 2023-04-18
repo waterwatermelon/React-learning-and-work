@@ -5,6 +5,10 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+
 public class ShareActivity extends ReactActivity {
 
   /**
@@ -32,4 +36,14 @@ public class ShareActivity extends ReactActivity {
         );
   }
 
+  @Override 
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+    System.out.println("=========== [share_receiver]");
+    Log.d("@@", "=========== [share_receiver][onCreate]");
+    // Activity currentActivity = getCurrentActivity();
+    // if(currentActivity != null) {
+    //   System.out.println("====== get current activity");
+    // }
+  }
 }

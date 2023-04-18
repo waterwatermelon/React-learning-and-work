@@ -13,23 +13,43 @@
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-        android:launchMode="singleInstance"
+        android:launchMode="singleTask"
         android:windowSoftInputMode="adjustResize"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-         <intent-filter > 
-            <action android:name="android.intent.action.SEND" /> 
-            <category android:name="android.intent.category.DEFAULT"/>
-            <!-- for share text include -->
-            <data android:mimeType="text/plain"/>
-            <!-- for share images include -->
-            <data android:mimeType="image/*"/>
-          </intent-filter > 
-       
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+          <!-- 如果希望该应用可以通过浏览器的连接启动 -->
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <!-- 表示该页面可以被隐式调用 -->
+          <category android:name="android.intent.category.DEFAULT"/>
+          <data android:scheme="srm" android:host="goods" />
+        </intent-filter>
+        
       </activity>
- 
+      
+      <activity 
+        android:name=".ShareActivity"
+        android:label="@string/title_activity_share"
+        android:launchMode="singleTask"
+        android:exported="true">
+        <intent-filter > 
+          <action android:name="android.intent.action.SEND" /> 
+          <category android:name="android.intent.category.DEFAULT"/>
+          <!-- for share text include -->
+          <data android:mimeType="text/plain"/>
+          <!-- for share images include -->
+          <data android:mimeType="image/*"/>
+        </intent-filter > 
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <data android:scheme="srs" android:host="goods" />
+        </intent-filter>
+      </activity>
     </application>
 </manifest>
