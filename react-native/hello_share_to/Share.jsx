@@ -7,18 +7,17 @@ function Share() {
     const [uri, setUri] = useState('');
     async function getData() {
         const { type, value } = await ShareExtension.data();
+        console.log('type', type);
         console.log('value', value);
-        // setResult([`type: ${type}`, `value:${value}`].join('\n'));
-
+        setResult([`type: ${type}`, `value:${value}`].join('\n'));
 
         if (type && type.includes('image')) {
-            // setUri(value);
+            setUri(value);
         }
     }
     useEffect(() => {
         getData();
     }, []);
-    console.log('uri', uri)
     return (
         <View >
 
@@ -34,16 +33,20 @@ function Share() {
                 </Text>
             </View>
 
-            <View style={{ backgroundColor: 'rgba(255,0,0,0.1)' , width: 200}}>
-                {/* <Image
-                    // style={{ width: 200, height: 200, borderWidth: 1, borderColor: 'red', }} 
+            <View style={{ backgroundColor: 'rgba(255,255,0,0.1)',  }}>
+                <Image
+                    style={{
+                        width: 200, height: 200,
+                        margin: 10,
+                        borderWidth: 2, borderColor: 'red',
+                    }}
 
-                    width={200}
-                    height={200}
-                    
+                    // width={200}
+                    // height={200}
+
                     // source={{ uri: 'file:///storage/emulated/0/DCIM/Camera/IMG_20230417_234201.jpg' }} 
-                    source={{uri}}
-                    /> */}
+                    source={{ uri }}
+                />
             </View>
         </View>
     );

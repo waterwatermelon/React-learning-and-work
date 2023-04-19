@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">share_to(sr)</string>
+    <string name="app_name">share_receiver</string>
     <string name="title_activity_share">sharepage</string >
 </resources>
