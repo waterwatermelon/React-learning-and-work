@@ -1,5 +1,9 @@
 package com.hello_share;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -31,5 +35,15 @@ public class MainActivity extends ReactActivity {
         // If you opted-in for the New Architecture, we enable Concurrent React (i.e. React 18).
         DefaultNewArchitectureEntryPoint.getConcurrentReactEnabled() // concurrentRootEnabled
         );
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    //SoLoader.init(this,  false);
+
+    SharedPreferences mPreferences =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+    mPreferences.edit().putString("debug_http_host","localhost:8082").commit();
   }
 }
