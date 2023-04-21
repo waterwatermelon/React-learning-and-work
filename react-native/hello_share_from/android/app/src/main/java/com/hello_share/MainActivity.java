@@ -2,6 +2,7 @@ package com.hello_share;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.preference.PreferenceManager;
 
 import com.facebook.react.ReactActivity;

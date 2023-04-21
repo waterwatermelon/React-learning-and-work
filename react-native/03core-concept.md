@@ -22,3 +22,4 @@
 #### 媒体文件
 
 ### 保存键值对
+SharedPreferences
