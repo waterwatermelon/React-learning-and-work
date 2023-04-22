@@ -1,11 +1,11 @@
 package com.hello_native_module;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.AlarmClock;
 import android.util.Log;
-
-import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -21,12 +21,30 @@ public class MySendIntent extends ReactContextBaseJavaModule {
     public void send(String message) {
         Log.d(TAG, "send:" + message);
         Uri number = Uri.parse("srs://goods");
-        Intent callIntent = new Intent(Intent.ACTION_VIEW, number);
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, number);
+        myIntent.putExtra(Intent.EXTRA_TEXT, message);
         Activity activity = getCurrentActivity();
         try {
+            activity.startActivity(myIntent);
 
-        }catch (e){}
-        activity.startActivity(callIntent);
+        }catch (ActivityNotFoundException e){
+            Log.e(TAG, "e", e);
+        }
+    }
+
+    @ReactMethod
+    public void createAlarm(int hour, int minutes, String message){
+        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM);
+        intent.putExtra(AlarmClock.EXTRA_HOUR, hour);
+        intent.putExtra(AlarmClock.EXTRA_MINUTES, minutes);
+        intent.putExtra(AlarmClock.EXTRA_MESSAGE, message);
+        Activity activity = getCurrentActivity();
+
+        if(intent.resolveActivity(activity.getPackageManager()) != null) {
+            activity.startActivity(intent);
+        } else {
+            Log.e(TAG, "no activity");
+        }
     }
     @Override
     public String getName() {
