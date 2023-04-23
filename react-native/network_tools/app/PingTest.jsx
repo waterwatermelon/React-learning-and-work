@@ -77,13 +77,12 @@ function PingTest() {
       <View style={styles.card}>
         <Text>IP地址</Text>
         <TextInput
-          // style={styles.input}
           placeholder='请输入IP地址'
           value={ip}
           onChangeText={setIp} />
       </View>
       <View style={styles.card}>
-        <Button title='ping' onPress={pingTest} />
+        <Button title='ping(single)' onPress={pingTest} />
         <Button title='ping(multip)' onPress={pingTestMultipart} />
       </View>
       <View style={styles.card}>
@@ -99,21 +98,4 @@ function PingTest() {
     </View>
   )
 }
-
-// const styles = StyleSheet.create({
-  // page: {
-  //   borderWidth: 1,
-  // },
-
-  // box: {
-  //   padding: 12,
-  //   margin: 12,
-  //   borderWidth: 1,
-  //   borderColor: 'skyblue',
-  // },
-  // input: {
-  //   // borderWidth: 1,
-  //   // borderColor: 'skyblue',
-  // }
-// });
 export default PingTest;

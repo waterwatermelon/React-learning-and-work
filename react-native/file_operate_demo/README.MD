@@ -10,9 +10,13 @@
 
 ```
 ├── App.jsx
-├── FileAccessTest.jsx react-native-file-access功能测试 
-├── FileSelectorTest.jsx react-native-file-selector功能测试 
-└── FetchBlobTest.jsx rn-fetch-blob功能测试
+└── app
+    ├── config.js 文件目录等配置信息
+    ├── FetchBlobTest.jsx react-native-file-access功能测试
+    ├── FileAccessTest.jsx react-native-file-selector功能测试 
+    ├── FileSelectorTest.jsx react-native-file-selector功能测试 
+    ├── FetchBlobTest.jsx rn-fetch-blob功能测试
+    └── style.js 全局样式
 ```
 
 ### FileAccessTest.jsx 
