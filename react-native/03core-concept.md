@@ -77,5 +77,25 @@
 ### 访问共享存储空间中的媒体文件
 框架提供了媒体集合索引，称为媒体库。
 
+照片选择器是媒体库的替代方案。
+
+媒体库的API
+通过ContentResolver来访问媒体库。
+媒体库的资源：
+- 图片 通过MediaStore.Images访问。
+- 视频 通过MediaStore.Video访问。
+- 音频 (从API30起)通过MediaStore.Audio访问。
+- 下载的文件 (从API29起)通过MediaStore.Downloads访问。
+
+#### 请求必要权限
+1 访问自己的媒体文件，不需要声明权限
+
+2 访问其他应用的媒体文件 
+文件必须位于以下任意媒体集合中：
+- MediaStore.Images
+- MediaStore.Video
+- MediaStore.Audio
+
+3 
 ### 保存键值对
 SharedPreferences
