@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react';
-import { View, Text, Button, Image, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MyButton from './components/MyButton';
+import settingIcon from './assets/setting_u.png';
+import profileIcon from './assets/profile_u.png';
+const navIcons = {
+  setting: settingIcon,
+  profile: profileIcon,
+};
 
 function LoginPage(props) {
   const { navigation } = props;
+
   const handleLogin = () => {
-    navigation.push('Home');
+    navigation.navigate('Home');
   }
 
   const handleUpdate = () => {
@@ -15,9 +23,12 @@ function LoginPage(props) {
       title: 'updated!'
     })
   }
-
   const gotoNesting = () => {
-    navigation.push('Out');
+    navigation.navigate('Out');
+  }
+
+  const gotoNestingOfMyTabBar = () => {
+    navigation.navigate('MyTabBarPage');
   }
 
   return (
@@ -25,9 +36,10 @@ function LoginPage(props) {
       <Text>
         login
       </Text>
-      <Button title='login' onPress={handleLogin} />
-      <Button title='update option' onPress={handleUpdate} />
-      <Button title='go to nesting navigation' onPress={gotoNesting} />
+      <MyButton title='login' onPress={handleLogin} />
+      <MyButton title='update option' onPress={handleUpdate} />
+      <MyButton title='nesting navigation(1)' onPress={gotoNesting} />
+      <MyButton title='nesting navigation(2)' onPress={gotoNestingOfMyTabBar} />
     </View>
   )
 }
@@ -35,12 +47,12 @@ function LoginPage(props) {
 function Homepage(props) {
   const { navigation } = props;
   const gotoUser = () => {
-    navigation.push('User', { name: 'sue' });
+    navigation.navigate('User', { name: 'sue' });
   }
   return (
     <View>
       <Text>home</Text>
-      <Button title={'go to user'} onPress={gotoUser} />
+      <MyButton title={'go to user'} onPress={gotoUser} />
     </View>)
 }
 // 自定义header内的title组件
@@ -59,7 +71,7 @@ function UserPage(props) {
 
 
   const handleReload = () => {
-    navigation.push('User', {
+    navigation.navigate('User', {
       name: ''
     });
   }
@@ -83,11 +95,12 @@ function UserPage(props) {
   return <View>
 
     <Text>user: {name}</Text>
-    <Button title='go to user again' onPress={handleReload} />
-    <Button title='set param' onPress={handleSetParam} />
-    <Button title="Go back" onPress={() => navigation.goBack()} />
+    <MyButton title='go to user again' onPress={handleReload} />
+    <MyButton title='set param' onPress={handleSetParam} />
+    <MyButton title="Go back" onPress={() => navigation.goBack()} />
   </View>
 }
+// Inner Page 1 
 function SettingsScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -95,20 +108,35 @@ function SettingsScreen() {
     </View>
   );
 }
+// Inner Page 2 
 function ProfileScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Profile!</Text>
-      <Button
+      <MyButton
         title="Go to Settings"
         onPress={() => navigation.navigate('Setting')}
       />
     </View>
   );
 }
-function OutPage() {
-  const Tab = createBottomTabNavigator();
 
+function TabBarIcon(props) {
+  console.log('props : ', props);
+  const { color, focused, size } = props;
+  const { label, iconKey } = props;
+  iconKey && console.log(' navIcons[iconKey] ', navIcons[iconKey]);
+  return <View>
+    <Image source={navIcons[iconKey]} style={{ width: size, height: size, tintColor: color }} />
+  </View>;
+}
+
+function tabBarIconFactory({ label, key: iconKey }) {
+  return (props) => <TabBarIcon {...props} label={label} iconKey={iconKey} />;
+}
+
+function OutPageOfNest() {
+  const Tab = createBottomTabNavigator();
   return <View style={{ borderWidth: 2, borderColor: 'blue', padding: 4 }}>
     <Text
       style={{
@@ -127,18 +155,68 @@ function OutPage() {
       <Tab.Navigator screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: 'orange',
-        tabBarInactiveTintColor: 'lightblue'
+        tabBarInactiveTintColor: '#7E87A1',
+        tabBarIcon: TabBarIcon,
       }}>
         <Tab.Screen name='Profile'
           component={ProfileScreen}
-          options={{ tabBarBadge: 6 }} />
+          options={{
+            tabBarBadge: 6,
+            tabBarIcon: tabBarIconFactory({ key: 'profile' }),
+          }} />
         <Tab.Screen name='Setting'
-          component={SettingsScreen} />
+          component={SettingsScreen}
+          options={{
+            tabBarIcon: tabBarIconFactory({ key: 'setting' }),
+          }} />
       </Tab.Navigator>
     </View>
   </View>
 }
+function MyTabBar(props) {
+  console.log('tarbarProps:', props);// routeNames, 
+  return <View style={{
+    height: 40,
+    backgroundColor: 'darkblue',
+  }}>
 
+  </View>
+
+}
+function MyTabBarPage() {
+  const Tab = createBottomTabNavigator();
+  return <View style={{ borderWidth: 2, borderColor: 'blue', padding: 4 }}>
+
+    <View style={{
+      borderWidth: 2,
+      borderColor: 'blue',
+      padding: 4,
+      backgroundColor: 'skyblue',
+      minHeight: 600
+    }}>
+      <Tab.Navigator screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: 'orange',
+        tabBarInactiveTintColor: '#7E87A1',
+        tabBarIcon: TabBarIcon,
+      }}
+        tabBar={MyTabBar}
+      >
+        <Tab.Screen name='Profile'
+          component={ProfileScreen}
+          options={{
+            tabBarBadge: 6,
+            tabBarIcon: TabBarIcon,
+          }} />
+        <Tab.Screen name='Setting'
+          component={SettingsScreen}
+          options={{
+            tabBarIcon: tabBarIconFactory({ label: 'SET' }),
+          }} />
+      </Tab.Navigator>
+    </View>
+  </View>
+}
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -155,12 +233,13 @@ export default function App() {
         <Stack.Screen name='Login' component={LoginPage} options={{ title: '登录' }} />
         <Stack.Screen name='Home' component={Homepage} options={{
           headerTitle: (props) => <HomeTitle {...props} />,
-          headerRight: () => <Button title='right' onPress={() => alert('click right button')} />
+          headerRight: () => <MyButton title='right' onPress={() => alert('click right button')} />
         }} />
         <Stack.Screen name='User' component={UserPage}
           options={({ route }) => ({ title: 'title:' + route.params.name })} />
         {/* 嵌套导航 */}
-        <Stack.Screen name='Out' component={OutPage} />
+        <Stack.Screen name='Out' component={OutPageOfNest} />
+        <Stack.Screen name='MyTabBarPage' component={MyTabBarPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
