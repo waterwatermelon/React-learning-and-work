@@ -96,6 +96,21 @@
 - MediaStore.Video
 - MediaStore.Audio
 
-3 
+需要请求以下权限：
+- READ_MEDIA_IMAGES
+- READ_MEDIA_VIDEO
+- READ_MEDIA_AUDIO
+
+3 旧版本设备，所需权限
+- READ_EXTERNAL_STORAGE API29版本以下的安卓设备需要额外声明此权限。
+- WRITE_EXTERNAL_STORAGE 如果需要修改媒体文件，API29版本以下的安卓设备需要额外声明此权限。
+
+4 访问其他应用的下载内容，需要使用存储框架
+
+5 媒体位置信息权限
+API级别29以上的设备，可以声明ACCESS_MEDIA_LOCATION权限，来访问媒体文件的位置信息。
+
+#### 加载媒体文件的缩略图
+loadThumbnail()
 ### 保存键值对
 SharedPreferences
