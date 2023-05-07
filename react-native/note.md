@@ -20,3 +20,26 @@ ref:React.ElementRef<typeof View>
 
 ## 开发环境
 metro 配置 https://facebook.github.io/metro/docs/configuration/
+### metro配置
+修改devServer地址和端口。
+1 修改服务端端口
+```js
+// metro.config.js
+module.exports = {
+  server: {
+    port: 8082,
+  },
+};
+```
+2 修改客户端代码
+```java
+// app/src/main/packageName/MainActivity.java
+@Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    SharedPreferences mPreferences =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+    // 添加偏好设置
+    mPreferences.edit().putString("debug_http_host","localhost:8082").commit();
+  }
+```
