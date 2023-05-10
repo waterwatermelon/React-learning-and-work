@@ -13,7 +13,6 @@ function SvgDemo() {
 
     const handlePressSvgBox = (e: GestureResponderEvent) => {
         console.log('[press] [svg]')
-        console.log('e:', e);
         const { locationX, locationY } = e.nativeEvent;
         console.log('x', locationX);
         setCx(locationX);
