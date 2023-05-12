@@ -17,6 +17,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import img from './app/assets/device.png';
 import ToastsScreen from './app/components/ToastScreen';
+import Header from './component/Header';
 
 
 const { TextField } = Incubator;
@@ -33,41 +34,43 @@ const colors = [
 ];
 
 function Buttons() {
-  return (<View margin-10>
-    <Button
-      enableShadow
-      label='button'
-    />
-    <Button
-      enableShadow
-      outline
-      outlineColor={Colors.orange10}
-      label='button-outline'
-    />
-    <Button round style={{ width: 100, height: 100 }} />
-    <Button round outline style={{ width: 100, height: 100 }} />
-    <Button label='button-border-radius-0' borderRadius={0} />
-    <Button label='button-disabled' disabled />
-    <Button
-      enableShadow
-      label='button-icon'
-    // iconSource={icon}
-    />
-  </View>
-  );
+  return (<>
+    <Header title='Buttons' />
+    <View margin-10>
+      <Button
+        enableShadow
+        label='button'
+      />
+      <Button
+        enableShadow
+        outline
+        outlineColor={Colors.orange10}
+        label='button-outline'
+      />
+      <Button round style={{ width: 100, height: 100 }} />
+      <Button round outline style={{ width: 100, height: 100 }} />
+      <Button label='button-border-radius-0' borderRadius={0} />
+      <Button label='button-disabled' disabled />
+      <Button
+        enableShadow
+        label='button-icon'
+      // iconSource={icon}
+      />
+    </View>
+  </>);
 }
 
 function Texts() {
-  return (
+  return (<>
+    <Header title='Texts' />
     <View padding-10 margin-10>
       <Text orangeNew>text-orangeNew</Text>
-      <Text color={Colors.orangeNew}>text-orangeNew</Text>
-      <Text color={Colors.orange20}>text-orange20</Text>
-      <Text color={Colors.orange60}>text-orange60</Text>
-      <Text text10>text10</Text>
-      <Text text60>text60</Text>
-      <Text text60 text60BL>text60BL</Text>
+      <Text orange20>text-orange20</Text>
+      <Text orange60>text-orange60</Text>
+      <Text text20>text20</Text>
+      <Text text30>text30</Text>
     </View>
+  </>
   );
 }
 
@@ -80,114 +83,116 @@ function ListComponents() {
   };
 
 
-  return <View margin-12>
-    <View marginB-12 bg-grey60>
-      <GridList
-        ListHeaderComponent={<Text>Header</Text>}
-        data={['hello', 'grid', 'list', 'hihi']}
-        itemSpacing={0}
-        renderItem={(props) => {
-          console.log('props', props);
-          const { item } = props;
-          return <View style={{
-            borderColor: 'grey',
-            borderWidth: 1,
-          }}>
-            <Text>{item}</Text>
-          </View>;
+  return <>
+    <Header title='List' />
+    <View margin-12>
+      <View marginB-12 bg-grey60>
+        <GridList
+          ListHeaderComponent={<Text>Header</Text>}
+          data={['hello', 'grid', 'list', 'hihi']}
+          itemSpacing={0}
+          renderItem={(props) => {
+            const { item } = props;
+            return <View style={{
+              borderColor: 'grey',
+              borderWidth: 1,
+            }}>
+              <Text>{item}</Text>
+            </View>;
+          }}
+          contentContainerStyle={{
+            paddingTop: 12,
+            marginBottom: 12,
+          }} />
+      </View>
+      <View style={{ backgroundColor: '#dedede', padding: 2, }}>
+        <GridView
+          items={[{
+            containerProps: {
+              ...itemContainerStyle,
+            },
+            // 自定义item的渲染 
+            renderCustomItem: () => {
+              return (
+                <View style={{ borderColor: 'black', borderWidth: 2, }}>
+                  <Text>render custom item</Text>
+                </View>
+              );
+            },
+          },
+          {
+            title: 'a',
+            subtitle: (<Text style={{ fontSize: 18, }} > subtitle </Text>),
+            description: 'description',
+            onPress: () => {
+              console.log('press item 2');
+            },
+            containerProps: {
+              useNative: true,
+              backgroundColor: 'salmon',
+              ...itemContainerStyle,
+            },
+          },
+          {
+            title: 'a',
+            subtitle: '-a',
+            containerProps: {
+              ...itemContainerStyle,
+            },
+          },
+          {
+            title: 'a',
+            subtitle: '-a',
+            containerProps: {
+              ...itemContainerStyle,
+            },
+          },]}
+          numColumns={3}
+        />
+      </View>
+
+      <Timeline
+        // 无法定义point的样式
+        point={{
+          type: 'outline',
+          state: 'success',
+          label: 'NO.1',
         }}
-        contentContainerStyle={{
-          paddingTop: 12,
-          marginBottom: 12,
-        }} />
-    </View>
-    <View style={{ backgroundColor: '#dedede', padding: 2, }}>
-      <GridView
-        items={[{
-          containerProps: {
-            ...itemContainerStyle,
-          },
-          // 自定义item的渲染 
-          renderCustomItem: () => {
-            return (
-              <View style={{ borderColor: 'black', borderWidth: 2, }}>
-                <Text>render custom item</Text>
-              </View>
-            );
-          },
-        },
-        {
-          title: 'a',
-          subtitle: (<Text style={{ fontSize: 18, }} > subtitle </Text>),
-          description: 'description',
-          onPress: () => {
-            console.log('press item 2');
-          },
-          containerProps: {
-            useNative: true,
-            backgroundColor: 'salmon',
-            ...itemContainerStyle,
-          },
-        },
-        {
-          title: 'a',
-          subtitle: '-a',
-          containerProps: {
-            ...itemContainerStyle,
-          },
-        },
-        {
-          title: 'a',
-          subtitle: '-a',
-          containerProps: {
-            ...itemContainerStyle,
-          },
-        },]}
-        numColumns={3}
+        bottomLine={{ type: 'dashed', color: 'grey', }}
+      >
+        <View style={{ backgroundColor: 'skyblue', height: 72 }}>
+          <Text>a</Text>
+        </View>
+      </Timeline >
+      <Timeline
+        point={{
+          state: 'current',
+          label: 'NO.2',
+        }}
+        topLine={{ type: 'solid', color: 'red', }}
+        bottomLine={{ type: 'solid', color: 'grey', }} >
+        <Text
+          style={{
+            height: 64,
+          }}>
+          b
+        </Text>
+      </Timeline>
+      <Timeline
+        point={{
+          state: 'error',
+          label: '3',
+        }}
+        topLine={{ type: 'solid', color: 'red', }}
+        bottomLine={{ type: 'solid', color: 'grey', }} >
+        <Text>c</Text>
+      </Timeline>
+      <Timeline
+        topLine={{ type: 'solid', color: 'red', }}
+        bottomLine={{ type: 'solid', color: 'grey', }}
       />
     </View>
-
-    <Timeline
-      // 无法定义point的样式
-      point={{
-        type: 'outline',
-        state: 'success',
-        label: 'NO.1',
-      }}
-      bottomLine={{ type: 'dashed', color: 'grey', }}
-    >
-      <View style={{ backgroundColor: 'skyblue', height: 72 }}>
-        <Text>a</Text>
-      </View>
-    </Timeline >
-    <Timeline
-      point={{
-        state: 'current',
-        label: 'NO.2',
-      }}
-      topLine={{ type: 'solid', color: 'red', }}
-      bottomLine={{ type: 'solid', color: 'grey', }} >
-      <Text
-        style={{
-          height: 64,
-        }}>
-        b
-      </Text>
-    </Timeline>
-    <Timeline
-      point={{
-        state: 'error',
-        label: '3',
-      }}
-      topLine={{ type: 'solid', color: 'red', }}
-      bottomLine={{ type: 'solid', color: 'grey', }} >
-      <Text>c</Text>
-    </Timeline>
-    <Timeline
-      topLine={{ type: 'solid', color: 'red', }}
-      bottomLine={{ type: 'solid', color: 'grey', }}
-    />
-  </View>
+  </>
 }
 
 function ExpandedSections() {
@@ -223,53 +228,56 @@ function StepperScreen() {
   };
 
   return (
-    <View padding-10 margin-10>
-      <Card>
+    <>
+      <Header title='Stepper' />
+      <View >
+        <Card padding-10 margin-10>
+          <Text text40 marginB-20>Stepper</Text>
 
-        <Text text40 marginB-20>Stepper</Text>
-
-        <View centerV>
-          <View row spread centerV>
-            <Text text70>Default</Text>
-            <Stepper />
-          </View>
-
-          <View row spread centerV marginT-30>
-            <Text text70>Disabled</Text>
-            <Stepper disabled />
-          </View>
-
-          <View row spread marginT-30>
-            <Text text70>Step (0.5)</Text>
-            <Stepper step={0.5} />
-          </View>
-
-          <View row spread marginT-30>
-            <Text text70>Small</Text>
-            <Stepper small />
-          </View>
-
-          <View marginT-30>
+          <View centerV>
             <View row spread centerV>
-              <Text text70>Custom</Text>
-              <Stepper
-                onValueChange={onValueChange}
-                maxValue={stepperProps.maxValue}
-                minValue={stepperProps.minValue}
-                value={stepperValue}
-                testID={'Stepper1'}
-              />
+              <Text text70>Default</Text>
+              <Stepper />
             </View>
-            <View padding-5>
-              <Text text80M>Stepper value: {stepperValue}</Text>
-              <Text marginT-3>Initial value: {stepperProps.value}</Text>
-              <Text marginT-3>Min value: {stepperProps.minValue}</Text>
-              <Text marginT-3>Max value: {stepperProps.maxValue}</Text>
+
+            <View row spread centerV marginT-30>
+              <Text text70>Disabled</Text>
+              <Stepper disabled />
+            </View>
+
+            <View row spread marginT-30>
+              <Text text70>Step (0.5)</Text>
+              <Stepper step={0.5} />
+            </View>
+
+            <View row spread marginT-30>
+              <Text text70>Small</Text>
+              <Stepper small />
+            </View>
+
+            <View marginT-30>
+              <View row spread centerV>
+                <Text text70>Custom</Text>
+                <Stepper
+                  onValueChange={onValueChange}
+                  maxValue={stepperProps.maxValue}
+                  minValue={stepperProps.minValue}
+                  value={stepperValue}
+                  testID={'Stepper1'}
+                />
+              </View>
+              <View padding-5>
+                <Text text80M>Stepper value: {stepperValue}</Text>
+                <Text marginT-3>Initial value: {stepperProps.value}</Text>
+                <Text marginT-3>Min value: {stepperProps.minValue}</Text>
+                <Text marginT-3>Max value: {stepperProps.maxValue}</Text>
+              </View>
             </View>
           </View>
-        </View>
-      </Card>
-    </View>
+        </Card>
+      </View>
+    </>
+
   );
 }
 
@@ -311,22 +319,28 @@ function App() {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+      {/* <ActionBar
+        centered
+        actions={[{
+          label: 'one', onPress: () => { },
+        }, {
+          label: 'two', onPress: () => { },
+        }, {
+          label: 'three', onPress: () => { },
+        },]} /> */}
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Text>UILIB</Text>
+        style={{ backgroundColor: '#f0f1f2' }}>
         <Buttons />
         <Texts />
-        <View >
-          <ActionBar
-            centered
-            backgroundColor={Colors.purple60}
-            actions={[{
-              label: 'one', onPress: () => { },
-            }, {
-              label: 'two', onPress: () => { },
-            },]} />
+
+        {/* Controls */}
+        <Header title='Controls' />
+        <View padding-10>
+          <Checkbox value={false} onValueChange={() => console.log('value changed')} />
+          <Chip label={'Chip'} onPress={() => console.log('pressed')} />
         </View>
+
         <View margin-20 bg-white >
           {/* 左右滑动，未见具体变化，需要在手机上再试试 */}
           <Drawer
@@ -404,10 +418,10 @@ function App() {
           <ProgressBar progress={40} progressColor={Colors.orange60} />
         </View>
 
-        <View padding-10 margin-10>
-          <Card>
-            <Text text40> form </Text>
-            <View row marginT-10>
+        <Header title='Form' />
+        <View margin-10>
+          <Card padding-10>
+            <View row wrap marginT-10>
               <Checkbox label='label' />
               <Checkbox label='label-' disabled />
               <Checkbox label='label' value={true} />
@@ -424,6 +438,20 @@ function App() {
               <TextField label='text-field' placeholder='please input' hint='hint' />
               <TextField label='text-field' placeholder='please input' hint='hint' value='123456' showCharCounter />
             </View>
+
+            <View bg-purple60>
+              <Picker
+                value={{ label: 'aa' }}
+                placeholder='picker'
+                renderPicker={({ label }) => {
+                  return <Text style={{ lineHeight: 30 }}>select: {label} </Text>
+                }}
+              >
+                <Picker.Item value='a' key='a' label='aa' />
+                <Picker.Item value='b' key='b' label='bb' />
+                <Picker.Item value='c' key='c' label='cc' />
+              </Picker>
+            </View>
           </Card>
         </View>
         <View padding-12 bg-pink>
@@ -433,24 +461,12 @@ function App() {
         </View>
 
         <StepperScreen />
-
+        <Header title='Color' />
         <View padding-12>
           <ColorPalette colors={colors} value={colors[2]} />
           <ColorPicker colors={[colors[0]]} initialColor={colors[0]} />
         </View>
-        <View bg-purple60>
-          <Picker
-            value={{ label: 'aa' }}
-            placeholder='picker'
-            renderPicker={({ label }) => {
-              return <Text>select: {label} </Text>
-            }}
-          >
-            <Picker.Item value='a' key='a' label='aa' />
-            <Picker.Item value='b' key='b' label='bb' />
-            <Picker.Item value='c' key='c' label='cc' />
-          </Picker>
-        </View>
+
         <Dialogs />
         <ToastsScreen />
         {/* List */}
