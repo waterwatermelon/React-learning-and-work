@@ -16,6 +16,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import AxiosLogger from './app/AxiosLogger';
 import NetInfo from './app/NetInfo';
 import PingTest from './app/PingTest';
 
@@ -38,6 +39,7 @@ function App() {
         style={backgroundStyle}>
         <PingTest />
         <NetInfo />
+        <AxiosLogger />
       </ScrollView>
     </SafeAreaView>
   );
