@@ -57,10 +57,9 @@ function RNEChartsPage() {
           <Button title='饼图随机数据' onPress={handleGenRandomData} />
         </View>
         <RNEChartsPro
-          backgroundColor='#f0f0f0'
           option={pieOption} />
       </View>
-      <View>
+      {/* <View>
         <RNEChartsPro
           option={{
             legend: { show: true, },
@@ -138,7 +137,7 @@ function RNEChartsPage() {
               }
             ]
           }} />
-      </View>
+      </View> */}
 
     </>
   )
