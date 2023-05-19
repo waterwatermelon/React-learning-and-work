@@ -34,6 +34,13 @@ function App() {
     // no activity
     MySendIntent.createAlarm(8, 0, 'setup');
   };
+
+  const getModuleName = () => {
+    MySendIntent.getModuleName().then(res => {
+      console.log('res:', res);
+    });
+  };
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -41,7 +48,8 @@ function App() {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <Button title='open' onPress={handlePress} />
-      <Button title='alarm' onPress={handleCreateAlarm} />
+      {/* <Button title='alarm' onPress={handleCreateAlarm} /> */}
+      <Button title='getName' onPress={getModuleName} />
     </SafeAreaView>
   );
 }
