@@ -1,10 +1,13 @@
 package com.hello_native_module;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.icu.util.Calendar;
 import android.net.Uri;
-import android.provider.AlarmClock;
 import android.util.Log;
 
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -15,17 +18,18 @@ import com.facebook.react.bridge.Promise;
 public class MySendIntent extends ReactContextBaseJavaModule {
     final String TAG = "[MySendIntent]";
     final String MODULE_NAME = "MySendIntent";
-   
+   ReactApplicationContext rContext;
     public MySendIntent(ReactApplicationContext context) {
         super(context);
+        rContext = context;
         Log.d(TAG, "create");
     }
    
     @ReactMethod
     public void send(String message) {
         Log.d(TAG, "send:" + message);
-        Uri number = Uri.parse("srs://goods");
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, number);
+        Uri uri = Uri.parse("srs://goods");
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, uri);
         myIntent.putExtra(Intent.EXTRA_TEXT, message);
         Activity activity = getCurrentActivity();
         try {
@@ -39,17 +43,22 @@ public class MySendIntent extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void createAlarm(int hour, int minutes, String message){
-        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM);
-        intent.putExtra(AlarmClock.EXTRA_HOUR, hour);
-        intent.putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-        intent.putExtra(AlarmClock.EXTRA_MESSAGE, message);
-        Activity activity = getCurrentActivity();
+        Log.d(TAG, "create alarm 16");
+        AlarmManager alarmMgr = (AlarmManager) rContext.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent alarmIntent;
 
-        if(intent.resolveActivity(activity.getPackageManager()) != null) {
-            activity.startActivity(intent);
-        } else {
-            Log.e(TAG, "no activity");
-        }
+        Uri uri = Uri.parse("tel:12345678");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        alarmIntent = PendingIntent.getBroadcast(rContext, 0, intent, 0);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE, 18);
+
+        alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                1000 * 60 * 2, alarmIntent);
+
     }
     
     @ReactMethod
