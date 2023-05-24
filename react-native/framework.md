@@ -21,21 +21,9 @@ UI引擎，用于计算元素在屏幕上展示的位置。
 
 JavaScript interface
 
-## react react-native之间的关系
+### 宿主平台
 
-### react
-
-是一个UI渲染的JavaScript库。实现JSX写法，以xml格式定义UI结构。
-
-实现了virtual dom 数据结构，使视图定义和具体渲染逻辑分离。比如说，浏览器使用`react-dom`来渲染，移动端APP使用`react-native`来渲染。
-
-通过数据驱动渲染，还实现了著名的diff算法来比较，新旧数据对应视图的差异。
-
-因此，react无法访问到一些低层的API。
-
-### react native
-
-rn接收react定义的virtual dom，调研桥接的API，转换成原生的UI控件，完成渲染。
+react native嵌入的平台。比如安卓、IOS。
 
 ## 新架构设计分析
 
@@ -45,12 +33,7 @@ rn接收react定义的virtual dom，调研桥接的API，转换成原生的UI控
 
 新的渲染系统，提升与宿主平台的可操作性。
 
-名词解释：
-
-- 宿主平台：react native嵌入的平台
-- Fabric渲染器：存在于JavaScript层，调用C++代码暴露的接口。
-
-新架构的受益：
+新架构的收益：
 
 - 类型安全：代码生成工具，使用JavaScript组件声明作为唯一事实源，生成C++结构体来持有props属性。
 - 共享C++ core：
@@ -58,7 +41,59 @@ rn接收react定义的virtual dom，调研桥接的API，转换成原生的UI控
 - 更快的启动速度：宿主平台的组件初始化，都是懒执行。
 - JavaScript和宿主平台之间的数据序列更少：新的渲染系统使用JSI（JavaScript Interface）直接获取JavaScript数据。
 
-### 渲染、提交与挂载流水线
+### 渲染、提交与挂载（渲染流水线）
+
+#### 初始渲染
+
+以下面这个组件为例：
+
+```jsx
+
+function MyComponent() {
+  return (<View> 
+    <Text>hello world</Text>
+  </View>);
+}
+```
+
+`MyComponent`是React元素。在渲染过程中，React会将React组件简化？为宿主组件。
+
+渲染（render) -> 提交(committed) -> 挂载(mount)
+
+1 渲染阶段
+
+渲染阶段是生成视图对应的虚拟数据结构，一般称作React影子树。
+
+渲染器会为每一个React元素创建React影子节点。创建完React影子树，渲染器会触发一次React元素树的提交。
+
+2 提交阶段
+
+提交阶段完成2项工作： 布局计算 + 树的提升。
+
+- 布局计算：计算每个React影子节点的位置和大小（x,y,width,height），布局计算是由yoga引擎实现。
+
+- 树的提升：从新的影子节点变成要挂载的下一棵树（next tree)。
+
+3 挂载阶段
+
+挂载阶段就是将要挂载的下一棵树，以像素形式渲染在屏幕中。执行时间是UI线程的下一个tick（tick是CPU时间的最小单位）。
+
+挂载阶段会完成3项工作：树对比 + 树提升 + 视图挂载。
+
+- 树对比：对比已经渲染的树（previously render tree）和将要挂载的树之间的差异。对比结果将生成一系列视图变更的原子操作，比如createView、updateView、removeView等。
+
+- 树提升：从要挂载的下一棵树到已渲染的树。
+
+- 视图挂载：执行视图变更的原子操作。
+
+#### React 状态更新
+
+1 渲染阶段
+生成新的React影子树。只复制新属性、新样式或者新子元素的React元素，任何没有因状态更新发生变动的React元素都不会被复制而成为共享节点。
+
+2 提交阶段
+
+- 布局计算：一种特殊情况就是：如果共享元素的父元素布局发生改变，可能导致共享元素的布局发生改变。因此，需要此共享节点会被复制出新的节点。其余情况与初始渲染一致。  
 
 ### 视图拍平
 
@@ -93,6 +128,13 @@ rn接收react定义的virtual dom，调研桥接的API，转换成原生的UI控
 合并之后的原生UI节点数量变少了，但是界面视觉上没有差异。
 
 ### 线程模型
+
+渲染器使用了三个不同线程：
+
+- UI线程：唯一可以操作宿主视图的线程。
+- JavaScript线程：执行react渲染阶段的线程。
+- 后台线程：专门用于布局的线程。
+
 
 ## 旧架构设计
 
