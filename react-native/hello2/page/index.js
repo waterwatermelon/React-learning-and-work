@@ -1,6 +1,6 @@
 
 
-export { default as Test } from './test';
+export { default as TestStorage } from './test';
 export { default as MyTextInput } from './MyTextInput';
 export { default as MyList } from './MyList';
 export { default as MySectionList } from './MySectionList';

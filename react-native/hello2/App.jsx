@@ -17,7 +17,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import { FixedDimensionBasic, FlexDirectionBasic, Images, Links, MyFetchButton, MyList, MySectionList, MyStepIndicator, MyTextInput, Test } from './page';
+import { FixedDimensionBasic, FlexDirectionBasic, Images, Links, MyFetchButton, MyList, MySectionList, MyStepIndicator, MyTextInput, TestStorage } from './page';
 
 
 
@@ -38,7 +38,7 @@ function App() {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Text> hello world</Text>
-        <Test />
+        <TestStorage />
         <MyTextInput />
         <FixedDimensionBasic />
         <Images />
