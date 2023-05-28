@@ -8,9 +8,9 @@ import FetchBlobTest from './app/FetchBlobTest';
 import FileAccessTest from './app/FileAccessTest';
 import FileSelectorTest from './app/FileSelectorTest';
 import ImagePickerTest from './app/ImagePicker';
+import CacheClear from './app/CacheClear';
 
 function App() {
-
 
 
   return (
@@ -21,6 +21,7 @@ function App() {
         <FileSelectorTest />
         <FetchBlobTest />
         <ImagePickerTest />
+        <CacheClear />
       </ScrollView>
     </SafeAreaView>
   );
