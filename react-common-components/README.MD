@@ -1,7 +1,7 @@
 ## 项目说明
 React组件库开发、测试环境
 
-技术栈： React + Webpack + scss 
+技术栈： React 17 + Webpack 5 + scss 
 
 ## npm 命令说明
 npm run build 编译库文件
