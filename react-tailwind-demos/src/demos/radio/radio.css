@@ -1,0 +1,30 @@
+.styled-radio {}
+
+.styled-radio:checked {}
+
+
+
+.styled-radio-selector {
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--radio-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.styled-radio-selector::after {
+  position: absolute;
+  content: '';
+
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+}
+
+.styled-radio:checked+.styled-radio-selector::after {
+  background-color: var(--radio-color);
+}
