@@ -1,11 +1,12 @@
 import React from 'react'
-import { Breadcrumb, Button, Card, Col, ConfigProvider, Divider, Input, Radio, Row, Select, Table, TimePicker } from 'antd'
+import { Breadcrumb, Button, Card, Col, ConfigProvider, Row, Table } from 'antd'
 import { CaretRightOutlined, SunOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import FormExample from './examples/FormExample';
 import MenuExample from './examples/MenuExample';
 import InputExample from './examples/InputExample';
-
+import { ProForm, ProFormText } from '@ant-design/pro-components';
 import './app.css';
+import EditTableExample from './examples/EditTableExample';
 
 
 export default function App() {
@@ -103,6 +104,31 @@ export default function App() {
                 </Card>
               </Col>
 
+              <Col span={8}>
+                <Card title='procomponents'>
+                  <ProForm                    
+                    onFinish={async (values) => {
+                      console.log(values);
+                    }}
+                  >
+                    <ProFormText
+                      name="name"
+                      label="姓名"
+                      rules={[{
+                        validator: (_, value) => {
+                          if (value && value.includes('#')) {
+                            return Promise.reject('包含非法字符');
+                          }
+                        }
+                      }]} />
+                  </ProForm>
+                </Card>
+              </Col>
+              <Col span={24}>
+                <Card title='procomponents'>
+                   <EditTableExample />
+                </Card>
+              </Col>
             </Row>
           </div>
         </Col>
