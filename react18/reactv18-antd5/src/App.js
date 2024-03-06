@@ -1,27 +1,26 @@
 import React from 'react'
-import { Button, Card, Checkbox, Col, ConfigProvider, Form, Input, Menu, Radio, Row, Select, Table } from 'antd'
+import { Breadcrumb, Button, Card, Col, ConfigProvider, Divider, Input, Radio, Row, Select, Table, TimePicker } from 'antd'
 import { CaretRightOutlined, SunOutlined, ThunderboltOutlined } from '@ant-design/icons';
+import FormExample from './examples/FormExample';
+import MenuExample from './examples/MenuExample';
+import InputExample from './examples/InputExample';
 
-const options = [{ label: 'apple', value: 'apple', }, { label: 'pear', value: 'pear', }, { label: 'banana', value: 'banana' }];
+import './app.css';
+
+
 export default function App() {
-  /* functions */
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
-  
+
   return (
     <ConfigProvider
       // TBC
       theme={{
         token: {
+          // 品牌主色
           colorPrimary: '#1999FF',
+          // 一级文本色
+          colorText: '#575967',
+          // 基础圆角
           borderRadius: '4px',
-          // colorText: '#575967',
-          colorTextBase: '#575967',
-
         },
         components: {
           Menu: {
@@ -34,146 +33,82 @@ export default function App() {
             // 菜单项文字悬浮颜色
             itemHoverColor: 'white',
             itemSelectedColor: 'white',
+            // 菜单项的圆角
+            // itemBorderRadius: 8,
           },
 
           Table: {
             headerBg: '#E7E7E7',
+            // 标题字体颜色
+            colorTextHeading: '#332',
+            // 一级文本色 覆盖全局主题的colorText
+            colorText: '#135',
           },
         }
       }}>
-
-      <Menu
-        style={{ width: '240px' }}
-        mode='inline'
-        items={[{
-          label: '状态',
-          key: 'status',
-          children: [{
-            label: '网络状态',
-            key: 'status-network',
-          }, {
-            label: 'PBX状态',
-            key: 'status-pbx',
-          },]
-        }, {
-          label: '网络',
-          key: 'network',
-          children: [{
-            label: 'LAN侧配置',
-            key: 'network-lan',
-            children: [{
-              label: 'IPv4',
-              key: 'network-lan-ipv4',
-            }, {
-              label: 'IPv6',
-              key: 'network-lan-ipv6',
-            },]
-          },]
-        },]}
-
-      />
-      <Row gutter={[8, 8]}>
-        <Col>
-          <Card title='Inputs'>
-            <Input placeholder="Basic usage" />
-            <Radio.Group options={options} />
-            <br />
-            <Select style={{ width: "200px" }} showSearch={true} options={options} />
-          </Card>
+      <Row >
+        <Col span={4}>
+          <MenuExample />
         </Col>
-        <Col  span={8}>
-          <Card title='Buttons'>
-            <Button >Button</Button>
-            <Button type='primary'>Button</Button>
-          </Card>
-        </Col>
-        <Col  span={8}>
-          <Card title='Form'>
-            <Form
-              name="basic"
-              labelCol={{
-                span: 8,
-              }}
-              wrapperCol={{
-                span: 16,
-              }}
-              style={{
-                maxWidth: 600,
-              }}
-              initialValues={{
-                remember: true,
-              }}
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              autoComplete="off"
-            >
-              <Form.Item
-                label="Username"
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Please input your username!',
-                  },
-                ]}
-              >
-                <Input />
-              </Form.Item>
+        <Col span={20}>
+          <Breadcrumb
+            items={[
+              {
+                title: 'Home',
+              },
+              {
+                title: <a href="">Application Center</a>,
+              },
+              {
+                title: <a href="">Application List</a>,
+              },
+              {
+                title: 'An Application',
+              },
+            ]}
+          />
 
-              <Form.Item
-                label="Password"
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Please input your password!',
-                  },
-                ]}
-              >
-                <Input.Password />
-              </Form.Item>
+          <div style={{ padding: '12px 0' }}>
+            {/* 此处单独设置Row组件的gutter会导致整个文档出现水平方向的滚动条 */}
+            <Row gutter={[0, 8]}>
+              <Col>
+                <Card title='Inputs'>
+                  <InputExample />
+                </Card>
+              </Col>
+              <Col span={8}>
+                <Card title='Buttons'>
+                  <Button >Button</Button>
+                  <Button type='primary'>Button</Button>
+                </Card>
+              </Col>
+              <Col span={8}>
+                <Card title='Form'>
+                  <FormExample />
+                </Card>
+              </Col>
+              <Col span={8} >
+                <Card title='Tables'>
+                  <Table
+                    columns={[{ title: 'username', dataIndex: 'username', }, { title: 'password', dataIndex: 'password', }]}
+                    dataSource={[{ username: 'gill', password: 'abc', }, { username: 'sue', password: 'haha' }]} />
+                </Card>
+              </Col>
 
-              <Form.Item
-                name="remember"
-                valuePropName="checked"
-                wrapperCol={{
-                  offset: 8,
-                  span: 16,
-                }}
-              >
-                <Checkbox>Remember me</Checkbox>
-              </Form.Item>
+              <Col span={8}>
+                <Card title='Icons'>
+                  <SunOutlined />
+                  <ThunderboltOutlined />
+                  <CaretRightOutlined />
+                </Card>
+              </Col>
 
-              <Form.Item
-                wrapperCol={{
-                  offset: 8,
-                  span: 16,
-                }}
-              >
-                <Button type="primary" htmlType="submit">
-                  Submit
-                </Button>
-              </Form.Item>
-            </Form>
-          </Card>
-        </Col>
-        <Col  span={8} >
-          <Card title='Tables'>
-            <Table
-              columns={[{ title: 'username', dataIndex: 'username', }, { title: 'password', dataIndex: 'password', }]}
-              dataSource={[{ username: 'gill', password: 'abc', }, { username: 'sue', password: 'haha' }]} />
-          </Card>
-        </Col>
-
-        <Col  span={8}>
-          <Card title='Icons'>
-            <SunOutlined />
-            <ThunderboltOutlined />
-            <CaretRightOutlined />
-          </Card>
+            </Row>
+          </div>
         </Col>
 
       </Row>
-    </ConfigProvider>
+
+    </ConfigProvider >
   )
 }
