@@ -5,7 +5,29 @@ import {
   ProFormField,
   ProFormRadio,
 } from '@ant-design/pro-components';
+import { Col, Input, Row, Tag } from 'antd';
 import React, { useState } from 'react';
+
+// 自定义输入组件
+function MyInput(props) {
+  console.log('props', props);
+  const { value = 'FE80/64', onChange } = props;
+
+  const handleChangeIp = (e) => {
+    const prevValue = value.split('/')[1];
+    onChange(e.target.value + '/' + prevValue);
+  };
+  return <Row gutter={[8, 8,]}>
+    <Col span={18}>
+      <Input
+        value={value.split('/')[0]}
+        onChange={handleChangeIp} />
+    </Col>
+    <Col span={6} >
+      <Input value={value.split('/')[1]} />
+    </Col>
+  </Row>
+};
 
 const waitTime = (time) => {
   return new Promise((resolve) => {
@@ -47,25 +69,37 @@ export default function EditableExample() {
       title: '活动名称',
       dataIndex: 'title',
       tooltip: '只读，使用form.getFieldValue获取不到值',
-      formItemProps: (form, { rowIndex }) => {
-        return {
-          rules:
-            rowIndex > 1 ? [{ required: true, message: '此项为必填项' }] : [],
-        };
+    
+      // 传递给Form.Item组件的props
+      // object写法
+      formItemProps: {
+        rules: [
+          {
+            required: true,
+            message: '此项为必填项',
+          },
+        ],
       },
-      // 第一行不允许编辑
+      // 函数写法
+      // formItemProps: (form, { rowIndex }) => {
+      //   return {
+      //     rules: [{
+      //       required: true,
+      //       message: '此项为必填项',
+      //     },]      
+      //   };
+      // },
+      // 设置单元格的可编辑属性
       editable: (text, record, index) => {
+        // 第一行不允许编辑
         return index !== 0;
       },
       width: '15%',
     },
-    {
-      title: '活动名称二',
-      dataIndex: 'readonly',
-      tooltip: '只读，使用form.getFieldValue可以获取到值',
-      readonly: true,
-      width: '15%',
-    },
+    { title: '活动口令',
+    key: 'key',
+    dataIndex: 'key',
+  },
     {
       title: '状态',
       key: 'state',
@@ -84,8 +118,26 @@ export default function EditableExample() {
       },
     },
     {
+      title: '自定义列',
+      dataIndex: 'labels',
+      width: '20%',
+      formItemProps: {
+        rules: [
+          {
+            required: true,
+            message: '此项为必填项',
+          },
+        ],
+      },
+      // 自定义表单组件
+      renderFormItem: (_, { isEditable }) => {
+        return <MyInput />;
+      },
+    },
+    {
       title: '描述',
       dataIndex: 'decs',
+      valueType: 'textarea',
       fieldProps: (form, { rowKey, rowIndex }) => {
         if (form.getFieldValue([rowKey || '', 'title']) === '不好玩') {
           return {
@@ -134,7 +186,9 @@ export default function EditableExample() {
     <>
       <EditableProTable
         rowKey="id"
+        // 标题
         headerTitle="可编辑表格"
+        // 最大数据量
         maxLength={5}
         scroll={{
           x: 960,
@@ -193,7 +247,15 @@ export default function EditableExample() {
           onChange: setEditableRowKeys,
         }}
       />
-      <ProCard title="表格数据" headerBordered collapsible defaultCollapsed>
+      <ProCard
+        // 卡片标题
+        title="表格数据"
+        // header底部边框
+        headerBordered
+        // 内容可折叠 
+        collapsible
+        // 默认折叠
+        defaultCollapsed>
         <ProFormField
           ignoreFormItem
           fieldProps={{
@@ -202,6 +264,7 @@ export default function EditableExample() {
             },
           }}
           mode="read"
+          // 展示JSON格式数据
           valueType="jsonCode"
           text={JSON.stringify(dataSource)}
         />

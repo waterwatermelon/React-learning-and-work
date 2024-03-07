@@ -21,7 +21,7 @@ export default function App() {
           // 一级文本色
           colorText: '#575967',
           // 基础圆角
-          borderRadius: '4px',
+          borderRadius: 4,
         },
         components: {
           Menu: {
@@ -46,7 +46,8 @@ export default function App() {
             colorText: '#135',
           },
         }
-      }}>
+      }}
+      >
       <Row >
         <Col span={4}>
           <MenuExample />
@@ -105,7 +106,7 @@ export default function App() {
               </Col>
 
               <Col span={8}>
-                <Card title='procomponents'>
+                <Card title='Procomponents'>
                   <ProForm                    
                     onFinish={async (values) => {
                       console.log(values);
@@ -125,7 +126,7 @@ export default function App() {
                 </Card>
               </Col>
               <Col span={24}>
-                <Card title='procomponents'>
+                <Card title='Procomponents'>
                    <EditTableExample />
                 </Card>
               </Col>
