@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
 } from 'react-router-dom';
 import Main from './Main';
 import Simple from './simple/Simple';
