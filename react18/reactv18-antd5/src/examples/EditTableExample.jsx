@@ -41,17 +41,26 @@ const defaultData = [
   {
     id: 624748504,
     title: '活动名称一',
-    readonly: '活动名称一',
     decs: '这个活动真好玩',
     state: 'open',
+    ipv6: 'fe80::1/64',
     created_at: 1590486176000,
     update_at: 1590486176000,
   },
   {
     id: 624691229,
     title: '活动名称二',
-    readonly: '活动名称二',
     decs: '这个活动真好玩',
+    state: 'closed',
+    ipv6: 'fe80::2/64',
+    created_at: 1590481162000,
+    update_at: 1590481162000,
+  },
+  {
+    id: 624691230,
+    title: '活动名称三',
+    decs: '不好玩',
+    ipv6: 'fe80::3/64',
     state: 'closed',
     created_at: 1590481162000,
     update_at: 1590481162000,
@@ -69,7 +78,7 @@ export default function EditableExample() {
       title: '活动名称',
       dataIndex: 'title',
       tooltip: '只读，使用form.getFieldValue获取不到值',
-    
+
       // 传递给Form.Item组件的props
       // object写法
       formItemProps: {
@@ -96,10 +105,20 @@ export default function EditableExample() {
       },
       width: '15%',
     },
-    { title: '活动口令',
-    key: 'key',
-    dataIndex: 'key',
-  },
+    {
+      title: '活动口令',
+      key: 'key',
+      dataIndex: 'key',
+      valueType: 'password',
+      width: '12%',
+    },
+    {
+      title: '主色',
+      key: 'color',
+      dataIndex: 'color',
+      valueType: 'color',
+      width: '12%',
+    },
     {
       title: '状态',
       key: 'state',
@@ -119,7 +138,7 @@ export default function EditableExample() {
     },
     {
       title: '自定义列',
-      dataIndex: 'labels',
+      dataIndex: 'ipv6',
       width: '20%',
       formItemProps: {
         rules: [
