@@ -1,4 +1,5 @@
-```
+## 项目结构 
+```sh
 src
 ├── app.css
 ├── App.js
@@ -60,3 +61,6 @@ src
     ├── basenode.scss
     └── UpdateCanvas.js
 ```
+
+## 参考文档
+[Butterfly - Home](https://butterfly-dag.gitee.io/butterfly-dag/home)
