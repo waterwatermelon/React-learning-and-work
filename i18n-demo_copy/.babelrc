@@ -1,0 +1,14 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "i18next-extract",
+            {
+                "outputPath": "./src/extractTranslation/translation.json"
+            }
+        ]
+    ]
+}
