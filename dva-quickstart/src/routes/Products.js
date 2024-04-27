@@ -1,5 +1,22 @@
 import React from "react";
-export default function ProductList()
-{
-  return <h2>List of Product</h2>
-}
+import ProductList from '../components/ProductList';
+// connect data to ui 
+import { connect } from "dva"; //
+
+const Products = ({ dispatch, products }) => {
+  function handleDelete(id) {
+    dispatch({
+      type: 'products/delete',
+      payload: id,
+    });
+  }
+  return (
+    <div>
+      <h2>List of Products</h2>
+      <ProductList onDelete={handleDelete} products={products} />
+    </div>
+  );
+};
+
+
+export default connect(({ products }) => ({ products }))(Products);
