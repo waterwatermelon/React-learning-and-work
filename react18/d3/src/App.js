@@ -1,5 +1,6 @@
 import React from 'react'
 import LinePlot from './LinePlots'
+import Bar from './Bar'
 export default function App() {
 
   return (
@@ -8,6 +9,7 @@ export default function App() {
         hello d3
       </h1>
       <LinePlot data={[1, 2, 4]} />
+      <Bar />
     </>
   )
 }
