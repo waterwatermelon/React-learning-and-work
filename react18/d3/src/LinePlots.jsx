@@ -7,8 +7,8 @@ import { useRef, useEffect } from "react";
  */
 export default function LinePlot({
   data,
-  width = 640,
-  height = 400,
+  width = 480,
+  height = 320,
   marginTop = 20,
   marginRight = 20,
   marginBottom = 30,
@@ -31,7 +31,7 @@ export default function LinePlot({
   }, [gy, y]);
 
   return (
-    <svg width={width} height={height}>
+    <svg className="box" width={width} height={height}>
       {/* draw x axis */}
       <g ref={gx} transform={`translate(0,${height - marginBottom})`} />
       {/* draw y axis */}
