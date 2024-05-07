@@ -31,17 +31,20 @@ export default function LinePlot({
   }, [gy, y]);
 
   return (
-    <svg className="box" width={width} height={height}>
-      {/* draw x axis */}
-      <g ref={gx} transform={`translate(0,${height - marginBottom})`} />
-      {/* draw y axis */}
-      <g ref={gy} transform={`translate(${marginLeft},0)`} />
-      {/* draw line */}
-      <path fill="none" stroke="currentColor" strokeWidth="1.5" d={line(data)} />
-      {/* draw points  */}
-      <g fill="white" stroke="currentColor" strokeWidth="1.5">
-        {data.map((d, i) => (<circle key={i} cx={x(i)} cy={y(d)} r="2.5" />))}
-      </g>
-    </svg>
+    <div>
+      <h2>Line Plots</h2>
+      <svg width={width} height={height}>
+        {/* draw x axis */}
+        <g ref={gx} transform={`translate(0,${height - marginBottom})`} />
+        {/* draw y axis */}
+        <g ref={gy} transform={`translate(${marginLeft},0)`} />
+        {/* draw line */}
+        <path fill="none" stroke="currentColor" strokeWidth="1.5" d={line(data)} />
+        {/* draw points  */}
+        <g fill="white" stroke="currentColor" strokeWidth="1.5">
+          {data.map((d, i) => (<circle key={i} cx={x(i)} cy={y(d)} r="2.5" />))}
+        </g>
+      </svg>
+    </div>
   );
 }

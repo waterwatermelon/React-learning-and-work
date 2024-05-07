@@ -20,7 +20,8 @@ export function Animation() {
   }, []);
 
   return <div>
-    <h3>Animation
+    <h3>
+      Animation
     </h3>
     
     <svg ref={aniRef}>

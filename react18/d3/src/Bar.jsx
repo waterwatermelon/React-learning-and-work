@@ -39,7 +39,7 @@ export default function BarStatic({
 
 
   return (
-    <>
+    <div>
       <h3>bar</h3>
 
       <svg width={width} height={height}>
@@ -73,7 +73,7 @@ export default function BarStatic({
         <g ref={refX} transform={`translate(0, ${marginTop})`}></g>
         <g ref={refY} transform={`translate(${marginLeft},${marginTop})`}></g>
       </svg>
-    </>
+    </div>
 
   );
 }
@@ -91,23 +91,24 @@ export function BarDynamic({
 }) {
   const svgRef = useRef();
   useEffect(() => {
-    // 为什么产生了2个rect？
-    // d3.select('#bar')
     const svg = d3.select(svgRef.current);
-    console.log('svg', svg);
-    svg.append('rect')
+
+    // console.log('svg', svg); // Selection
+    svg.append('g')
+      .append('rect')
       .attr('x', 0)
       .attr('y', 0)
       .attr('height', 10)
-      .attr('width', 10).
-      transition()
+      .attr('width', 10)
+      .transition()
       .duration(2000)
       .attr("width", 200);
 
   }, [])
 
-  return <>
+  return <div>
+    <h2>Bar</h2>
     <svg ref={svgRef} width={width} height={height}>
     </svg>
-  </>;
+  </div>;
 }
