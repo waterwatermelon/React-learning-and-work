@@ -4,6 +4,7 @@ import Bar from './Bar';
 import { Animation } from './Animation';
 import { Event } from './Event';
 import Pie from './Pie';
+import Tree from './Tree';
 export default function App() {
 
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Animation />
         <Event />
         <Pie />
+        <Tree />
       </div>
     </>
   )
