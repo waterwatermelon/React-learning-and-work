@@ -1,0 +1,16 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  --primary-color: #5077D6;
+  --primary-color-hover: rgba(#5077D6, 0.02);
+  --icon-color: #295EBD;
+  --border-color: #ddd;
+  --text-color: #333;
+  --text-color-secondary: #63697B;
+
+  --danger-color: #B82A1B;
+}

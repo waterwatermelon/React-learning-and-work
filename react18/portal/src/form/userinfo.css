@@ -1,0 +1,21 @@
+.userinfo-box {
+  /* border: 1px solid #000; */
+
+}
+.form-item {
+  line-height: 2em;
+  font-size: 1rem;
+}
+.form-label {
+  color: #333;
+  margin-right: 4px;
+}
+
+.form-content {
+  color: #666;
+}
+
+.offlin-btn {
+  width: 100px;
+  margin: 0;
+}
