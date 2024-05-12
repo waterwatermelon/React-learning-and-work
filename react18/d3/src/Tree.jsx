@@ -15,8 +15,8 @@ export default function Tree() {
     var g = svg.append("g")
       .attr("transform", "translate(" + marge.top + "," + marge.left + ")");
 
-    var scale = svg.append("g")
-      .attr("transform", "translate(" + marge.top + "," + marge.left + ")");
+    // var scale = svg.append("g")
+    //   .attr("transform", "translate(" + marge.top + "," + marge.left + ")");
     //数据
     var dataset = {
       name: "中国",
@@ -80,7 +80,7 @@ export default function Tree() {
       // 可绘制区域的大小
       .size([width - 20, height - 100])
       .separation(function (a, b) {
-        return (a.parent == b.parent ? 1 : 2) / a.depth;
+        return (a.parent === b.parent ? 1 : 2) / a.depth;
       })
     var treeData = tree(hierarchyData);
     // 得到边和节点（已经完成转换的）
