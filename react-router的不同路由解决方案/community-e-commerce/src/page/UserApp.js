@@ -15,6 +15,8 @@ import Address from './Address/AddressList.jsx';
 import AddressDetail from './AddressDetail';
 import NotFound from './NotFound.jsx';
 import Refund from './Refund.jsx';
+import Family from './Family/Family.jsx';
+
 function App() {
   return (
     <Router>
@@ -32,6 +34,7 @@ function App() {
         <Route path='/user/coupon/list' component={Coupon} />
         <Route path='/user/address/list' component={Address} />
         <Route path='/user/address/detail' component={AddressDetail} />
+        <Route path='/user/family/list' component={Family} />
         <Route component={NotFound} />
       </Switch>
     </Router>

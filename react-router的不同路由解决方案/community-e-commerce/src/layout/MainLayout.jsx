@@ -16,7 +16,7 @@ class MainLayout extends Component{
     render(){
         return(
             <div style={{display:'flex',flexDirection:'column',minHeight:'100vh',paddingBottom:this.state.tabsHeight,boxSizing:'border-box'}}>
-                <div style={{flex:'1',background:'#fcf',}}>
+                <div style={{flex:'1',background:'#efefef',}}>
                     {this.props.children}
                 </div>
                 <MenuTab height={this.state.tabsHeight}/>
