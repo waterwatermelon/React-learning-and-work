@@ -11,9 +11,19 @@ function transformXY(nodes) {
   });
 }
 
+function clickNodeHandler(event) {
+  console.log('>> click event', event);
+  console.log();
+  // get Selection
+  const node = d3.select(event.target).data()[0]; // get Node
+  console.log(node);
+  alert(node.data.name);
+}
 export default function TreeOne(props) {
   const { direction = 'horizontal' } = props;
   const ref = useRef();
+
+
 
   function draw() {
     // prepare data
@@ -66,16 +76,6 @@ export default function TreeOne(props) {
             { name: "大庆", value: 100 }
           ]
         },
-        {
-          name: "新疆",
-          children:
-            [
-              { name: "乌鲁木齐" },
-              { name: "克拉玛依" },
-              { name: "吐鲁番" },
-              { name: "哈密" }
-            ]
-        }
       ]
     };
     // 构建出Node类型的根节点
@@ -101,13 +101,14 @@ export default function TreeOne(props) {
     console.log('tree', tree);
     var treeData = tree(hierarchyData);
     console.log('treeData', treeData);
-    // 得到边和节点（已经完成转换的）
+    // 得到所有后代节点（已经完成转换的）
     var nodes = treeData.descendants();
     console.log('nodes', nodes);
     // 
     if (direction === 'vertical') {
       transformXY(nodes);
     }
+    // 得到所有连线
     var links = treeData.links();
     console.log('links', links);
     // 创建一个贝塞尔生成曲线生成器
@@ -138,7 +139,7 @@ export default function TreeOne(props) {
 
 
     // 收集节点数据，设置节点偏移
-    var gs = g.append("g")
+    var groupRoot = g.append("g")
       .selectAll("g")
       .data(nodes)
       .enter()
@@ -150,19 +151,17 @@ export default function TreeOne(props) {
       });
 
     // 绘制节点 circle point
-    gs.append("circle")
+    groupRoot.append("circle")
       .attr("r", 6)
       .attr("fill", "white")
       .attr("stroke", "blue")
       .attr("stroke-width", 1);
-
-
     //文字
-    gs.append("text")
+    groupRoot.append("text")
       .attr('font-size', '14');
-
+    // 文字居中
     if (direction === 'vertical') {
-      gs.select('text')
+      groupRoot.select('text')
         .attr("y", function (d) {
           // 如果某节点有子节点，则对应的文字左移/上移
           return d.children ? -12 : 14; // 12:fontsize or lineheight
@@ -173,8 +172,7 @@ export default function TreeOne(props) {
         })
       // .attr("dx ,10)
     } else {
-
-      gs.select('text')
+      groupRoot.select('text')
         .attr("x", function (d) {
           // 如果某节点有子节点，则对应的文字左移/上移
           return d.children ? -40 : 8; // 8:圆点宽度
@@ -182,14 +180,18 @@ export default function TreeOne(props) {
         .attr("y", -5)
         .attr("dy", 10)
     }
-    gs.selectAll('text')
+    groupRoot.selectAll('text')
       .text(function (d) {
         return d.data.name;
       });
+
+    groupRoot.select('circle').on('click', clickNodeHandler)
+    return groupRoot;
   }
   useEffect(() => {
     // destory();
     draw();
+
   }, [direction]);
   return (
     <div>

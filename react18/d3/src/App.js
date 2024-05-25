@@ -18,7 +18,6 @@ export default function App() {
         <Animation />
         <Event />
         <Pie />
-        <Tree />
         <Tree direction={'vertical'}/>
       </div>
     </>

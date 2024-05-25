@@ -7,8 +7,7 @@ export function Event(props) {
   const max_radius = 20;
 
   useEffect(() => {
-    // ?执行2次
-    console.log('useeffect');
+
     const circle = d3.select(ref.current)
       .append('circle');
     circle.attr('cx', max_radius);
