@@ -1,7 +1,8 @@
 ## 依赖项
 
-- antd
-- @ant-design/pro-components
+- react 18
+- antd 5
+- @ant-design/pro-components 2 
 
 ## 编译 
 
