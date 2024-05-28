@@ -6,6 +6,7 @@ import { Event } from './Event';
 import Pie from './Pie';
 import Tree from './Tree';
 import Axis from './Axis';
+import Zoom from './Zoom';
 export default function App() {
 
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Event />
         <Pie />
         <Tree direction={'vertical'}/>
+        <Zoom />
       </div>
     </>
   )
