@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as  d3 from 'd3';
 
-// 原文链接：https://blog.csdn.net/weixin_57182748/article/details/132394057
 
 export default function Zoom() {
   const ref = useRef();
