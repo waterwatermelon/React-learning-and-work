@@ -4,9 +4,10 @@ import Bar from './Bar';
 import { Animation } from './Animation';
 import { Event } from './Event';
 import Pie from './Pie';
-import Tree from './Tree';
+import Tree from './tree/Tree';
 // import Axis from './Axis';
 import Zoom from './Zoom';
+import TreeTwo from './tree/TreeTwo';
 export default function App() {
 
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Event />
         <Pie />
         <Tree direction={'vertical'}/>
+        <TreeTwo direction={'vertical'}/>
         <Zoom />
       </div>
     </>
