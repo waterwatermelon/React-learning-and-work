@@ -15,9 +15,16 @@ function transformXY(nodes) {
 export default function TreeTwo(props) {
   const { direction = 'horizontal' } = props;
   const ref = useRef();
-  const NODE_WIDTH = 60;
-  const NODE_HEIGHT = 32;
+  /* MACRO */
+  const NODE_INNER_PADDING = 0;
+  /* SIZE */
+  const IMAGE_WIDTH = 96;
+  const IMAGE_HEIGHT = 56;
+  const NODE_WIDTH = IMAGE_WIDTH + NODE_INNER_PADDING * 2;
+  const TEXT_FONT_SIZE = 14;
+  const NODE_HEIGHT = TEXT_FONT_SIZE + IMAGE_HEIGHT + NODE_INNER_PADDING * 2;
 
+  /* COLOR */
   const NORMAL_BORDER = "#aaa";
   const SELECTED_BORDER = "#f00";
 
@@ -35,42 +42,16 @@ export default function TreeTwo(props) {
 
     // 原始数据
     var dataset = {
-      name: "中国",
+      name: "主网关",
+      imgsrc: '/SL8500-GP04.png',
       children: [
         {
-          name: "浙江",
-          children: [
-            { name: "杭州", value: 100 },
-            { name: "宁波", value: 100 },
-            { name: "温州", value: 100 },
-            { name: "绍兴", value: 100 }
-          ]
+          name: "SU3140",
+          imgsrc: '/SU3140-AX30.png',
         },
         {
-          name: "广西",
-          children: [
-            {
-              name: "桂林",
-              children: [
-                { name: "秀峰区", value: 100 },
-                { name: "叠彩区", value: 100 },
-                { name: "象山区", value: 100 },
-                { name: "七星区", value: 100 }
-              ]
-            },
-            { name: "南宁", value: 100 },
-            { name: "柳州", value: 100 },
-            { name: "防城港", value: 100 }
-          ]
-        },
-        {
-          name: "黑龙江",
-          children: [
-            { name: "哈尔滨", value: 100 },
-            { name: "齐齐哈尔", value: 100 },
-            { name: "牡丹江", value: 100 },
-            { name: "大庆", value: 100 }
-          ]
+          name: "SU1120",
+          imgsrc: '/SU3140-AX30.png',
         },
       ]
     };
@@ -92,7 +73,7 @@ export default function TreeTwo(props) {
       });
 
     if (direction === 'vertical')
-      tree.size([width - 120, height - 120]);
+      tree.size([width - NODE_WIDTH, height - NODE_HEIGHT * 2]);
 
     console.log('tree', tree);
     var treeData = tree(hierarchyData);
@@ -148,13 +129,14 @@ export default function TreeTwo(props) {
         return "translate(" + cy + "," + cx + ")";
       });
 
-    console.log('groupRoot', groupRoot);// Selection { _groups:[], _parents: [g]}
+    console.log('groupRoot', groupRoot);// Selection { _groups:[g,g,g], _parents: [g]}
+
     // 绘制边界
     groupRoot
       .append("rect")
       .attr("width", NODE_WIDTH)
       .attr("height", NODE_HEIGHT)
-      .attr('fill', 'transparent')
+      .attr('fill', "transparent")
       .attr('stroke', NORMAL_BORDER)
       .on('click', e => {
         console.log('click rectangle:', e);
@@ -164,35 +146,69 @@ export default function TreeTwo(props) {
         console.log(node);
         node.isSelected = !node.isSelected;
         selection.attr('stroke', node.isSelected ? SELECTED_BORDER : NORMAL_BORDER);
-
       })
 
-    //文字
-    groupRoot.append("text")
-      .attr('font-size', '14');
+    {/* <image width="96" height="36" xlink:href="static/SL8500-GP04.b0f7286b.png" x="2" y="18"></image> */ }
 
-    // // 文字居中
-    if (direction === 'vertical') {
-      groupRoot.select('text')
-        .attr("y", function (d) {
-          return NODE_HEIGHT / 2;
-        })
-        .attr("x", function (d) {
-          console.log('text', d)
-        })
-    } else {
-      groupRoot.select('text')
-        .attr("x", function (d) {
-          return d.children ? -40 : 8; // 8:圆点宽度
-        })
-        .attr("y", -5)
-        .attr("dy", 10)
-    }
+    // 图片
+    groupRoot.append('image')
+      .attr('width', IMAGE_WIDTH)
+      .attr('height', IMAGE_HEIGHT)
+      .attr('xlink:href', element => {
+        return element.data.imgsrc;
+      })
+      .attr('x', NODE_INNER_PADDING)
+      .attr('y', NODE_INNER_PADDING)
+
+
+    // 文字
+    groupRoot.append("text")
+      .attr('font-size', TEXT_FONT_SIZE)
+      .attr('y', NODE_INNER_PADDING + IMAGE_HEIGHT + TEXT_FONT_SIZE)
+      .attr('x', NODE_WIDTH / 2)
+
+    /*
+  // 文字居中
+  if (direction === 'vertical') {
+    groupRoot.select('text')
+      .attr("y", function (d) {
+        return NODE_HEIGHT / 2;
+      })
+      .attr("x", function (d) {
+        console.log('text', d)
+      })
+  } else {
+    groupRoot.select('text')
+      .attr("x", function (d) {
+        return d.children ? -40 : 8; // 8:圆点宽度
+      })
+      .attr("y", -5)
+      .attr("dy", 10)
+  }
+  */
+    /*
+         <foreignObject width="100" height="20px" y="50">
+           <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+             <span style="font-size: 12px; line-height: 16px; color: black; text-align: center;">SL8500-GP04</span>
+           </div>
+         </foreignObject>
+       */
+
     groupRoot.selectAll('text')
       .text(function (d) {
         return d.data.name;
       });
-
+    /*
+     groupRoot.append('foreignObject')
+       .attr('width', '100')
+       .attr('height', '14')
+       .attr('y', NODE_HEIGHT)
+       .append('div')
+       .attr('style', "width: 100%;height: 100%; display: flex; justify-content: center; align-items: center; background: blue")
+       .append('span')
+       .attr('style', 'color: black; font-size: 14px; line-height: 14px; text-align: center;')
+       .text(d => d.data.name);
+     */
     return groupRoot;
   }
   useEffect(() => {
@@ -204,8 +220,18 @@ export default function TreeTwo(props) {
       <h3>
         Tree(2) - Province-City-Country
       </h3>
-      <svg ref={ref} width={1200} height={720} />
-    </div>
+      <svg ref={ref} width={1400} height={720} >
+        <g>
+          <g>
+            <foreignObject width="100" height="20" y="50" transform='translate(10,10)'>
+              <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", }} >
+                <span style={{ fontSize: "12px", lineHeight: "16px", color: "black", textAlign: "center", }}>TEXT</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </svg>
+    </div >
   )
 }
 
