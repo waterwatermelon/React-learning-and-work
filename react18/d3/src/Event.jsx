@@ -18,7 +18,7 @@ export function Event(props) {
     circle.attr('r', min_radius);
     circle.attr('fill', fillStyle);
 
-    console.log('circle', circle); // Selection
+    // console.log('circle', circle); // Selection
 
     circle.on('mouseover', function handler(e) {
       console.log('click e:', e);

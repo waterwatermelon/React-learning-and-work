@@ -16,16 +16,18 @@ export default function TreeTwo(props) {
   const { direction = 'horizontal' } = props;
   const ref = useRef();
   /* MACRO */
-  const NODE_INNER_PADDING = 0;
+  const NODE_INNER_PADDING = 8;
   /* SIZE */
   const IMAGE_WIDTH = 96;
   const IMAGE_HEIGHT = 56;
   const NODE_WIDTH = IMAGE_WIDTH + NODE_INNER_PADDING * 2;
   const TEXT_FONT_SIZE = 14;
-  const NODE_HEIGHT = TEXT_FONT_SIZE + IMAGE_HEIGHT + NODE_INNER_PADDING * 2;
-
+  const SUBTEXT_FONT_SIZE = 13;
+  const NODE_HEIGHT = TEXT_FONT_SIZE + SUBTEXT_FONT_SIZE + IMAGE_HEIGHT + NODE_INNER_PADDING * 2;
+  const BORDER_RADIUS = 8;
+  const NODE_MARGIN = 8;
   /* COLOR */
-  const NORMAL_BORDER = "#aaa";
+  const NORMAL_BORDER = "#ccc";
   const SELECTED_BORDER = "#f00";
 
   function draw() {
@@ -42,15 +44,20 @@ export default function TreeTwo(props) {
 
     // 原始数据
     var dataset = {
-      name: "主网关",
+      model: "SL8500-GP04",
+      deviceName: '主网关',
       imgsrc: '/SL8500-GP04.png',
       children: [
         {
-          name: "SU3140",
+          model: "SU3140-AX30",
+          deviceName: '11',
+          belongPort: 'PON1',
           imgsrc: '/SU3140-AX30.png',
         },
         {
-          name: "SU1120",
+          model: "SU1120-AX30",
+          deviceName: '12',
+          belongPort: 'PON2',
           imgsrc: '/SU3140-AX30.png',
         },
       ]
@@ -60,8 +67,6 @@ export default function TreeTwo(props) {
       .sum(function (d) {
         return d.value;
       });
-    // 生成一个数据
-    console.log('hierarchyData', hierarchyData);
     // generate a layout function, for tree 
     var tree = d3.tree()
       // 可绘制区域的大小
@@ -75,19 +80,15 @@ export default function TreeTwo(props) {
     if (direction === 'vertical')
       tree.size([width - NODE_WIDTH, height - NODE_HEIGHT * 2]);
 
-    console.log('tree', tree);
     var treeData = tree(hierarchyData);
-    console.log('treeData', treeData);
     // 得到所有后代节点（已经完成转换的）
     var nodes = treeData.descendants();
-    console.log('descendants:', nodes); // [Node]
     // 
     if (direction === 'vertical') {
       transformXY(nodes);
     }
     // 得到所有连线
     var links = treeData.links();
-    console.log('links', links);
     // 创建一个贝塞尔生成曲线生成器
     var Bézier_curve_generator;
     if (direction == 'vertical')
@@ -102,21 +103,52 @@ export default function TreeTwo(props) {
       .y(function (d) { return d.x });
 
     //绘制边
-    g.append("g")
-      .selectAll("path")
+    const pathgroup = g.append("g").selectAll("path")
+      /* 绑定数据 */
       .data(links)
-      .enter()
+      .enter();
+
+    pathgroup
       .append("path")
+      .attr("fill", "none")
+      .attr("stroke", "green")
+      .attr("stroke-width", 1)
       .attr("d", function (d) {
         var start = { x: d.source.x + NODE_HEIGHT, y: d.source.y + NODE_WIDTH / 2 };
         var end = { x: d.target.x, y: d.target.y + NODE_WIDTH / 2 };
         return Bézier_curve_generator({ source: start, target: end });
       })
-      .attr("fill", "none")
-      .attr("stroke", "green")
-      .attr("stroke-width", 1);
 
 
+    //  point of end
+    pathgroup.append('circle')
+      .attr('r', 4)
+      .attr('fill', 'transparent')
+      .attr('stroke', 'blue')
+      .attr('cx', d => d.target.y + NODE_WIDTH / 2)
+      .attr('cy', d => d.target.x - NODE_MARGIN)
+
+
+    pathgroup.append('foreignObject')
+      .attr('width', '56')
+      .attr('height', '20')
+      .attr('x', d => d.target.y + NODE_WIDTH / 2 - 28)
+      .attr('y', d => d.target.x - NODE_MARGIN - NODE_MARGIN - 24)
+      .append('xhtml:span')
+      .attr('style', `box-sizing:border-box; display:block;color: black; text-align: center; \
+        background-color: rgb(255, 255, 255);\
+        border: 1px solid rgb(43, 106, 253);\
+        border-radius: 22px;\
+        color: rgb(0, 0, 0);\
+        max-width: 70px;\
+        white-space: nowrap;\
+        overflow: hidden;\
+        text-overflow: ellipsis;\
+        padding: 0px 2px;\
+        font-size: ${SUBTEXT_FONT_SIZE}px;`)
+      .text(d => {
+        return d.target.data.belongPort;
+      });
     // 收集节点数据，设置节点偏移
     var groupRoot = g.append("g")
       .selectAll("g")
@@ -129,11 +161,13 @@ export default function TreeTwo(props) {
         return "translate(" + cy + "," + cx + ")";
       });
 
-    console.log('groupRoot', groupRoot);// Selection { _groups:[g,g,g], _parents: [g]}
+    // console.log('groupRoot', groupRoot);// Selection { _groups:[g,g,g], _parents: [g]}
 
     // 绘制边界
     groupRoot
       .append("rect")
+      .attr("rx", BORDER_RADIUS)
+      .attr("ry", BORDER_RADIUS)
       .attr("width", NODE_WIDTH)
       .attr("height", NODE_HEIGHT)
       .attr('fill', "transparent")
@@ -164,51 +198,23 @@ export default function TreeTwo(props) {
     // 文字
     groupRoot.append("text")
       .attr('font-size', TEXT_FONT_SIZE)
+      // 将文字的中心设置在水平、竖直方向的中心
+      .attr('text-anchor', 'middle')
       .attr('y', NODE_INNER_PADDING + IMAGE_HEIGHT + TEXT_FONT_SIZE)
       .attr('x', NODE_WIDTH / 2)
-
-    /*
-  // 文字居中
-  if (direction === 'vertical') {
-    groupRoot.select('text')
-      .attr("y", function (d) {
-        return NODE_HEIGHT / 2;
-      })
-      .attr("x", function (d) {
-        console.log('text', d)
-      })
-  } else {
-    groupRoot.select('text')
-      .attr("x", function (d) {
-        return d.children ? -40 : 8; // 8:圆点宽度
-      })
-      .attr("y", -5)
-      .attr("dy", 10)
-  }
-  */
-    /*
-         <foreignObject width="100" height="20px" y="50">
-           <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-             <span style="font-size: 12px; line-height: 16px; color: black; text-align: center;">SL8500-GP04</span>
-           </div>
-         </foreignObject>
-       */
-
-    groupRoot.selectAll('text')
       .text(function (d) {
-        return d.data.name;
+        return d.data.model;
+      })
+    // subtitle
+    groupRoot.append("text")
+      .attr('font-size', SUBTEXT_FONT_SIZE)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'grey')
+      .attr('y', NODE_INNER_PADDING + IMAGE_HEIGHT + TEXT_FONT_SIZE + TEXT_FONT_SIZE)
+      .attr('x', NODE_WIDTH / 2)
+      .text(function (d) {
+        return d.data.deviceName;
       });
-    /*
-     groupRoot.append('foreignObject')
-       .attr('width', '100')
-       .attr('height', '14')
-       .attr('y', NODE_HEIGHT)
-       .append('div')
-       .attr('style', "width: 100%;height: 100%; display: flex; justify-content: center; align-items: center; background: blue")
-       .append('span')
-       .attr('style', 'color: black; font-size: 14px; line-height: 14px; text-align: center;')
-       .text(d => d.data.name);
-     */
     return groupRoot;
   }
   useEffect(() => {
@@ -220,16 +226,7 @@ export default function TreeTwo(props) {
       <h3>
         Tree(2) - Province-City-Country
       </h3>
-      <svg ref={ref} width={1400} height={720} >
-        <g>
-          <g>
-            <foreignObject width="100" height="20" y="50" transform='translate(10,10)'>
-              <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", }} >
-                <span style={{ fontSize: "12px", lineHeight: "16px", color: "black", textAlign: "center", }}>TEXT</span>
-              </div>
-            </foreignObject>
-          </g>
-        </g>
+      <svg ref={ref} width={1400} height={720} style={{ overflow: 'unset' }} >
       </svg>
     </div >
   )

@@ -12,11 +12,8 @@ function transformXY(nodes) {
 }
 
 function clickNodeHandler(event) {
-  console.log('>> click event', event);
-  console.log();
   // get Selection
   const node = d3.select(event.target).data()[0]; // get Node
-  console.log(node);
   alert(node.data.name);
 }
 export default function TreeOne(props) {
@@ -84,7 +81,6 @@ export default function TreeOne(props) {
         return d.value;
       });
     // 生成一个数据
-    console.log('hierarchyData', hierarchyData);
     // generate a layout function, for tree 
     var tree = d3.tree()
       // 可绘制区域的大小
@@ -98,19 +94,15 @@ export default function TreeOne(props) {
     if (direction === 'vertical')
       tree.size([width - 20, height - 120]);
 
-    console.log('tree', tree);
     var treeData = tree(hierarchyData);
-    console.log('treeData', treeData);
     // 得到所有后代节点（已经完成转换的）
     var nodes = treeData.descendants();
-    console.log('nodes', nodes);
     // 
     if (direction === 'vertical') {
       transformXY(nodes);
     }
     // 得到所有连线
     var links = treeData.links();
-    console.log('links', links);
     // 创建一个贝塞尔生成曲线生成器
     var Bézier_curve_generator;
     if (direction == 'vertical')
@@ -167,7 +159,6 @@ export default function TreeOne(props) {
           return d.children ? -12 : 14; // 12:fontsize or lineheight
         })
         .attr("x", function (d) {
-          console.log('text', d)
           return -12 * d.data.name.length / 2;
         })
       // .attr("dx ,10)
@@ -189,7 +180,6 @@ export default function TreeOne(props) {
     return groupRoot;
   }
   useEffect(() => {
-    // destory();
     draw();
 
   }, [direction]);
