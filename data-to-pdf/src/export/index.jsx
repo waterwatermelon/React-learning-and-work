@@ -9,6 +9,11 @@ import { mockQuotation, mockAgentDetail } from './data';
 import './report.scss';
 const { DescriptionItem } = Descriptions;
 const { Text, Title, Paragraph } = Typography;
+
+/**
+ * jspdf&html2canvas实例项目
+ */
+
 // 第一项单位 mm， 第二项单位 pt 第三项 px
 // pt = px * 3/4 
 const papers = { 'a4': [{ w: 210, h: 316 }, { w: 595, h: 842 }, { w: 794, h: 1122 }], 'b5': [{ w: 185, h: 260 }, { w: 495, h: 694 }] };
@@ -185,7 +190,7 @@ export function ExportPriview(props) {
     if (logos.length === 0) {
       return '';
     }
-    return logos[0] ?.fileId;
+    return logos[0]?.fileId;
   }
   // 产品清单添加序号
   function transformProductList(list) {
