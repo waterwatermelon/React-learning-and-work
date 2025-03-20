@@ -49,6 +49,16 @@ export default function TreeTwo(props) {
       imgsrc: '/SL8500-GP04.png',
       children: [
         {
+          model: '',
+          deviceName: 'SPILTTER_1',
+          belongPort: 'PON3',
+          imgsrc: '',
+          children: [{
+            model: 'B0110',
+            deviceName: 'B0110',
+          }]
+        },
+        {
           model: "SU3140-AX30",
           deviceName: '11',
           belongPort: 'PON1',
@@ -129,13 +139,16 @@ export default function TreeTwo(props) {
       .attr('cy', d => d.target.x - NODE_MARGIN)
 
 
+    // filter ?
     pathgroup.append('foreignObject')
       .attr('width', '56')
       .attr('height', '20')
       .attr('x', d => d.target.y + NODE_WIDTH / 2 - 28)
       .attr('y', d => d.target.x - NODE_MARGIN - NODE_MARGIN - 24)
       .append('xhtml:span')
-      .attr('style', `box-sizing:border-box; display:block;color: black; text-align: center; \
+      .attr('style', `box-sizing:border-box; \
+        display:block;color: black;\
+        text-align: center; \
         background-color: rgb(255, 255, 255);\
         border: 1px solid rgb(43, 106, 253);\
         border-radius: 22px;\
@@ -144,7 +157,8 @@ export default function TreeTwo(props) {
         white-space: nowrap;\
         overflow: hidden;\
         text-overflow: ellipsis;\
-        padding: 0px 2px;\
+        height: 14px;\
+        line-height: 14px;\
         font-size: ${SUBTEXT_FONT_SIZE}px;`)
       .text(d => {
         return d.target.data.belongPort;
