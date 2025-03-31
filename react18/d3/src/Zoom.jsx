@@ -10,7 +10,7 @@ export default function Zoom() {
     const root_node = d3.select(ref.current)
       .node(); // Selection to DOM
     //
-    const s_xml = (new XMLSerializer).serializeToString(root_node);
+    const s_xml = (new XMLSerializer()).serializeToString(root_node);
 
     var imgsrc = 'data:image/svg+xml,' + s_xml;
 

@@ -101,7 +101,7 @@ export default function TreeTwo(props) {
     var links = treeData.links();
     // 创建一个贝塞尔生成曲线生成器
     var Bézier_curve_generator;
-    if (direction == 'vertical')
+    if (direction === 'vertical')
       Bézier_curve_generator = d3.linkVertical();
 
     else

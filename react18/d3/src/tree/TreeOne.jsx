@@ -16,7 +16,7 @@ function clickNodeHandler(event) {
   const node = d3.select(event.target).data()[0]; // get Node
   alert(node.data.name);
 }
-export default function Tree(props) {
+export default function TreeOne(props) {
   const { direction = 'horizontal' } = props;
   const ref = useRef();
 
@@ -44,7 +44,7 @@ export default function Tree(props) {
             { name: "杭州", value: 100 },
             { name: "宁波", value: 100 },
             { name: "温州", value: 100 },
-            { name: "绍兴", value: 100 },
+            { name: "绍兴", value: 100 }
           ]
         },
         {
@@ -53,15 +53,15 @@ export default function Tree(props) {
             {
               name: "桂林",
               children: [
-                { name: "秀峰区", value: 200 },
-                { name: "叠彩区", value: 200 },
-                { name: "象山区", value: 200 },
-                { name: "七星区", value: 200 },
+                { name: "秀峰区", value: 100 },
+                { name: "叠彩区", value: 100 },
+                { name: "象山区", value: 100 },
+                { name: "七星区", value: 100 }
               ]
             },
             { name: "南宁", value: 100 },
             { name: "柳州", value: 100 },
-            { name: "防城港", value: 100 },
+            { name: "防城港", value: 100 }
           ]
         },
         {
@@ -70,25 +70,22 @@ export default function Tree(props) {
             { name: "哈尔滨", value: 100 },
             { name: "齐齐哈尔", value: 100 },
             { name: "牡丹江", value: 100 },
-            { name: "大庆", value: 100 },
+            { name: "大庆", value: 100 }
           ]
         },
       ]
     };
     // 构建出Node类型的根节点
     var hierarchyData = d3.hierarchy(dataset)
-      /* 累加出总数量 */
       .sum(function (d) {
         return d.value;
       });
-
-    console.log('hierarchyData', hierarchyData);
-
-    // 生成布局函数
+    // 生成一个数据
+    // generate a layout function, for tree 
     var tree = d3.tree()
-      // 设置绘制区域的大小
-      .size([width / 2, height / 2])
-      /* 节点间隔的空间大小 */
+      // 可绘制区域的大小
+      // 画布大小保留可能会被遮挡的元素空间，120是根节点、叶子节点的高度
+      .size([width - 20, height - 120])
       .separation(function (a, b) {
         // return (a.parent === b.parent ? 1 : 2) / a.depth;
         return (a.parent === b.parent ? 1 : 2);
@@ -97,33 +94,31 @@ export default function Tree(props) {
     if (direction === 'vertical')
       tree.size([width - 20, height - 120]);
 
-    // 通过布局函数，生成布局数据
     var treeData = tree(hierarchyData);
-    // 得到所有后代节点（已经完成位置计算）
+    // 得到所有后代节点（已经完成转换的）
     var nodes = treeData.descendants();
-    // X、Y轴翻转
+    // 
     if (direction === 'vertical') {
       transformXY(nodes);
     }
-    // 得到所有连线对象
+    // 得到所有连线
     var links = treeData.links();
     // 创建一个贝塞尔生成曲线生成器
     var Bézier_curve_generator;
     if (direction === 'vertical')
       Bézier_curve_generator = d3.linkVertical();
+
     else
       Bézier_curve_generator = d3.linkHorizontal();
 
     Bézier_curve_generator.x(function (d) { return d.y; })
       .y(function (d) { return d.x; });
 
-    // 绘制连线
+    //绘制边
     g.append("g")
-      .selectAll("g")
-      /* 遍历数组元素，执行以下操作 */
+      .selectAll("path")
       .data(links)
       .enter()
-      /* 添加path元素 */
       .append("path")
       .attr("d", function (d) {
         var start = { x: d.source.x, y: d.source.y };
@@ -191,7 +186,7 @@ export default function Tree(props) {
   return (
     <div>
       <h3>
-        Tree(0) - Province-City-Country
+        Tree(1) - Province-City-Country
       </h3>
       <svg ref={ref} width={1000} height={720} />
     </div>
