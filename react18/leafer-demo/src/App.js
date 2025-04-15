@@ -1,47 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { Leafer, Group, Rect, Debug, PointerEvent } from 'leafer-ui'
+import { DemoOne } from './DemoOne';
+import { DemoThree } from './DemoThree';
+import { DemoFour } from './DemoFour';
 
-/**
- * 创建方块
- */
-function DemoOne() {
-
-  const ref = useRef();
-
-  useEffect(() => {
-    const leafer = new Leafer({
-      view: ref.current, // mount dom 
-    })
-
-    // rectangle
-    const rect = new Rect({
-      x: 10,
-      y: 10,
-      width: 200,
-      height: 200,
-      fill: '#32cd79',
-      cornerRadius: [50, 80, 50, 80],
-      draggable: true
-    })
-
-    leafer.add(rect);
-
-    function onEnter(e) {
-      (e.current).fill = '#42dd89'
-    }
-
-    function onLeave(e) {
-      (e.current).fill = '#32cd79'
-    }
-    
-    // 添加事件
-    rect.on(PointerEvent.ENTER, onEnter)
-    rect.on(PointerEvent.LEAVE, onLeave)
-  }, []);
-  return <div id='box' ref={ref} style={{ width: '800px', height: '640px', border: '1px solid grey' }}>
-
-  </div>;
-}
 
 /**
  * 性能体验：创建100万个方块
@@ -113,7 +75,9 @@ export default function App() {
 
   return (<div>
     <h1>hello leafer</h1>
-    <DemoOne />
+    {/* <DemoOne /> */}
     {/* <DemoTwo /> */}
+    {/* <DemoThree /> */}
+    <DemoFour />
   </div>)
 }
