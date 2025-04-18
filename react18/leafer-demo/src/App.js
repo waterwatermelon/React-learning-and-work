@@ -3,6 +3,8 @@ import { Leafer, Group, Rect, Debug, PointerEvent } from 'leafer-ui'
 import { DemoOne } from './DemoOne';
 import { DemoThree } from './DemoThree';
 import { DemoFour } from './DemoFour';
+import { DemoFive } from './DemoFive';
+import { DemoSix } from './DemoSix';
 
 
 /**
@@ -75,9 +77,7 @@ export default function App() {
 
   return (<div>
     <h1>hello leafer</h1>
-    <DemoOne />
-    {/* <DemoTwo /> */}
-    {/* <DemoThree /> */}
-    {/* <DemoFour /> */}
+
+    <DemoSix />
   </div>)
 }
