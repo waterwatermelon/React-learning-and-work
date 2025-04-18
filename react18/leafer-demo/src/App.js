@@ -75,9 +75,9 @@ export default function App() {
 
   return (<div>
     <h1>hello leafer</h1>
-    {/* <DemoOne /> */}
+    <DemoOne />
     {/* <DemoTwo /> */}
     {/* <DemoThree /> */}
-    <DemoFour />
+    {/* <DemoFour /> */}
   </div>)
 }

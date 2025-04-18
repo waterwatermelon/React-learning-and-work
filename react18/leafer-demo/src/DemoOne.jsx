@@ -91,6 +91,13 @@ function DemoOne() {
       }
     });
     leafer.add(line);
+    // 曲线
+    const line2 = new Line({
+      points: [300, 200, 400, 240, 500, 200],
+      stroke: '#A868ab',
+      curve: 0.5, // boolean or number
+    });
+    leafer.add(line2);
   }, []);
   return <div id='box' ref={ref}
     style={{ width: '800px', height: '640px', border: '1px solid #ccc', background: '#f8f8f8' }}>
